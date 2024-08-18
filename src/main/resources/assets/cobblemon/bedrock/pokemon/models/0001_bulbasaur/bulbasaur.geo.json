@@ -36,7 +36,13 @@
 					"cubes": [
 						{"origin": [-4, 6, -2.25], "size": [8, 5, 9], "inflate": 0.1, "uv": [4, 18]},
 						{"origin": [-2.5, 11, -0.25], "size": [5, 2, 5], "uv": [41, 25]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 13, 4],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "head",
