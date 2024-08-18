@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.dage.cobblemon_helditems.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

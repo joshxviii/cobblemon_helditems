@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "cobblemon_helditems",
+	"version": "${version}",
+	"name": "Cobblemon - Show Held Items",
+	"description": "Shows certain Pokemon's held items on the actual Pokemon entity!",
+	"authors": [
+		"joshxviii"
+	],
+	"contact": {
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/cobblemon_helditems/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.dage.cobblemon_helditems.CobblemonHeldItems"
+		],
+		"client": [
+			"com.dage.cobblemon_helditems.CobblemonHeldItemsClient"
+		]
+	},
+	"mixins": [
+		"cobblemon_helditems.mixins.json",
+		{
+			"config": "cobblemon_helditems.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"cobblemon": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
