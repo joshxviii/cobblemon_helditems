@@ -6,7 +6,7 @@
 				"identifier": "geometry.dragonite",
 				"texture_width": 256,
 				"texture_height": 128,
-				"visible_bounds_width": 8,
+				"visible_bounds_width": 9,
 				"visible_bounds_height": 5.5,
 				"visible_bounds_offset": [0, 2.25, 0]
 			},
@@ -119,7 +119,10 @@
 					"pivot": [-17, 35, 2.5],
 					"cubes": [
 						{"origin": [-21, 30, -3], "size": [4, 5, 6], "inflate": 0.02, "uv": [136, 101], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-22, 32.25, 0]
+					}
 				},
 				{
 					"name": "finger_back_right",
@@ -196,7 +199,6 @@
 					"name": "head",
 					"parent": "neck",
 					"pivot": [0, 46, 1],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-5, 41, -6], "size": [10, 11, 11], "inflate": 0.01, "uv": [0, 0]}
 					]

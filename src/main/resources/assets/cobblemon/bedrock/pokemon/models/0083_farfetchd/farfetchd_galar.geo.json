@@ -83,7 +83,13 @@
 						{"origin": [-1.5, 13, -6.75], "size": [3, 1, 4], "inflate": 0.01, "uv": [36, 27]},
 						{"origin": [-1, 14, -4.75], "size": [2, 1, 2], "inflate": 0.01, "pivot": [0, 15, -2.75], "rotation": [30, 0, 0], "uv": [40, 37]},
 						{"origin": [-0.5, 12.5, -6.75], "size": [1, 1, 0], "inflate": 0.01, "uv": [3, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 13, -4.75],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "eyebrow_left",

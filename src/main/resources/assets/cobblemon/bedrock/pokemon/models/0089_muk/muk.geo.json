@@ -7,8 +7,8 @@
 				"texture_width": 128,
 				"texture_height": 64,
 				"visible_bounds_width": 3,
-				"visible_bounds_height": 2.5,
-				"visible_bounds_offset": [0, 0.75, 0]
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
 			},
 			"bones": [
 				{
@@ -123,7 +123,13 @@
 					"pivot": [-8.25, 21, -1.5],
 					"cubes": [
 						{"origin": [-10.25, 21, -4.5], "size": [4, 3, 3], "uv": [88, 15]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-8.25, 22.75, -5.25],
+							"rotation": [0, -90, 0]
+						}
+					}
 				},
 				{
 					"name": "finger_right_index",

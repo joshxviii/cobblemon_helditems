@@ -6,7 +6,7 @@
 				"identifier": "geometry.poliwag",
 				"texture_width": 64,
 				"texture_height": 64,
-				"visible_bounds_width": 3,
+				"visible_bounds_width": 4,
 				"visible_bounds_height": 2.5,
 				"visible_bounds_offset": [0, 0.75, 0]
 			},
@@ -24,7 +24,13 @@
 						{"origin": [-3.5, 2, -3.75], "size": [7, 6, 0], "inflate": 0.02, "uv": [0, 32]},
 						{"origin": [-1.5, 7.5, -4.65], "size": [3, 2, 1], "pivot": [0, 8.375, -4.4125], "rotation": [-2.5, 0, 0], "uv": [0, 0]},
 						{"origin": [-1, 8.25, -4.675], "size": [2, 1, 0], "inflate": 0.02, "pivot": [0, 8.375, -4.4125], "rotation": [-2.5, 0, 0], "uv": [36, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 12, 2],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "eyes",

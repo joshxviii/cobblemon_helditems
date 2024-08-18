@@ -1,8 +1,5 @@
 package com.dage.cobblemon_helditems;
 
-import com.cobblemon.mod.common.client.CobblemonClient;
-import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
-import com.cobblemon.mod.common.pokemon.Pokemon;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.item.ItemStack;
@@ -13,8 +10,7 @@ import java.util.*;
 
 public class CobblemonHeldItemsClient implements ClientModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("cobblemon_helditems");
-
-    private static final HashMap<UUID, ItemStack> cachedServerHeldItems = new HashMap<>();
+    public static final HashMap<UUID, ItemStack> cachedServerHeldItems = new HashMap<>();
     @Override
     public void onInitializeClient() {
         //Receive events from server
@@ -34,28 +30,9 @@ public class CobblemonHeldItemsClient implements ClientModInitializer {
 
         ClientPlayNetworking.registerGlobalReceiver(CobblemonHeldItems.ENTITY_STOP_TRACKING, (client, handler, buf, responseSender) -> {
             UUID pokemonUuid = buf.readUuid();
-            ItemStack heldItem = buf.readItemStack();
 
-            client.execute(() -> removeItemCache(pokemonUuid, heldItem));
+            client.execute(() -> removeItemCache(pokemonUuid));
         });
-    }
-
-    public static ItemStack getCachedHeldItem(UUID pokemonID) {
-
-        Pokemon fromMyParty = null;
-        //try to see if the pokemon that is being rendered is part of client users party
-        //TODO Make the client storage search not suck so bad
-        for (Pokemon p : CobblemonClient.INSTANCE.getStorage().getMyParty()) {
-            if (p==null) continue;
-            PokemonEntity entity = p.getEntity();
-            if (entity!=null) {
-                if (entity.getUuid() == pokemonID) fromMyParty = p;
-            }
-        }
-        if (fromMyParty != null) return fromMyParty.heldItem();//if yes, then get held item from client storage
-
-        //otherwise check server cache for held item
-        return cachedServerHeldItems.getOrDefault(pokemonID, ItemStack.EMPTY);
     }
 
     public static void updatedItemCache(UUID pokemonID, ItemStack heldItem) {
@@ -70,11 +47,10 @@ public class CobblemonHeldItemsClient implements ClientModInitializer {
         cachedServerHeldItems.putIfAbsent(pokemonID, heldItem);
     }
 
-    public static void removeItemCache(UUID pokemonID, ItemStack heldItem) {
+    public static void removeItemCache(UUID pokemonID) {
         if (cachedServerHeldItems.containsKey(pokemonID)) {
             //LOGGER.info("cacheRemoved");
-            cachedServerHeldItems.remove(pokemonID, heldItem);
+            cachedServerHeldItems.remove(pokemonID);
         }
     }
-
 }

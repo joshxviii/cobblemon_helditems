@@ -114,7 +114,13 @@
 					"cubes": [
 						{"origin": [-1.5, 16.5, -11], "size": [3, 3, 3], "uv": [18, 0]},
 						{"origin": [-1, 16.49, -10.5], "size": [2, 0, 2], "uv": [31, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 17, -9.5],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "horn",

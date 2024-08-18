@@ -90,7 +90,6 @@
 					"name": "arm_right",
 					"parent": "torso",
 					"pivot": [-3, 14, 0.5],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-8, 12, -1], "size": [5, 2, 3], "inflate": 0.01, "uv": [13, 46], "mirror": true}
 					]
@@ -109,7 +108,10 @@
 					"pivot": [-12, 13, 0.5],
 					"cubes": [
 						{"origin": [-14, 12, -1.5], "size": [2, 2, 4], "uv": [35, 35], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-16, 12.5, 0.5]
+					}
 				},
 				{
 					"name": "finger_right_index",
@@ -179,7 +181,6 @@
 					"name": "thumb_right",
 					"parent": "hand_right",
 					"pivot": [-13.5, 12.5, -1.25],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-15, 12, -1.75], "size": [2, 1, 1], "inflate": 0.01, "uv": [0, 0], "mirror": true}
 					]
@@ -196,7 +197,6 @@
 					"name": "arm_left",
 					"parent": "torso",
 					"pivot": [3, 14, 0.5],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [3, 12, -1], "size": [5, 2, 3], "inflate": 0.01, "uv": [30, 46], "mirror": true}
 					]
@@ -285,7 +285,6 @@
 					"name": "thumb_left",
 					"parent": "hand_left",
 					"pivot": [13.5, 12.5, -1.25],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [13, 12, -1.75], "size": [2, 1, 1], "inflate": 0.01, "uv": [0, 2]}
 					]

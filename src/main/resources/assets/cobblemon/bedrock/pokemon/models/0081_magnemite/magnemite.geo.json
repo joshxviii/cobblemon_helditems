@@ -110,7 +110,13 @@
 						{"origin": [-5.5, 2, -1], "size": [2, 6, 2], "inflate": 0.01, "uv": [24, 0], "mirror": true},
 						{"origin": [-11, 6, -1], "size": [6, 2, 2], "uv": [32, 4], "mirror": true},
 						{"origin": [-11, 2, -1], "size": [6, 2, 2], "uv": [48, 4], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-11.5, 3.25, 0],
+							"rotation": [0, -90, 0]
+						}
+					}
 				},
 				{
 					"name": "nails",

@@ -98,7 +98,13 @@
 					"rotation": [-7.5, -60, 0],
 					"cubes": [
 						{"origin": [-1, 32.5, -19], "size": [14, 16, 14], "uv": [0, 80]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [5.75, 37.5, -18.5],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "mouth_closed2",

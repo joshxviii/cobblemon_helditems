@@ -343,7 +343,13 @@
 					"rotation": [0, 32.5, 0],
 					"cubes": [
 						{"origin": [-29.5, 9.25, -8], "size": [3, 2, 2], "inflate": 0.01, "uv": [40, 62]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-28.25, 9.75, -9.5],
+							"rotation": [4.65079, -43.01132, -17.27576]
+						}
+					}
 				},
 				{
 					"name": "right_index_finger",

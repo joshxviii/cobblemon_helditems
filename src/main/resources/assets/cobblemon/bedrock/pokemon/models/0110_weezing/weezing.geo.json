@@ -33,7 +33,13 @@
 						{"origin": [-6, 8, -7.51], "size": [4, 2, 0], "uv": [51, 30], "mirror": true},
 						{"origin": [-5, 8.5, -7.52], "size": [2, 1, 0], "uv": [51, 32], "mirror": true},
 						{"origin": [-4.5, 7.5, -7.52], "size": [1, 1, 0], "uv": [55, 34], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-4, 19.5, 2.5],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "eyes",

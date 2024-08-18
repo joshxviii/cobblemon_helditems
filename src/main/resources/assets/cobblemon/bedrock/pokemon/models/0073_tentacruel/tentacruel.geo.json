@@ -374,7 +374,13 @@
 					"pivot": [-2.5, 8, -5.5],
 					"cubes": [
 						{"origin": [-4, 0, -7], "size": [3, 8, 3], "uv": [116, 0], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-2.75, 0, -6.25],
+							"rotation": [0, -90, 0]
+						}
+					}
 				},
 				{
 					"name": "tentacle_right_2",

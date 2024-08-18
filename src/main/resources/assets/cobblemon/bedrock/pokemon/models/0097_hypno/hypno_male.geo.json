@@ -6,7 +6,7 @@
 				"identifier": "geometry.hypno_male",
 				"texture_width": 128,
 				"texture_height": 128,
-				"visible_bounds_width": 3,
+				"visible_bounds_width": 5,
 				"visible_bounds_height": 3.5,
 				"visible_bounds_offset": [0, 1.25, 0]
 			},
@@ -309,7 +309,13 @@
 					"pivot": [-17.5, 16.5, 0],
 					"cubes": [
 						{"origin": [-20.5, 15.5, -2], "size": [3, 2, 4], "inflate": 0.02, "uv": [59, 55]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-21.75, 14.75, 0],
+							"rotation": [0, 0, -40]
+						}
+					}
 				},
 				{
 					"name": "right_thumb1",

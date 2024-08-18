@@ -92,7 +92,10 @@
 					"pivot": [-7.5, 9.5, 2],
 					"cubes": [
 						{"origin": [-10.5, 2.5, 2], "size": [3, 7, 0], "inflate": 0.02, "uv": [0, 15]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [-9, 2.75, 1.5]
+					}
 				},
 				{
 					"name": "leaf_right3",

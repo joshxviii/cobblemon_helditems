@@ -22,7 +22,13 @@
 					"cubes": [
 						{"origin": [-9, 0, -9], "size": [18, 18, 18], "uv": [56, 21]},
 						{"origin": [-9, 0, -9], "size": [18, 18, 18], "inflate": 0.25, "uv": [0, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 19, 2],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "eyebrow_right",

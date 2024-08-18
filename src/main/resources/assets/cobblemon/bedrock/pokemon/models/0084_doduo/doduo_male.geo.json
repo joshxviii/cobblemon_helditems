@@ -116,7 +116,13 @@
 					"cubes": [
 						{"origin": [-5, 21, -4.5], "size": [5, 5, 5], "uv": [0, 16]},
 						{"origin": [-3.5, 22.5, -10.5], "size": [2, 1, 6], "uv": [24, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-2.5, 22.5, -7],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "jaw2",
@@ -162,7 +168,6 @@
 					"name": "leg_right",
 					"parent": "body",
 					"pivot": [-2, 8, 0.25],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-2.5, 4, -0.25], "size": [1, 4, 1], "inflate": 0.001, "uv": [46, 4]}
 					]
@@ -223,7 +228,6 @@
 					"name": "leg_left",
 					"parent": "body",
 					"pivot": [2, 8, 0.25],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [1.5, 4, -0.25], "size": [1, 4, 1], "inflate": 0.001, "uv": [0, 16]}
 					]

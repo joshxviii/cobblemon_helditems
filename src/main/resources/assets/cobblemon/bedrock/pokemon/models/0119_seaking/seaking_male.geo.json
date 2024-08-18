@@ -50,7 +50,13 @@
 					"pivot": [-2.5, 2.75, -1.75],
 					"cubes": [
 						{"origin": [-8.5, 2.75, -3.75], "size": [6, 0, 5], "inflate": 0.02, "uv": [15, 5]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-5.5, 2, -1],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "leftwing",

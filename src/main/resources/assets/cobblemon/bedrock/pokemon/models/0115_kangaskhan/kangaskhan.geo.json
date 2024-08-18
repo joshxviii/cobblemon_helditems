@@ -81,7 +81,13 @@
 					"pivot": [-2, 14.75, -7.25],
 					"cubes": [
 						{"origin": [-5, 13.75, -8.25], "size": [4, 2, 2], "uv": [62, 18]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-4.25, 12, -10.75],
+							"rotation": [0, -115, 0]
+						}
+					}
 				},
 				{
 					"name": "leftlegbaby",

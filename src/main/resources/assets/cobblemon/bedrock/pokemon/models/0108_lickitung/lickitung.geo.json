@@ -194,7 +194,10 @@
 					"pivot": [-9, 16, 2],
 					"cubes": [
 						{"origin": [-14, 15, -2], "size": [5, 3, 4], "inflate": 0.01, "uv": [42, 82]}
-					]
+					],
+					"locators": {
+						"held_item": [-13.75, 16, 0]
+					}
 				},
 				{
 					"name": "right_thumb",

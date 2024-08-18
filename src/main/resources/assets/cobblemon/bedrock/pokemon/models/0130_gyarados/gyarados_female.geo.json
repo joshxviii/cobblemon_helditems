@@ -284,7 +284,13 @@
 					"pivot": [0, 3.5, 8],
 					"cubes": [
 						{"origin": [-3.5, 0, 8], "size": [7, 7, 6], "inflate": 0.02, "uv": [26, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 7.75, 13.5],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "segment7",

@@ -27,7 +27,13 @@
 					"cubes": [
 						{"origin": [-9.25, 0, -9], "size": [11, 3, 11], "pivot": [-3.75, 1.25, -3.5], "rotation": [0, -15, 0], "uv": [0, 50]},
 						{"origin": [-9.25, 0, -9], "size": [11, 2, 11], "inflate": 0.2, "pivot": [-3.75, 1.25, -3.5], "rotation": [0, -15, 0], "uv": [66, 51]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-7.5, 2, -6.5],
+							"rotation": [0, 70, 0]
+						}
+					}
 				},
 				{
 					"name": "body1",

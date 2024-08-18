@@ -150,7 +150,10 @@
 					"pivot": [0, 29, -5],
 					"cubes": [
 						{"origin": [-2.5, 26, -7], "size": [5, 3, 2], "uv": [0, 14]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [0, 23, -6]
+					}
 				},
 				{
 					"name": "wings",

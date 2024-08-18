@@ -6,7 +6,7 @@
 				"identifier": "geometry.pinsir",
 				"texture_width": 128,
 				"texture_height": 64,
-				"visible_bounds_width": 4,
+				"visible_bounds_width": 5,
 				"visible_bounds_height": 3.5,
 				"visible_bounds_offset": [0, 1.25, 0]
 			},
@@ -215,7 +215,10 @@
 					"pivot": [-22, 15, -0.5],
 					"cubes": [
 						{"origin": [-25, 14, -2], "size": [3, 2, 3], "inflate": 0.01, "uv": [0, 59]}
-					]
+					],
+					"locators": {
+						"held_item": [-25, 13.75, 0]
+					}
 				},
 				{
 					"name": "finger_right_index",

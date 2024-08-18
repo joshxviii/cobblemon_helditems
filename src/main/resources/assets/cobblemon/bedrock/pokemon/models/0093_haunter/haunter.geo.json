@@ -189,7 +189,13 @@
 					"pivot": [-13, 2, -8],
 					"cubes": [
 						{"origin": [-15.5, 0, -10.5], "size": [5, 4, 4], "uv": [66, 33]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-14, 1.5, -12.25],
+							"rotation": [0, -90, 0]
+						}
+					}
 				},
 				{
 					"name": "finger_right_index",

@@ -99,7 +99,10 @@
 					"pivot": [-3, 2, -1],
 					"cubes": [
 						{"origin": [-5.75, 1, -1], "size": [3, 4, 0], "uv": [0, 26]}
-					]
+					],
+					"locators": {
+						"held_item": [-6, 3, 0]
+					}
 				},
 				{
 					"name": "left_hand",

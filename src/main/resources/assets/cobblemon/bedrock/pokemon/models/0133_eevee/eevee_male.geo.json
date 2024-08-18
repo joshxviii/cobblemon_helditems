@@ -38,7 +38,13 @@
 						{"origin": [-3, 9.5, -10], "size": [6, 2, 1], "uv": [36, 1]},
 						{"origin": [-3, 16.5, -6.25], "size": [6, 2, 0], "pivot": [0, 17.5, -6], "rotation": [-15, 0, 0], "uv": [52, 7]},
 						{"origin": [-0.5, 10.51, -10.01], "size": [1, 1, 0], "uv": [52, 5], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 9.75, -8.5],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "mouth",

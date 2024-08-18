@@ -22,7 +22,13 @@
 					"cubes": [
 						{"origin": [-5.5, 0, -5.5], "size": [11, 3, 11], "uv": [0, 17]},
 						{"origin": [-5.5, 0, -5.5], "size": [11, 2, 11], "inflate": 0.2, "uv": [17, 3]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-4.25, 2, -1.5],
+							"rotation": [0, 80, 0]
+						}
+					}
 				},
 				{
 					"name": "body",
