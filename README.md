@@ -1,8 +1,3 @@
-### Links
-
-[Modrinth Page](https://modrinth.com/mod/cobblemon-held-items) \
-[Discord](https://discord.gg/a2GbzTjF8V)
-
 # Cobblemon - Show Held Items
 
 This is a side mod for [Cobblemon](https://modrinth.com/mod/cobblemon) so it will not do anything without Cobblemon installed.
@@ -30,3 +25,9 @@ If there are Pokemon that do not render their held item or if you would like to 
 ![Customizing how held items are rendered.](https://cdn.modrinth.com/data/cached_images/6ce70e33d590ed0fe7a20af629d77e49a94c22e6.png)
 
 ![Customizing how held items are rendered.](https://cdn.modrinth.com/data/cached_images/baddbdececeac2a690c5907b1e157e19606a542c.png)
+
+
+### Links
+
+[Modrinth Page](https://modrinth.com/mod/cobblemon-held-items) \
+[Discord](https://discord.gg/a2GbzTjF8V)
