@@ -9,8 +9,10 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 
 public class CobblemonHeldItemsClient implements ClientModInitializer {
+
     public static final Logger LOGGER = LoggerFactory.getLogger("cobblemon_helditems");
-    public static final HashMap<UUID, ItemStack> cachedServerHeldItems = new HashMap<>();
+    public static final HashMap<UUID, ItemStack> cachedHeldItems = new HashMap<>();
+
     @Override
     public void onInitializeClient() {
         //Receive events from server
@@ -36,21 +38,19 @@ public class CobblemonHeldItemsClient implements ClientModInitializer {
     }
 
     public static void updatedItemCache(UUID pokemonID, ItemStack heldItem) {
-        if (cachedServerHeldItems.containsKey(pokemonID)) {
+        if (cachedHeldItems.containsKey(pokemonID)) {
             //LOGGER.info("cacheUpdated");
-            cachedServerHeldItems.put(pokemonID, heldItem);
+            cachedHeldItems.put(pokemonID, heldItem);
         }
     }
 
     public static void addItemCache(UUID pokemonID, ItemStack heldItem) {
         //LOGGER.info("cacheAdded");
-        cachedServerHeldItems.putIfAbsent(pokemonID, heldItem);
+        cachedHeldItems.putIfAbsent(pokemonID, heldItem);
     }
 
     public static void removeItemCache(UUID pokemonID) {
-        if (cachedServerHeldItems.containsKey(pokemonID)) {
-            //LOGGER.info("cacheRemoved");
-            cachedServerHeldItems.remove(pokemonID);
-        }
+        //LOGGER.info("cacheRemoved");
+        cachedHeldItems.remove(pokemonID);
     }
 }

@@ -35,6 +35,8 @@ public class CobblemonHeldItems implements ModInitializer {
 	public static final Identifier ENTITY_STOP_TRACKING = new Identifier(MOD_ID, "pokemon_item_stop");
 	public static final Identifier HELD_ITEM_UPDATED = new Identifier(MOD_ID, "pokemon_item_updated");
 
+
+
 	@Override
 	public void onInitialize() {
 		//if (1==1) return;//TODO ADD CONFIG CHECK TO EACH EVENT CALL

@@ -3,12 +3,13 @@
 	"id": "cobblemon_helditems",
 	"version": "${version}",
 	"name": "Cobblemon - Show Held Items",
-	"description": "Shows certain Pokemon's held items on the actual Pokemon entity!",
+	"description": "Shows your Pokémon held items in the world.",
 	"authors": [
 		"joshxviii"
 	],
 	"contact": {
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/cobblemon-held-items",
+		"sources": "https://github.com/joshxviii/cobblemon_helditems"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/cobblemon_helditems/icon.png",
@@ -34,8 +35,5 @@
 		"java": ">=17",
 		"fabric-api": "*",
 		"cobblemon": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }

@@ -60,6 +60,7 @@ abstract class PokemonRendererMixin {
         }
     }
 
+    @Unique
     private static ItemStack getHeldItem(UUID pokemonID) {
         Pokemon fromMyParty = null;
         //try to see if the pokemon that is being rendered is part of client users party
@@ -72,8 +73,8 @@ abstract class PokemonRendererMixin {
         }
         if (fromMyParty != null) return fromMyParty.heldItem();//if yes, then get held item from client storage
 
-        //otherwise check server cache for held item
-        return CobblemonHeldItemsClient.cachedServerHeldItems.getOrDefault(pokemonID, ItemStack.EMPTY);
+        //Otherwise check item cache for held items
+        return CobblemonHeldItemsClient.cachedHeldItems.getOrDefault(pokemonID, ItemStack.EMPTY);
     }
 
 }
