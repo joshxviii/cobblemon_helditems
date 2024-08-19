@@ -70,7 +70,13 @@
 					"cubes": [
 						{"origin": [-2.5, 7.75, -10.5], "size": [5, 4, 6], "uv": [0, 39]},
 						{"origin": [-1, 9, -10.5], "size": [2, 1, 0], "inflate": 0.01, "uv": [0, 30]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 5.15238, -11.57275],
+							"rotation": [-35, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "horn_right",

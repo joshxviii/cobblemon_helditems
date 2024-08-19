@@ -43,7 +43,13 @@
 						{"origin": [-6.5, 8, -3.5], "size": [0, 3, 7], "inflate": 0.01, "uv": [44, 28], "mirror": true},
 						{"origin": [-6.5, 8, -3.5], "size": [13, 3, 0], "inflate": 0.01, "uv": [40, 26]},
 						{"origin": [-6.5, 8, 3.5], "size": [13, 3, 0], "inflate": 0.01, "uv": [40, 29]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [6.5, 9, 0],
+							"rotation": [-155, 87.5, -152.5]
+						}
+					}
 				},
 				{
 					"name": "belt_coin",

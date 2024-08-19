@@ -27,7 +27,13 @@
 					"cubes": [
 						{"origin": [-6.5, 2, -4.75], "size": [13, 5, 9], "inflate": 0.02, "uv": [0, 0]},
 						{"origin": [-5.5, 2, 4.25], "size": [11, 5, 3], "uv": [25, 15]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-5.5, 7.5, 0.25],
+							"rotation": [0, -90, 22.5]
+						}
+					}
 				},
 				{
 					"name": "tail",

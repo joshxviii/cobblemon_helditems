@@ -12,6 +12,13 @@
 			},
 			"bones": [
 				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [7.5, 13.5, -4], "size": [8, 7, 8], "uv": [122, 1]}
+					]
+				},
+				{
 					"name": "gurdurr",
 					"pivot": [0, 0, 0]
 				},
@@ -67,10 +74,7 @@
 				{
 					"name": "arm_left_rotation",
 					"parent": "arm_left",
-					"pivot": [10.5, 17, 0],
-					"cubes": [
-						{"origin": [7.5, 13.5, -4], "size": [8, 7, 8], "uv": [122, 1]}
-					]
+					"pivot": [10.5, 17, 0]
 				},
 				{
 					"name": "arm_left2",
@@ -94,7 +98,13 @@
 					"pivot": [22.5, 18.5, 0],
 					"cubes": [
 						{"origin": [22.5, 16.5, -2], "size": [3, 2, 4], "inflate": 0.02, "uv": [38, 48]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [25.5, 14, 0],
+							"rotation": [0, 0, -35]
+						}
+					}
 				},
 				{
 					"name": "fingers_left",

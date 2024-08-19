@@ -103,7 +103,10 @@
 					"rotation": [0, 0, 20],
 					"cubes": [
 						{"origin": [-3.25, -0.25, -12.5], "size": [1, 2, 1], "uv": [0, 2]}
-					]
+					],
+					"locators": {
+						"held_item": [-2.58415, -0.94056, -12.25]
+					}
 				},
 				{
 					"name": "leg_left_front",

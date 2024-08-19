@@ -200,7 +200,10 @@
 					"pivot": [-9.5, 23, 0],
 					"cubes": [
 						{"origin": [-15, 22, -1], "size": [6, 2, 2], "inflate": 0.01, "uv": [48, 31]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [-14, 22.5, -2.5]
+					}
 				},
 				{
 					"name": "finger_right",

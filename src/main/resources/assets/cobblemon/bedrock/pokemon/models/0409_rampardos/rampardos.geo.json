@@ -309,7 +309,6 @@
 					"name": "left_arm2",
 					"parent": "left_arm",
 					"pivot": [12, 27.5, -1.5],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [12.5, 26, -3.5], "size": [4, 3, 2], "inflate": 0.01, "uv": [44, 43]}
 					]
@@ -318,7 +317,6 @@
 					"name": "left_arm3",
 					"parent": "left_arm2",
 					"pivot": [15.5, 27.5, -2.25],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [15.5, 26, -3.5], "size": [3, 3, 2], "uv": [0, 42]}
 					]
@@ -341,7 +339,6 @@
 					"name": "left_finger1",
 					"parent": "left_fingers",
 					"pivot": [18.5, 26, -2.5],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [18.5, 26, -2.5], "size": [2, 1, 0], "uv": [7, 36]}
 					]
@@ -350,7 +347,6 @@
 					"name": "left_finger2",
 					"parent": "left_fingers",
 					"pivot": [18.5, 28.5, -2.5],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [18.5, 28, -2.5], "size": [2, 1, 0], "uv": [12, 11]}
 					]
@@ -368,7 +364,6 @@
 					"name": "right_arm2",
 					"parent": "right_arm",
 					"pivot": [-12, 27.5, -1.5],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-16.5, 26, -3.5], "size": [4, 3, 2], "inflate": 0.01, "uv": [88, 0]}
 					]
@@ -377,10 +372,15 @@
 					"name": "right_arm3",
 					"parent": "right_arm2",
 					"pivot": [-15.5, 27.5, -2.25],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-18.5, 26, -3.5], "size": [3, 3, 2], "uv": [65, 26]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-17.5, 27.5, -3.75],
+							"rotation": [-10, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "right_fingers",
@@ -391,7 +391,6 @@
 					"name": "right_thumb",
 					"parent": "right_fingers",
 					"pivot": [-18.5, 26, -2.5],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-20.5, 26, -2.5], "size": [2, 1, 0], "uv": [39, 45]}
 					]
@@ -400,7 +399,6 @@
 					"name": "right_finger1",
 					"parent": "right_fingers",
 					"pivot": [-18.5, 28.5, -2.5],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-20.5, 28, -2.5], "size": [2, 1, 0], "uv": [7, 38]}
 					]

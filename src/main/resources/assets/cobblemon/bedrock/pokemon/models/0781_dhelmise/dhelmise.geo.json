@@ -7,8 +7,8 @@
 				"texture_width": 128,
 				"texture_height": 128,
 				"visible_bounds_width": 5,
-				"visible_bounds_height": 6.5,
-				"visible_bounds_offset": [0, 2.75, 0]
+				"visible_bounds_height": 11,
+				"visible_bounds_offset": [0, 0.5, 0]
 			},
 			"bones": [
 				{
@@ -111,8 +111,8 @@
 					"cubes": [
 						{"origin": [19, 50, 0], "size": [2, 2, 2], "inflate": 0.01, "uv": [0, 45]},
 						{"origin": [21, 49.5, -0.5], "size": [8, 3, 3], "inflate": 0.01, "uv": [8, 45]},
-						{"origin": [-21, 50, 0], "size": [2, 2, 2], "inflate": 0.01, "pivot": [0, 51, 3.5], "rotation": [0, 0, 0], "uv": [0, 49], "mirror": true},
-						{"origin": [-29, 49.5, -0.5], "size": [8, 3, 3], "inflate": 0.01, "pivot": [0, 51, 3], "rotation": [0, 0, 0], "uv": [8, 51], "mirror": true},
+						{"origin": [-21, 50, 0], "size": [2, 2, 2], "inflate": 0.01, "uv": [0, 49], "mirror": true},
+						{"origin": [-29, 49.5, -0.5], "size": [8, 3, 3], "inflate": 0.01, "uv": [8, 51], "mirror": true},
 						{"origin": [18, 50, 0], "size": [2, 2, 2], "inflate": 0.01, "pivot": [0, 51, 3], "rotation": [0, 0, -55], "uv": [0, 53]},
 						{"origin": [-20, 50, 0], "size": [2, 2, 2], "inflate": 0.01, "pivot": [0, 51, 3.5], "rotation": [0, 0, 55], "uv": [30, 43], "mirror": true},
 						{"origin": [-28, 49.5, -0.5], "size": [8, 3, 3], "inflate": 0.01, "pivot": [0, 51, 3], "rotation": [0, 0, 55], "uv": [58, 46], "mirror": true},
@@ -139,7 +139,13 @@
 						{"origin": [-37.8, -48.75, -4], "size": [11, 5, 2], "pivot": [-26.9, -48.7, -4.5], "rotation": [0, 0, 90], "uv": [82, 82], "mirror": true},
 						{"origin": [-41.8, -48.75, -4], "size": [4, 3, 2], "pivot": [-26.9, -48.7, -4.5], "rotation": [0, 0, 90], "uv": [108, 82], "mirror": true},
 						{"origin": [-26.925, -33.85, -4], "size": [10, 3, 2], "inflate": 0.01, "pivot": [-26.9, -33.8, -4.5], "rotation": [0, 0, 52.5], "uv": [44, 94], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-10.5, -53.75, -6.25],
+							"rotation": [-90, 0, 20]
+						}
+					}
 				},
 				{
 					"name": "anchor_nose2",

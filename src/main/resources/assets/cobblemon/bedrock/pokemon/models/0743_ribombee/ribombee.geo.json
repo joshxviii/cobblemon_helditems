@@ -107,7 +107,13 @@
 					"cubes": [
 						{"origin": [-3.5, 18, 7.5], "size": [1, 1, 1], "uv": [58, 14], "mirror": true},
 						{"origin": [-4, 17.9, 8.1], "size": [2, 2, 3], "uv": [0, 34], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-3.25, 18, 10.25],
+							"rotation": [-90, -57.5, 0]
+						}
+					}
 				},
 				{
 					"name": "torso_fur",

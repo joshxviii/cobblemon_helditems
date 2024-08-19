@@ -311,7 +311,10 @@
 					"pivot": [-20, 15, 1.25],
 					"cubes": [
 						{"origin": [-22, 14, 0.25], "size": [3, 2, 2], "uv": [20, 34], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-22, 14.25, 1.25]
+					}
 				},
 				{
 					"name": "claw_right1",

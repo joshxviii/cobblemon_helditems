@@ -156,7 +156,10 @@
 					"pivot": [-6.5, 7.5, 0.5],
 					"cubes": [
 						{"origin": [-12.5, 6, -1.5], "size": [6, 3, 3], "uv": [34, 6], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-13.25, 7.25, 0]
+					}
 				},
 				{
 					"name": "claw_right1",

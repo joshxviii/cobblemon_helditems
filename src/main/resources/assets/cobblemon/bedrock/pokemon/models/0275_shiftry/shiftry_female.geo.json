@@ -226,7 +226,13 @@
 				{
 					"name": "hand2",
 					"parent": "arm_right",
-					"pivot": [-16, 19, 0.5]
+					"pivot": [-16, 19, 0.5],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-19, 18.5, 0],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "leaf_right",

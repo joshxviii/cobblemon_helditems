@@ -76,7 +76,13 @@
 					"rotation": [0, -90, 90],
 					"cubes": [
 						{"origin": [-2.525, 3.7, -13.8], "size": [0, 5, 4], "uv": [16, 21], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-2.25, 4, -11.5],
+							"rotation": [0, 90, 0]
+						}
+					}
 				},
 				{
 					"name": "torso_top3",

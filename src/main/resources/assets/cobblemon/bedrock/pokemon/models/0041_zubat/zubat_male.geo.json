@@ -6,7 +6,7 @@
 				"identifier": "geometry.zubat_male",
 				"texture_width": 64,
 				"texture_height": 32,
-				"visible_bounds_width": 3,
+				"visible_bounds_width": 4,
 				"visible_bounds_height": 3.5,
 				"visible_bounds_offset": [0, 1.25, 0]
 			},
@@ -32,7 +32,13 @@
 				{
 					"name": "mouth",
 					"parent": "torso",
-					"pivot": [0, 13.2, -1.5]
+					"pivot": [0, 13.2, -1.5],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 13.5, -2],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "mouth_open",

@@ -311,7 +311,13 @@
 					"pivot": [-3.5, 9.3, 12.4],
 					"cubes": [
 						{"origin": [-4.5, 8.3, 12.4], "size": [2, 2, 2], "uv": [8, 28], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-3.75, 10, 13.5],
+							"rotation": [0, -90, 90]
+						}
+					}
 				},
 				{
 					"name": "leg_back_left",

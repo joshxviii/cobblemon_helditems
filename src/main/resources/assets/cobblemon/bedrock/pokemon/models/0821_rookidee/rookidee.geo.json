@@ -72,7 +72,13 @@
 					"pivot": [0, 6.25, -4.75],
 					"cubes": [
 						{"origin": [-1, 5.25, -6.75], "size": [2, 1, 2], "uv": [23, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 3.75797, -8.48917],
+							"rotation": [-65, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "tail",

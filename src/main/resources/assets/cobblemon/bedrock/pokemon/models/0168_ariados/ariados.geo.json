@@ -52,7 +52,13 @@
 					"pivot": [0, 6.5, -5],
 					"cubes": [
 						{"origin": [-2.5, 4.5, -11], "size": [5, 5, 7], "inflate": 0.01, "uv": [0, 21]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 6, -12.25],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "eye_left",

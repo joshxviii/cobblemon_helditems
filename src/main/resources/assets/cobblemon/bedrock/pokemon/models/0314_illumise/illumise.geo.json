@@ -209,7 +209,10 @@
 					"cubes": [
 						{"origin": [-7, 8, -1.5], "size": [3, 3, 3], "uv": [36, 5]},
 						{"origin": [-8, 8.5, -1], "size": [1, 2, 2], "uv": [0, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [-8.75, 9.75, -1]
+					}
 				},
 				{
 					"name": "left_thigh_ring",

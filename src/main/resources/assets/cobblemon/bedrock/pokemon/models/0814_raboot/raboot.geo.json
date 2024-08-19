@@ -6,7 +6,7 @@
 				"identifier": "geometry.raboot",
 				"texture_width": 64,
 				"texture_height": 64,
-				"visible_bounds_width": 3,
+				"visible_bounds_width": 4,
 				"visible_bounds_height": 3.5,
 				"visible_bounds_offset": [0, 1.25, 0]
 			},
@@ -345,7 +345,10 @@
 					"pivot": [-11.5, 14.85, 0],
 					"cubes": [
 						{"origin": [-13.5, 13.85, -1.5], "size": [2, 2, 3], "uv": [31, 29], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-14.25, 14.25, 0]
+					}
 				},
 				{
 					"name": "arm_left",

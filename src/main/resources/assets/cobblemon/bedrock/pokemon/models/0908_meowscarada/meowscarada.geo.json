@@ -374,7 +374,10 @@
 					"cubes": [
 						{"origin": [-22.5, 33.25, -2.5], "size": [3, 2, 3], "uv": [51, 11]},
 						{"origin": [-22, 33.25, -2], "size": [2, 0, 2], "inflate": 0.01, "uv": [-2, 16]}
-					]
+					],
+					"locators": {
+						"held_item": [-24.25, 33, -2.25]
+					}
 				},
 				{
 					"name": "finger_index_right",

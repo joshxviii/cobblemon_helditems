@@ -6,7 +6,7 @@
 				"identifier": "geometry.empoleon",
 				"texture_width": 128,
 				"texture_height": 64,
-				"visible_bounds_width": 4,
+				"visible_bounds_width": 5,
 				"visible_bounds_height": 3.5,
 				"visible_bounds_offset": [0, 1.25, 0]
 			},
@@ -191,7 +191,10 @@
 						{"origin": [-21.5, 22, -1], "size": [2, 2, 0], "uv": [9, 21]},
 						{"origin": [-21.5, 22, 2], "size": [2, 2, 0], "uv": [6, 8]},
 						{"origin": [-27.5, 24, -6], "size": [14, 0, 13], "uv": [0, 21]}
-					]
+					],
+					"locators": {
+						"held_item": [-23, 22.75, 1.75]
+					}
 				},
 				{
 					"name": "leg_left",

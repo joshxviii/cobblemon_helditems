@@ -205,7 +205,13 @@
 					"rotation": [0, 0, -25],
 					"cubes": [
 						{"origin": [-18, 12.8, -2.5], "size": [3, 2, 4], "uv": [44, 24], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-17.75, 12.5, 0],
+							"rotation": [0, 0, -22.5]
+						}
+					}
 				},
 				{
 					"name": "claw_right2",

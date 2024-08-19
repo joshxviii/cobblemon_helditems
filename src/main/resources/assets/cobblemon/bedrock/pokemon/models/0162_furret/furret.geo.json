@@ -155,7 +155,13 @@
 					"pivot": [-2, 0.5, -9],
 					"cubes": [
 						{"origin": [-3.5, -1.5, -10], "size": [3, 2, 2], "inflate": 0.01, "uv": [48, 6]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-2, -1, -9.25],
+							"rotation": [170, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "tail",

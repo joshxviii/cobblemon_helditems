@@ -387,7 +387,13 @@
 					"rotation": [0, 0, -80],
 					"cubes": [
 						{"origin": [-14, 6, -5.5], "size": [6, 1, 1], "inflate": 0.01, "uv": [14, 40], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-13.75, 5.25, -4.5],
+							"rotation": [0, -90, -10]
+						}
+					}
 				},
 				{
 					"name": "toes_front_right",

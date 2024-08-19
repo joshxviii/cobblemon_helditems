@@ -56,7 +56,10 @@
 					"cubes": [
 						{"origin": [-29, 20, -2], "size": [7, 2, 5], "inflate": 0.01, "uv": [62, 16]},
 						{"origin": [-27, 22.01, -0.5], "size": [3, 0, 2], "inflate": 0.01, "uv": [0, 2]}
-					]
+					],
+					"locators": {
+						"held_item": [-29, 20, 0.25]
+					}
 				},
 				{
 					"name": "arm_left",

@@ -503,7 +503,10 @@
 					"pivot": [-6, 14.9, -2.5],
 					"cubes": [
 						{"origin": [-9, 12.9, -2.5], "size": [3, 4, 0], "uv": [56, 0], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [-7.75, 13.5, -1.75]
+					}
 				},
 				{
 					"name": "segment2",

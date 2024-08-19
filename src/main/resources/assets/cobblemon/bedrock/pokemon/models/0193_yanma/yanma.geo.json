@@ -255,7 +255,13 @@
 					"pivot": [-7.5, 2, -5],
 					"cubes": [
 						{"origin": [-12.5, 2, -6.25], "size": [5, 0, 2], "uv": [48, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-10.5, 1.5, -5],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "leg_right2",

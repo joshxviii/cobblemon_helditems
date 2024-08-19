@@ -212,7 +212,13 @@
 					"pivot": [0, 2.5, -15],
 					"cubes": [
 						{"origin": [-3, 0.5, -19], "size": [6, 2, 4], "inflate": 0.01, "uv": [0, 44]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 2.5, -17.5],
+							"rotation": [95, 0, 0]
+						}
+					}
 				}
 			]
 		}

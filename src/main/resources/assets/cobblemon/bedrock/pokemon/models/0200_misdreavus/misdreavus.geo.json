@@ -285,7 +285,13 @@
 					"pivot": [0, 10, -3],
 					"cubes": [
 						{"origin": [-3, 5, -3], "size": [6, 5, 6], "uv": [0, 35]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-4, 4.5, -2],
+							"rotation": [0, -90, 0]
+						}
+					}
 				},
 				{
 					"name": "flap_front",

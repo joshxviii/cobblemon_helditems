@@ -35,7 +35,10 @@
 					"cubes": [
 						{"origin": [-5, 3, -10.75], "size": [10, 10, 7], "inflate": 0.01, "uv": [0, 23]},
 						{"origin": [-4, 4.5, -12.5], "size": [8, 4, 2], "pivot": [0, 6.5, -11.5], "rotation": [-2.5, 0, 0], "uv": [34, 35]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [0, 1, -11.5]
+					}
 				},
 				{
 					"name": "eye_right",

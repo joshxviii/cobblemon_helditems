@@ -156,7 +156,13 @@
 					"cubes": [
 						{"origin": [-2, 3.75, -12], "size": [4, 1, 2], "uv": [39, 11]},
 						{"origin": [-1.5, 3.75, -13.25], "size": [3, 1, 2], "uv": [10, 40]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 4.25, -11.25],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "leg_front_left",

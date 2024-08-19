@@ -6,7 +6,7 @@
 				"identifier": "geometry.kricketune_male",
 				"texture_width": 64,
 				"texture_height": 64,
-				"visible_bounds_width": 3,
+				"visible_bounds_width": 5,
 				"visible_bounds_height": 3.5,
 				"visible_bounds_offset": [0, 1.25, 0]
 			},
@@ -189,7 +189,13 @@
 					"pivot": [-11, 13.5, 0],
 					"cubes": [
 						{"origin": [-25, 10.5, 0], "size": [14, 3, 0], "uv": [20, 16]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-16, 10.5, 2.25],
+							"rotation": [90, 0, -10]
+						}
+					}
 				},
 				{
 					"name": "leg_left",

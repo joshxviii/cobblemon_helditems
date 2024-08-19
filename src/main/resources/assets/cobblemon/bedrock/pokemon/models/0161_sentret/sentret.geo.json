@@ -161,7 +161,10 @@
 					"pivot": [-9, 8, 1],
 					"cubes": [
 						{"origin": [-11, 7, -1], "size": [2, 2, 2], "inflate": 0.01, "uv": [0, 0]}
-					]
+					],
+					"locators": {
+						"held_item": [-12, 7.75, 0]
+					}
 				},
 				{
 					"name": "ear_right",

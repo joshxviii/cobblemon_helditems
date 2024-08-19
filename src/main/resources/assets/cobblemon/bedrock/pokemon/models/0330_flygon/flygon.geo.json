@@ -171,7 +171,10 @@
 					"pivot": [-16, 24, 0],
 					"cubes": [
 						{"origin": [-19, 22, -2], "size": [3, 2, 4], "inflate": 0.02, "uv": [106, 18], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-19.25, 20.75, 0]
+					}
 				},
 				{
 					"name": "finger_back_right",

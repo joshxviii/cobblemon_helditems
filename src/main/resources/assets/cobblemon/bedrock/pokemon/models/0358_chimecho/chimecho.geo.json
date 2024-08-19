@@ -83,7 +83,10 @@
 					"pivot": [-1, 15, -1],
 					"cubes": [
 						{"origin": [-1, 15, -3.25], "size": [0, 1, 2], "pivot": [-1, 15, -1], "rotation": [32.5, 0, 40], "uv": [0, 2]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [1, 11.5, -3]
+					}
 				},
 				{
 					"name": "arm_right",

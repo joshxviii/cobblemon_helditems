@@ -388,7 +388,13 @@
 					"pivot": [0, 36, -10.25],
 					"cubes": [
 						{"origin": [-2, 33, -10.25], "size": [4, 3, 1], "uv": [17, 16]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 29.72548, -8.65849],
+							"rotation": [22.5, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "muzzle2",

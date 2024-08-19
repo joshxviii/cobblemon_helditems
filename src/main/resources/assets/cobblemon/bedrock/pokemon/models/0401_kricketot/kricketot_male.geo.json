@@ -94,7 +94,10 @@
 					"pivot": [-2.25, 4, -3],
 					"cubes": [
 						{"origin": [-3.25, 3, -4], "size": [2, 2, 2], "uv": [0, 12]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [0.25, 1, -4.25]
+					}
 				},
 				{
 					"name": "hand_left",

@@ -42,7 +42,10 @@
 					"pivot": [0, 1.5, -3],
 					"cubes": [
 						{"origin": [-3.5, -1.5, -9], "size": [7, 6, 6], "uv": [0, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [0, -3.5, -4]
+					}
 				},
 				{
 					"name": "antennae",

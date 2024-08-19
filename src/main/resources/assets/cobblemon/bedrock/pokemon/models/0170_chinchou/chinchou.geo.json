@@ -240,7 +240,10 @@
 					"pivot": [-11, 4.5, -3],
 					"cubes": [
 						{"origin": [-16, 4.5, -3], "size": [5, 0, 5], "inflate": 0.01, "uv": [29, 22]}
-					]
+					],
+					"locators": {
+						"held_item": [-14.25, 4, -0.5]
+					}
 				},
 				{
 					"name": "leg_left",

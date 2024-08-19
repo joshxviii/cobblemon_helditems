@@ -44,7 +44,13 @@
 					"pivot": [0, 3.75, -3],
 					"cubes": [
 						{"origin": [-3.5, 2.25, -8], "size": [7, 3, 5], "uv": [0, 12]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 3.75, -10.5],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "horn",

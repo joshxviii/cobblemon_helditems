@@ -231,7 +231,13 @@
 					"pivot": [-6.5, 12, -2],
 					"cubes": [
 						{"origin": [-9.5, 11, -4], "size": [3, 2, 2], "uv": [29, 34], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-10, 12, -3],
+							"rotation": [-90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "tail",

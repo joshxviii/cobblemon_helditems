@@ -6,7 +6,7 @@
 				"identifier": "geometry.quaxwell",
 				"texture_width": 128,
 				"texture_height": 64,
-				"visible_bounds_width": 3,
+				"visible_bounds_width": 4,
 				"visible_bounds_height": 3.5,
 				"visible_bounds_offset": [0, 1.25, 0]
 			},
@@ -320,7 +320,10 @@
 					"pivot": [-7.5, 20.35, 0.65],
 					"cubes": [
 						{"origin": [-13.5, 18.85, -2.85], "size": [6, 3, 4], "uv": [42, 7]}
-					]
+					],
+					"locators": {
+						"held_item": [-14, 18.75, -2.5]
+					}
 				},
 				{
 					"name": "arm_ruff_right",

@@ -93,7 +93,13 @@
 					"cubes": [
 						{"origin": [-2.5, 5.75, -2.5], "size": [5, 5, 5], "inflate": 0.02, "uv": [0, 0]},
 						{"origin": [-0.5, 7.5, -5.5], "size": [1, 1, 3], "inflate": 0.01, "pivot": [0, 8.5, -2.5], "rotation": [7.5, 0, 0], "uv": [21, 23]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 7.5, -3],
+							"rotation": [97.5, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "jaw",

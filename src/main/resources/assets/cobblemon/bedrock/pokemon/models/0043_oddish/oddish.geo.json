@@ -26,7 +26,13 @@
 					"pivot": [0, 5.5, 0],
 					"cubes": [
 						{"origin": [-4.5, 2, -3], "size": [9, 7, 6], "uv": [0, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-4.5, 5, -0.5],
+							"rotation": [90, 0, 90]
+						}
+					}
 				},
 				{
 					"name": "mouth",

@@ -203,7 +203,13 @@
 					"pivot": [-33, 28, -1.5],
 					"cubes": [
 						{"origin": [-39, 24, -5.5], "size": [6, 4, 8], "inflate": 0.02, "uv": [70, 60], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-40.5, 23.75, -1.5],
+							"rotation": [0, 0, -90]
+						}
+					}
 				},
 				{
 					"name": "fingers_right",

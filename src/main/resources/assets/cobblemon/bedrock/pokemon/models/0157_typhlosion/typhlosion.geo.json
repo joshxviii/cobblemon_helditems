@@ -200,7 +200,13 @@
 					"pivot": [-7.25, -1, -15.75],
 					"cubes": [
 						{"origin": [-7.25, -6, -19.75], "size": [3, 5, 4], "uv": [109, 43]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-6.25, -7.75, -18.25],
+							"rotation": [0, 0, -22.5]
+						}
+					}
 				},
 				{
 					"name": "finger_right_thumb",

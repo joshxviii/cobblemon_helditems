@@ -89,7 +89,13 @@
 					"rotation": [-7.5, 0, 0],
 					"cubes": [
 						{"origin": [-1, 12.85, -9], "size": [2, 2, 2], "uv": [36, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 12.5, -7.25],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "ear_right",

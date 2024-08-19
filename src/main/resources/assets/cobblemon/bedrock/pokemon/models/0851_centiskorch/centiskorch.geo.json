@@ -6,7 +6,7 @@
 				"identifier": "geometry.centiskorch",
 				"texture_width": 128,
 				"texture_height": 128,
-				"visible_bounds_width": 5,
+				"visible_bounds_width": 8,
 				"visible_bounds_height": 4.5,
 				"visible_bounds_offset": [0, 1.75, 0]
 			},
@@ -224,7 +224,10 @@
 					"rotation": [0, 0, -45],
 					"cubes": [
 						{"origin": [-13, 2.5, -34], "size": [4, 2, 0], "uv": [10, 68]}
-					]
+					],
+					"locators": {
+						"held_item": [-13.77355, 2.8021, -34.5]
+					}
 				},
 				{
 					"name": "leg_front_left",

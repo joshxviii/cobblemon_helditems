@@ -251,7 +251,13 @@
 					"pivot": [-22, 25.75, 0],
 					"cubes": [
 						{"origin": [-27, 25.25, -0.5], "size": [5, 1, 1], "inflate": 0.01, "uv": [11, 23], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-25.25, 26.75, 0],
+							"rotation": [0, 90, -42.5]
+						}
+					}
 				},
 				{
 					"name": "arm_right7",

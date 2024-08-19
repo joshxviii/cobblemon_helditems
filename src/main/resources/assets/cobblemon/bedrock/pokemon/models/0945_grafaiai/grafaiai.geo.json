@@ -128,7 +128,13 @@
 					"pivot": [-14, 10, 1],
 					"cubes": [
 						{"origin": [-16, 9.5, 0], "size": [2, 1, 2], "inflate": 0.025, "uv": [13, 33]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-18, 9, 0.25],
+							"rotation": [0, 0, -15]
+						}
+					}
 				},
 				{
 					"name": "finger_index_right",

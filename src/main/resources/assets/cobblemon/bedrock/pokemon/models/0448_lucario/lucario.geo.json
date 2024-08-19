@@ -242,6 +242,7 @@
 						{"origin": [-16.5, 25.45, -2.4], "size": [2, 2, 4], "uv": [88, 8], "mirror": true}
 					],
 					"locators": {
+						"held_item": [-16.5, 25.75, 0],
 						"aura_right": [-15, 26, 0]
 					}
 				},
@@ -629,7 +630,6 @@
 					"name": "foot_right3",
 					"parent": "foot_right2",
 					"pivot": [-4, -7.5, 1],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-6, -9.5, -2], "size": [4, 2, 3], "inflate": 0.01, "uv": [99, 59], "mirror": true},
 						{"origin": [-4.5, -9, 1.01], "size": [1, 1, 0], "inflate": 0.01, "uv": [96, 60], "mirror": true}
@@ -691,7 +691,6 @@
 					"name": "foot_left3",
 					"parent": "foot_left2",
 					"pivot": [4, -7.5, 1],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [2, -9.5, -2], "size": [4, 2, 3], "inflate": 0.01, "uv": [85, 59]},
 						{"origin": [3.5, -9, 1.01], "size": [1, 1, 0], "inflate": 0.01, "uv": [96, 59]}

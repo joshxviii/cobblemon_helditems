@@ -34,9 +34,9 @@
 						{"origin": [-7.5, 7, 7.5], "size": [15, 3, 0], "uv": [27, 15]}
 					],
 					"locators": {
-						"held_item": {
-							"offset": [0, 10, -1],
-							"rotation": [180, 15, 90]
+						"held_item_fixed": {
+							"offset": [0, 7.5, 1],
+							"rotation": [90, 0, 0]
 						}
 					}
 				},

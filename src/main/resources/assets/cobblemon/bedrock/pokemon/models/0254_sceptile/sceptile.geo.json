@@ -145,7 +145,6 @@
 					"name": "left_bud_glow",
 					"parent": "left_bud",
 					"pivot": [2.5, 26.25, 3],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [1, 24.25, 1.5], "size": [3, 3, 3], "uv": [73, 32]}
 					]
@@ -163,7 +162,6 @@
 					"name": "right_bud_glow",
 					"parent": "right_bud",
 					"pivot": [-2.5, 26.25, 3],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-4, 24.25, 1.5], "size": [3, 3, 3], "uv": [113, 10]}
 					]
@@ -198,7 +196,10 @@
 					"pivot": [-16, 23, 0.5],
 					"cubes": [
 						{"origin": [-19, 21, -1], "size": [3, 2, 3], "inflate": 0.01, "uv": [92, 45]}
-					]
+					],
+					"locators": {
+						"held_item": [-20.75, 20.5, 0]
+					}
 				},
 				{
 					"name": "right_index_finger",

@@ -404,7 +404,10 @@
 					"pivot": [-24, 34.5, 0],
 					"cubes": [
 						{"origin": [-27, 33.5, -2], "size": [3, 2, 4], "inflate": 0.01, "uv": [65, 78]}
-					]
+					],
+					"locators": {
+						"held_item": [-28, 33.5, 0]
+					}
 				},
 				{
 					"name": "hand_right_armor_plate",

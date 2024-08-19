@@ -232,7 +232,10 @@
 					"pivot": [-11, 12.25, 0],
 					"cubes": [
 						{"origin": [-12.5, 11.75, -1], "size": [2, 1, 2], "inflate": 0.02, "uv": [12, 61]}
-					]
+					],
+					"locators": {
+						"held_item": [-12.25, 11.5, -0.5]
+					}
 				},
 				{
 					"name": "right_thumb",
@@ -310,7 +313,6 @@
 					"name": "left_upper_leg",
 					"parent": "body",
 					"pivot": [3, 5.25, 0],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [1, 1.75, -2.5], "size": [4, 5, 5], "uv": [33, 37]}
 					]
@@ -347,7 +349,6 @@
 					"name": "right_upper_leg",
 					"parent": "body",
 					"pivot": [-3, 5.25, 0],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-5, 1.75, -2.5], "size": [4, 5, 5], "uv": [20, 32]}
 					]

@@ -101,7 +101,13 @@
 					"pivot": [-1.2, 14, -14.99],
 					"cubes": [
 						{"origin": [-4.2, 14, -19.99], "size": [3, 0, 5], "uv": [91, 5]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-2.5, 13, -16],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "arm_left",

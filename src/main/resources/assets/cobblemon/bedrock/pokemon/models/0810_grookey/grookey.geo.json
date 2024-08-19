@@ -149,7 +149,10 @@
 						{"origin": [5, 6, -1], "size": [3, 2, 2], "inflate": 0.01, "uv": [32, 24]}
 					],
 					"locators": {
-						"held_item": [7, 6, 0]
+						"held_item": {
+							"offset": [9, 6, 0],
+							"rotation": [0, -15, -180]
+						}
 					}
 				},
 				{

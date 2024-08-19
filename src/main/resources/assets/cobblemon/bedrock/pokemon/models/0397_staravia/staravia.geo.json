@@ -165,7 +165,13 @@
 					"rotation": [-7.5, 0, 0],
 					"cubes": [
 						{"origin": [-1, 10, -7.25], "size": [2, 1, 2], "uv": [36, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 10.5, -6],
+							"rotation": [100, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "leg_left",

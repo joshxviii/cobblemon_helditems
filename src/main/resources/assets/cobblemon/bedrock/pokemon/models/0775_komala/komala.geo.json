@@ -177,7 +177,13 @@
 					"pivot": [-4.5, 8, 1],
 					"cubes": [
 						{"origin": [-6.5, 7, -1], "size": [2, 2, 2], "uv": [0, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-5.75, 8.5, -1],
+							"rotation": [153.0391, -73.26807, 103.47212]
+						}
+					}
 				},
 				{
 					"name": "finger_right",

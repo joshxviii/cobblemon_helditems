@@ -181,7 +181,13 @@
 					"pivot": [-3, 3.5, -9.5],
 					"cubes": [
 						{"origin": [-4, 1.5, -12.5], "size": [2, 2, 3], "uv": [49, 2], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-0.75, 2.5, -11.25],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "flames",

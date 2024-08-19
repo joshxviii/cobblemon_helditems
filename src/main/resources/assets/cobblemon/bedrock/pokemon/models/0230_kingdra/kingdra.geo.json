@@ -143,7 +143,13 @@
 					"rotation": [-22.5, 0, 0],
 					"cubes": [
 						{"origin": [-2.5, 0, -5.5], "size": [5, 9, 9], "inflate": 0.01, "uv": [36, 0]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [1.75, 4.25, -2],
+							"rotation": [-90, -65, 90]
+						}
+					}
 				}
 			]
 		}

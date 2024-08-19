@@ -280,7 +280,10 @@
 					"pivot": [-55.5, 32.5, 4],
 					"cubes": [
 						{"origin": [-63.5, 27.5, 2.5], "size": [8, 10, 3], "uv": [61, 36]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [-61, 31.5, 1.75]
+					}
 				},
 				{
 					"name": "finger_topright_index",

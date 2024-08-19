@@ -6,7 +6,7 @@
 				"identifier": "geometry.delphox",
 				"texture_width": 128,
 				"texture_height": 128,
-				"visible_bounds_width": 5,
+				"visible_bounds_width": 6,
 				"visible_bounds_height": 5.5,
 				"visible_bounds_offset": [0, 2.25, 0]
 			},
@@ -477,7 +477,10 @@
 					"pivot": [18.5, 32.6, -1.25],
 					"cubes": [
 						{"origin": [18.5, 31.6, -2.75], "size": [2, 1, 3], "inflate": 0.01, "uv": [0, 41]}
-					]
+					],
+					"locators": {
+						"held_item": [21.5, 31.5, 0]
+					}
 				},
 				{
 					"name": "finger_index_left",

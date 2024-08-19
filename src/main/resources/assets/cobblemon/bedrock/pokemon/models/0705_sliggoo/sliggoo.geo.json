@@ -74,7 +74,13 @@
 					"pivot": [-3, 10, -11.5],
 					"cubes": [
 						{"origin": [-3, 8, -13.5], "size": [2, 2, 2], "uv": [27, 30], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-2, 9, -13],
+							"rotation": [0, -50, 0]
+						}
+					}
 				},
 				{
 					"name": "neck",

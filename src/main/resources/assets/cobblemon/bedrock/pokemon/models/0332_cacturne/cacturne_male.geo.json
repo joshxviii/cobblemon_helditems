@@ -418,7 +418,10 @@
 					"pivot": [-8, 15, -0.5],
 					"cubes": [
 						{"origin": [-14.5, 13.5, -1.5], "size": [7, 3, 3], "uv": [0, 38]}
-					]
+					],
+					"locators": {
+						"held_item": [-15.25, 15, 0]
+					}
 				},
 				{
 					"name": "armspike_right3",

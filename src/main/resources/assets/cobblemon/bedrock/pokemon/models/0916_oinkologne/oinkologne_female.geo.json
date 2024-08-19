@@ -44,7 +44,13 @@
 					"pivot": [0, 14.75, -5],
 					"cubes": [
 						{"origin": [-4, 11.75, -9], "size": [8, 8, 8], "inflate": 0.01, "uv": [26, 36]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 10.25831, -10.76095],
+							"rotation": [-37.5, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "mouth_open",

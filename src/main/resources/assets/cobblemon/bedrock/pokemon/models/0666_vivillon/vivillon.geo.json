@@ -198,7 +198,10 @@
 					"pivot": [-1, 6, -1],
 					"cubes": [
 						{"origin": [-2, 5.5, -2], "size": [1, 1, 1], "uv": [54, 14]}
-					]
+					],
+					"locators": {
+						"held_item": [-1.75, 5.5, -2]
+					}
 				},
 				{
 					"name": "leg_left",

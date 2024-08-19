@@ -123,7 +123,13 @@
 					"rotation": [15, 0, 0],
 					"cubes": [
 						{"origin": [-5.75, 6, -6.5], "size": [1, 2, 3], "uv": [36, 40]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-4.75, 6.75, -7.5],
+							"rotation": [0, -70, -90]
+						}
+					}
 				},
 				{
 					"name": "hand_left",

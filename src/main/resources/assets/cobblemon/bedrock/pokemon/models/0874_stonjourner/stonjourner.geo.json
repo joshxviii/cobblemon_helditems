@@ -138,7 +138,13 @@
 					"pivot": [-22.5, 45.6, 0],
 					"cubes": [
 						{"origin": [-30.5, 41.5, -3.5], "size": [8, 8, 6], "uv": [72, 4], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-32, 46.5, -1.25],
+							"rotation": [-180, 0, 90]
+						}
+					}
 				},
 				{
 					"name": "legs",

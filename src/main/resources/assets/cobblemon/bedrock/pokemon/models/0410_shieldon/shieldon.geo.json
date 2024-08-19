@@ -102,7 +102,10 @@
 					"rotation": [-10, 0, 0],
 					"cubes": [
 						{"origin": [-2.5, 8.91261, -6.90579], "size": [5, 3, 2], "uv": [46, 7]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [0, 5.75, -6.5]
+					}
 				},
 				{
 					"name": "eyes",

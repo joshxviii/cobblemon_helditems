@@ -232,7 +232,10 @@
 						{"origin": [0, 8.25, -0.5], "size": [1, 1, 1], "inflate": 0.01, "pivot": [-3, 14.25, -3], "rotation": [0, 90, 0], "uv": [0, 26]},
 						{"origin": [3, 8, -5.25], "size": [0, 1, 2], "inflate": 0.02, "pivot": [3.5, 8.75, -4.5], "rotation": [0, -90, 80], "uv": [41, 4]},
 						{"origin": [0.5, 9.8, -6.75], "size": [0, 5, 6], "inflate": 0.01, "pivot": [3.5, 14.25, -2], "rotation": [0, -90, 45], "uv": [0, 24]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [0, 6, -6]
+					}
 				},
 				{
 					"name": "tail",

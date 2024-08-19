@@ -183,7 +183,6 @@
 					"name": "tongue2",
 					"parent": "tongue",
 					"pivot": [0, 6.75, -9.5],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-4, 4.75, -16.5], "size": [8, 2, 7], "inflate": 0.04, "uv": [32, 31]}
 					]
@@ -336,7 +335,13 @@
 					"rotation": [0, 0, -80],
 					"cubes": [
 						{"origin": [-12, 3.5, -0.5], "size": [4, 1, 1], "inflate": 0.01, "uv": [30, 6], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-12.25, 4, 0],
+							"rotation": [0, -90, -10]
+						}
+					}
 				},
 				{
 					"name": "toes_right",

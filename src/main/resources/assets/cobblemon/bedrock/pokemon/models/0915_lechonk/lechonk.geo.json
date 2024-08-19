@@ -26,7 +26,13 @@
 					"pivot": [0, 2, 3],
 					"cubes": [
 						{"origin": [-4, 1.5, -4.5], "size": [8, 8, 9], "uv": [0, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, -0.24169, -7.26095],
+							"rotation": [-55, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "eye_right",

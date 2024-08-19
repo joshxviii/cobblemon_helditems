@@ -27,7 +27,13 @@
 					"cubes": [
 						{"origin": [-12, 0, -20], "size": [24, 16, 23], "uv": [0, 0]},
 						{"origin": [-11, 6, -22.5], "size": [22, 2, 3], "inflate": 0.01, "uv": [50, 44]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 5.75, -21.25],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "whisker_right",
@@ -236,7 +242,6 @@
 					"name": "tail",
 					"parent": "torso",
 					"pivot": [0, 6, 1],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-8, 0.5, 1], "size": [16, 11, 9], "uv": [0, 39]}
 					]
@@ -261,7 +266,6 @@
 					"name": "tail4",
 					"parent": "tail3",
 					"pivot": [0, 5, 18],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-6.5, 5, 17], "size": [13, 0, 8], "uv": [42, 49]}
 					]

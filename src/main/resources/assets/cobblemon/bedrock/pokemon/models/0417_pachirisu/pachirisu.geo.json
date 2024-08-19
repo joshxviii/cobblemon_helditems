@@ -101,7 +101,10 @@
 					"pivot": [-2.25, 6.5, -5],
 					"cubes": [
 						{"origin": [-2.75, 4.5, -7], "size": [1, 2, 2], "uv": [38, 38]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [-1, 4.5, -7]
+					}
 				},
 				{
 					"name": "leftfoot",

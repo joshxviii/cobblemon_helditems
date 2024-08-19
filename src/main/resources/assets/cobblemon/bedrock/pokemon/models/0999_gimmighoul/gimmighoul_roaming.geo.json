@@ -63,7 +63,10 @@
 					"pivot": [-4.5, 5.7, 0.5],
 					"cubes": [
 						{"origin": [-7.5, 5.2, -0.5], "size": [3, 1, 1], "inflate": 0.01, "uv": [18, 11], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-8.25, 5.75, 0]
+					}
 				},
 				{
 					"name": "head",

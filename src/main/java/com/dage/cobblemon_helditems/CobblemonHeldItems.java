@@ -70,7 +70,7 @@ public class CobblemonHeldItems implements ModInitializer {
 
 				PokemonEntity pokemonEntity = (PokemonEntity)trackedEntity;
 				ItemStack heldItem = pokemonEntity.getPokemon().heldItem();
-				if(heldItem.isIn(HIDDEN_ITEMS)) heldItem = ItemStack.EMPTY;;
+				if(heldItem.isIn(HIDDEN_ITEMS)) heldItem = ItemStack.EMPTY;
 
 				MinecraftServer server = player.getServer();
 

@@ -61,7 +61,13 @@
 					"pivot": [5, 9, 1],
 					"cubes": [
 						{"origin": [5, 7, -1.5], "size": [4, 2, 3], "inflate": 0.001, "uv": [44, 35]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [10, 7.5, -0.25],
+							"rotation": [0, 0, -180]
+						}
+					}
 				},
 				{
 					"name": "finger_left",

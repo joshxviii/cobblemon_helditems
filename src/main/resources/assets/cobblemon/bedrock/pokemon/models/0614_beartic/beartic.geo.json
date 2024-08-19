@@ -232,7 +232,10 @@
 				{
 					"name": "right_hand",
 					"parent": "right_elbow",
-					"pivot": [-20, 26, 1.25]
+					"pivot": [-20, 26, 1.25],
+					"locators": {
+						"held_item": [-22, 22.5, 1]
+					}
 				},
 				{
 					"name": "right_fingers",

@@ -6,7 +6,7 @@
 				"identifier": "geometry.greninja",
 				"texture_width": 128,
 				"texture_height": 64,
-				"visible_bounds_width": 5,
+				"visible_bounds_width": 7,
 				"visible_bounds_height": 4,
 				"visible_bounds_offset": [0, 1, 0]
 			},
@@ -333,7 +333,13 @@
 				{
 					"name": "hand_right",
 					"parent": "arm_right2",
-					"pivot": [-17, 24.3, 1.5]
+					"pivot": [-17, 24.3, 1.5],
+					"locators": {
+						"held_item": {
+							"offset": [-19, 21.75, 1.75],
+							"rotation": [-7.5, 0, -77.5]
+						}
+					}
 				},
 				{
 					"name": "finger_index_right",

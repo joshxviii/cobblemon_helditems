@@ -69,7 +69,13 @@
 					"pivot": [-4.5, 17.25, -10],
 					"cubes": [
 						{"origin": [-6, 14.04539, -14.91628], "size": [3, 4, 5], "uv": [80, 5]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-4.75, 14, -10.75],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "claw2_right",

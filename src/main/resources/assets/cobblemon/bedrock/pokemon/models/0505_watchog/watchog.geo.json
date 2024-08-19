@@ -6,7 +6,7 @@
 				"identifier": "geometry.watchog",
 				"texture_width": 128,
 				"texture_height": 128,
-				"visible_bounds_width": 4,
+				"visible_bounds_width": 7,
 				"visible_bounds_height": 4.5,
 				"visible_bounds_offset": [0, 1.75, 0]
 			},
@@ -106,7 +106,10 @@
 					"pivot": [-16.5, 23.25, 0],
 					"cubes": [
 						{"origin": [-18.5, 22.25, -1.5], "size": [2, 2, 3], "inflate": 0.02, "uv": [44, 48]}
-					]
+					],
+					"locators": {
+						"held_item": [-18, 22.5, -0.25]
+					}
 				},
 				{
 					"name": "right_thumb",

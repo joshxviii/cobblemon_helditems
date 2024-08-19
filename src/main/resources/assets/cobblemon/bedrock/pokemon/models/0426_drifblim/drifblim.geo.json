@@ -248,7 +248,13 @@
 					"pivot": [-9, 14, -28],
 					"cubes": [
 						{"origin": [-14, 14, -39], "size": [10, 0, 11], "inflate": 0.02, "uv": [65, 92], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-10, 13.5, -36],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "arm_back_right",

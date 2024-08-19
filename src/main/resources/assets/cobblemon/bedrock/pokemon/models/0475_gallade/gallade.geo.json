@@ -136,7 +136,13 @@
 					"cubes": [
 						{"origin": [-18, 25.8, -0.5], "size": [10, 2, 2], "inflate": 0.01, "uv": [0, 27]},
 						{"origin": [-8, 26.2, -0.5], "size": [1, 1, 2], "inflate": 0.01, "uv": [42, 0]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-18.75, 25.5, 0.5],
+							"rotation": [0, 0, 17.5]
+						}
+					}
 				},
 				{
 					"name": "arm_blade_right",

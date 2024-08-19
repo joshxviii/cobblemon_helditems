@@ -139,7 +139,10 @@
 						{"origin": [-16.5, 24, 0.25], "size": [4, 3, 0], "pivot": [-14.5, 24, 0.25], "rotation": [-102.5, 0, 0], "uv": [48, 97], "mirror": true},
 						{"origin": [-12.5, 27, -2.75], "size": [0, 3, 6], "pivot": [-12.5, 27, 0.25], "rotation": [0, 0, 12.5], "uv": [96, 92], "mirror": true},
 						{"origin": [-12.5, 24, -2.75], "size": [0, 3, 6], "pivot": [-12.5, 27, 0.25], "rotation": [0, 0, -12.5], "uv": [96, 95], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-17.25, 26.5, 0.5]
+					}
 				},
 				{
 					"name": "fingers_right",

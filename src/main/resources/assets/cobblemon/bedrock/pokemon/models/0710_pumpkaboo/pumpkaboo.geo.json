@@ -222,7 +222,13 @@
 					"rotation": [0, 0, -12.5],
 					"cubes": [
 						{"origin": [-8, 7.5, -2], "size": [6, 2, 4], "inflate": -0.01, "uv": [18, 15]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-4.75, 10, -1],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "fluff_right_back",

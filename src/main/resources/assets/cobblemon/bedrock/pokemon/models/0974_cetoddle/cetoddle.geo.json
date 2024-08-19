@@ -67,7 +67,10 @@
 					"pivot": [-11.5, 9, 0],
 					"cubes": [
 						{"origin": [-16.5, 8, -2], "size": [6, 2, 4], "uv": [0, 44]}
-					]
+					],
+					"locators": {
+						"held_item": [-16, 8.25, -1.5]
+					}
 				},
 				{
 					"name": "finger_right",

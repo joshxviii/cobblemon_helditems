@@ -26,7 +26,13 @@
 					"pivot": [0, 2.25, -4.5],
 					"cubes": [
 						{"origin": [-4.4, 0.25, -7.25], "size": [5, 3, 5], "pivot": [-1.35, 1.25, -2.25], "rotation": [0, -45, 0], "uv": [0, 8]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 1.25, -6.5],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "mandibles",

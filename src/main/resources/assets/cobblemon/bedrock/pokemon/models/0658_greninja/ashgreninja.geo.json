@@ -455,7 +455,13 @@
 				{
 					"name": "hand_left",
 					"parent": "arm_left2",
-					"pivot": [17, 24.3, 1.5]
+					"pivot": [17, 24.3, 1.5],
+					"locators": {
+						"held_item": {
+							"offset": [20, 22, 2],
+							"rotation": [0, 0, 55]
+						}
+					}
 				},
 				{
 					"name": "finger_index_left",

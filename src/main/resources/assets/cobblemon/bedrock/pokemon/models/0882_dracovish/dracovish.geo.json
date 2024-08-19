@@ -7,8 +7,8 @@
 				"texture_width": 256,
 				"texture_height": 256,
 				"visible_bounds_width": 8,
-				"visible_bounds_height": 8,
-				"visible_bounds_offset": [0, 3, 0]
+				"visible_bounds_height": 9,
+				"visible_bounds_offset": [0, 3.5, 0]
 			},
 			"bones": [
 				{
@@ -358,7 +358,13 @@
 					"pivot": [29, 13, 86],
 					"cubes": [
 						{"origin": [29, 13, 79.5], "size": [8, 0, 13], "pivot": [27, 13, 86], "rotation": [-90, 0, 0], "uv": [72, 64], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [36, 14.25, 86.5],
+							"rotation": [90, 0, -180]
+						}
+					}
 				},
 				{
 					"name": "legs",

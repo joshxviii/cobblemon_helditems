@@ -140,7 +140,13 @@
 					"pivot": [-6.75, 14.25, -3.75],
 					"cubes": [
 						{"origin": [-6.75, 12.75, -6.75], "size": [3, 3, 3], "uv": [0, 0]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-4.75, 14, -8.25],
+							"rotation": [0, -90, -180]
+						}
+					}
 				},
 				{
 					"name": "finger_ring_right",

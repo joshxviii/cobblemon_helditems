@@ -59,7 +59,10 @@
 					"pivot": [-2.5, 4, 0.5],
 					"cubes": [
 						{"origin": [-5, 3.5, -0.5], "size": [3, 1, 2], "uv": [31, 8]}
-					]
+					],
+					"locators": {
+						"held_item": [-5.75, 4, 0.75]
+					}
 				},
 				{
 					"name": "mouth_top",

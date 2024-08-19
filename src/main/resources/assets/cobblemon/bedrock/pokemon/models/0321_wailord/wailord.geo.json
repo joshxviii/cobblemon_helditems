@@ -92,7 +92,13 @@
 					"rotation": [2.5, 0, 0],
 					"cubes": [
 						{"origin": [-15.5, 15.5, -36], "size": [31, 7, 27], "uv": [396, 58]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 25, -27.25],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "torso_middle",

@@ -63,7 +63,13 @@
 					"pivot": [11.5, 14.8, 0.1],
 					"cubes": [
 						{"origin": [11.5, 13.8, -1.4], "size": [2, 1, 3], "inflate": 0.01, "uv": [48, 6]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [14.25, 13.5, -0.75],
+							"rotation": [0, 0, 180]
+						}
+					}
 				},
 				{
 					"name": "hand_left2",

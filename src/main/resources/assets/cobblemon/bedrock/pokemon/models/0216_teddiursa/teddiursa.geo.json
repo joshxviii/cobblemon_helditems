@@ -153,7 +153,13 @@
 					"pivot": [-6, 8, 1.5],
 					"cubes": [
 						{"origin": [-9, 6, -1.5], "size": [3, 2, 3], "inflate": 0.01, "uv": [12, 35]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-10.75, 7.75, 0],
+							"rotation": [0, 0, -20]
+						}
+					}
 				},
 				{
 					"name": "right_fingies",

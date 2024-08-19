@@ -263,7 +263,13 @@
 					"pivot": [-4, 8.75, 0],
 					"cubes": [
 						{"origin": [-7, 7.75, -2], "size": [3, 2, 2], "uv": [44, 44]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-7.75, 10.5, -1.25],
+							"rotation": [-30, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "neck_fluff",

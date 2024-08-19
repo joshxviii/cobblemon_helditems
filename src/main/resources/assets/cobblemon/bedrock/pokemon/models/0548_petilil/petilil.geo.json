@@ -59,7 +59,10 @@
 					"rotation": [0, 0, 5],
 					"cubes": [
 						{"origin": [-5.75, 3.5, -1], "size": [3, 2, 2], "uv": [54, 4], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-7, 4.25, 0]
+					}
 				},
 				{
 					"name": "neck_leaves",

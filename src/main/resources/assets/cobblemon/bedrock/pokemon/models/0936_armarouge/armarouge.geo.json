@@ -205,7 +205,10 @@
 					"pivot": [-8.1, 25.45, 0.3],
 					"cubes": [
 						{"origin": [-14.1, 22.7, -2.7], "size": [6, 4, 4], "inflate": 0.01, "uv": [28, 94], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-14.5, 23.5, -2.25]
+					}
 				},
 				{
 					"name": "hand_right",

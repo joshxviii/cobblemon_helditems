@@ -206,7 +206,10 @@
 					"rotation": [0, 0, -20],
 					"cubes": [
 						{"origin": [-12, 2, -1], "size": [2, 2, 2], "inflate": -0.01, "uv": [0, 36]}
-					]
+					],
+					"locators": {
+						"held_item": [-13.25, 2.75, -0.25]
+					}
 				},
 				{
 					"name": "arm_left2",

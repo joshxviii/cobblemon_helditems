@@ -112,7 +112,13 @@
 					"pivot": [-8, 9, 0],
 					"cubes": [
 						{"origin": [-14, 8, -6], "size": [6, 2, 12], "uv": [51, 27], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-14.25, 7.75, -5],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "finger_left_front",

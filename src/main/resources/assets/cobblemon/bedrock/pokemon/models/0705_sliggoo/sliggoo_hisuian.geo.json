@@ -66,7 +66,10 @@
 					"pivot": [-3, 11.5, -11],
 					"cubes": [
 						{"origin": [-3, 9.5, -13], "size": [2, 2, 2], "uv": [0, 41], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-2, 10.25, -13.25]
+					}
 				},
 				{
 					"name": "neck",

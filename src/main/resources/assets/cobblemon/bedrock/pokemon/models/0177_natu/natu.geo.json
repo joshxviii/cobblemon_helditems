@@ -87,7 +87,13 @@
 					"pivot": [0, 6.25, -4],
 					"cubes": [
 						{"origin": [-1.5, 4.25, -7], "size": [3, 2, 3], "uv": [0, 25]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 4.75, -4.75],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "feather",

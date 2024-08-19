@@ -61,7 +61,10 @@
 					"cubes": [
 						{"origin": [-19.8, 36, -2.3], "size": [5, 3, 4], "inflate": 0.11, "uv": [26, 114]},
 						{"origin": [-25.7, 35.5, -2.8], "size": [6, 4, 5], "inflate": -0.1, "uv": [44, 110]}
-					]
+					],
+					"locators": {
+						"held_item": [-26.5, 35.75, 0]
+					}
 				},
 				{
 					"name": "arm_fluff_right",

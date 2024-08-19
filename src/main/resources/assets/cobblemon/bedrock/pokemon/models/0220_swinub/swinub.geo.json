@@ -21,7 +21,13 @@
 					"pivot": [0, 3, -0.5],
 					"cubes": [
 						{"origin": [-3.5, 0, -5], "size": [7, 6, 9], "uv": [0, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 6.75, 1.5],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "nose",

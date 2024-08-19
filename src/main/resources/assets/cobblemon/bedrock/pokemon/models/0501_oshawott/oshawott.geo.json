@@ -176,7 +176,10 @@
 					"pivot": [3.5, 9.65, -0.5],
 					"cubes": [
 						{"origin": [3.5, 7.65, -2], "size": [5, 2, 3], "uv": [32, 40]}
-					]
+					],
+					"locators": {
+						"held_item": [7.75, 8.5, -0.75]
+					}
 				},
 				{
 					"name": "scalchop_torso",

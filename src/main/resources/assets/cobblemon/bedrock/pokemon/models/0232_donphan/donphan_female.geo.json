@@ -216,7 +216,13 @@
 					"pivot": [0, 24, -41],
 					"cubes": [
 						{"origin": [-4, 21, -47], "size": [8, 3, 6], "uv": [180, 52]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 20.75, -44.5],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "tread8",

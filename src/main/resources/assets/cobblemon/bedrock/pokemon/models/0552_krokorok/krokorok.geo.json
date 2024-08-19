@@ -7,8 +7,8 @@
 				"texture_width": 128,
 				"texture_height": 64,
 				"visible_bounds_width": 4,
-				"visible_bounds_height": 3.5,
-				"visible_bounds_offset": [0, 1.25, 0]
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
 			},
 			"bones": [
 				{
@@ -158,7 +158,10 @@
 					"pivot": [-11.5, 17.5, -0.75],
 					"cubes": [
 						{"origin": [-14.5, 16.5, -2.25], "size": [3, 2, 3], "inflate": 0.01, "uv": [55, 13]}
-					]
+					],
+					"locators": {
+						"held_item": [-15.5, 17, 0]
+					}
 				},
 				{
 					"name": "claw_right",

@@ -93,7 +93,13 @@
 					"pivot": [-6.5, 5, -2],
 					"cubes": [
 						{"origin": [-12.5, 4, -2.5], "size": [6, 2, 2], "inflate": 0.02, "uv": [48, 19], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-10, 3, -3.5],
+							"rotation": [-90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "claw_front_right",

@@ -177,7 +177,13 @@
 					"pivot": [-9, 34.5, -16],
 					"cubes": [
 						{"origin": [-14, 32.5, -17.5], "size": [5, 2, 3], "inflate": 0.02, "uv": [18, 49], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-16, 31.5, -16],
+							"rotation": [0, 15, -27.5]
+						}
+					}
 				},
 				{
 					"name": "claws_right",

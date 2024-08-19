@@ -69,7 +69,13 @@
 					"pivot": [-10.5, 12.5, 0],
 					"cubes": [
 						{"origin": [-12.5, 9.5, -2.5], "size": [4, 4, 5], "uv": [55, 124]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-10.32627, 7.6014, -1],
+							"rotation": [0, 0, -105]
+						}
+					}
 				},
 				{
 					"name": "right_thumb",

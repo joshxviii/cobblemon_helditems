@@ -147,7 +147,10 @@
 					"pivot": [3, -14.27208, -6],
 					"cubes": [
 						{"origin": [0, -22.27208, -6], "size": [6, 8, 0], "uv": [16, 46]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [2.75, -21, -5.25]
+					}
 				},
 				{
 					"name": "finger_left",

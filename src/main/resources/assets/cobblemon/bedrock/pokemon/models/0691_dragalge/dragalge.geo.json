@@ -77,7 +77,13 @@
 					"pivot": [-22, 22.5, 1],
 					"cubes": [
 						{"origin": [-0.75, 46.25, -3.5], "size": [0, 10, 9], "pivot": [0.5, 23.75, 1.5], "rotation": [0, 0, -90], "uv": [0, 52]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-27.5, 22, -0.5],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "left_flipper",

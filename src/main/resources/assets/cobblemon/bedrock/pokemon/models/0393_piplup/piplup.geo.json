@@ -60,7 +60,13 @@
 					"pivot": [-8, 8, 0.25],
 					"cubes": [
 						{"origin": [-11, 8, -2.25], "size": [3, 0, 5], "uv": [23, 22]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-9.5, 7.75, 0],
+							"rotation": [0, 0, 22.5]
+						}
+					}
 				},
 				{
 					"name": "front_cape",

@@ -218,7 +218,13 @@
 					"rotation": [-12.5, 0, 0],
 					"cubes": [
 						{"origin": [-4.5, 9.5, -34.5], "size": [9, 3, 7], "uv": [83, 20]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 10, -32.75],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "leg_front_left",

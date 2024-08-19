@@ -157,7 +157,10 @@
 						{"origin": [-18.5, 6.5, -9], "size": [10, 3, 4], "uv": [28, 82], "mirror": true},
 						{"origin": [-12.5, 6.5, -19], "size": [4, 3, 10], "uv": [28, 89], "mirror": true},
 						{"origin": [-18.5, 6.5, -19], "size": [4, 3, 10], "uv": [28, 102], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": [-13.5, 7, -19.5]
+					}
 				},
 				{
 					"name": "nail_right",
@@ -178,8 +181,7 @@
 				{
 					"name": "magnet_back",
 					"parent": "body",
-					"pivot": [0, 8, 12],
-					"rotation": [0, 0, 0]
+					"pivot": [0, 8, 12]
 				},
 				{
 					"name": "magnet_back_rotation",

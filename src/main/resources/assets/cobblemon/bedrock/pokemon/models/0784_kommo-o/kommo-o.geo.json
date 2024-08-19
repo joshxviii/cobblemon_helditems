@@ -286,7 +286,10 @@
 					"pivot": [-26, 34, 0],
 					"cubes": [
 						{"origin": [-36.5, 31.5, -4.5], "size": [11, 5, 9], "uv": [36, 76]}
-					]
+					],
+					"locators": {
+						"held_item": [-37.25, 30.75, -2.25]
+					}
 				},
 				{
 					"name": "hand_scale_right",
@@ -779,7 +782,6 @@
 					"name": "leg_right",
 					"parent": "leg_right_pos",
 					"pivot": [-5.5, 18, 2],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-8.5, 13.5, -7], "size": [6, 8, 13], "uv": [38, 55]}
 					]
@@ -847,7 +849,6 @@
 					"name": "leg_left",
 					"parent": "leg_left_pos",
 					"pivot": [5.5, 18, 2],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [2.5, 13.5, -7], "size": [6, 8, 13], "uv": [0, 51]}
 					]

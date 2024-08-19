@@ -120,7 +120,13 @@
 					"cubes": [
 						{"origin": [-4, 4.25, -17.5], "size": [8, 8, 11], "inflate": 0.01, "uv": [0, 18]},
 						{"origin": [-1.5, 12.25, -13], "size": [3, 0, 4], "inflate": 0.02, "uv": [16, 52]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 2, -14],
+							"rotation": [-15, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "fire_head",

@@ -221,7 +221,10 @@
 					"cubes": [
 						{"origin": [-10, 17.9, -1.25], "size": [2, 2, 3], "uv": [45, 26]},
 						{"origin": [-13, 17.4, -1.25], "size": [3, 3, 3], "inflate": 0.01, "uv": [40, 20]}
-					]
+					],
+					"locators": {
+						"held_item": [-15, 17.75, -0.5]
+					}
 				},
 				{
 					"name": "hand_fur_right_main",

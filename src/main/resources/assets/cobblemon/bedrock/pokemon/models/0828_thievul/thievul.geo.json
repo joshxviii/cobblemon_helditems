@@ -138,7 +138,13 @@
 					"pivot": [0, 25, -11.8],
 					"cubes": [
 						{"origin": [-1.5, 24.5, -15.1], "size": [3, 1, 6], "uv": [32, 5]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 25, -16.75],
+							"rotation": [-82.5, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "fluff_right",

@@ -70,7 +70,13 @@
 					"rotation": [-5, 0, 0],
 					"cubes": [
 						{"origin": [-1, 8.5, -8], "size": [2, 1, 2], "uv": [36, 6]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 9.25, -7.5],
+							"rotation": [100, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "hair",

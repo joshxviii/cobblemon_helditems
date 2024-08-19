@@ -275,7 +275,13 @@
 					"rotation": [0, 0, -22.5],
 					"cubes": [
 						{"origin": [-2.5, -0.5, -3.5], "size": [0, 2, 3], "uv": [6, 36]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-2.25, 0.75, -2.25],
+							"rotation": [90, -65, 90]
+						}
+					}
 				},
 				{
 					"name": "right_back_arm",

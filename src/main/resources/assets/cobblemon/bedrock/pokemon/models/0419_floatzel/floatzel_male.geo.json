@@ -139,7 +139,10 @@
 					"pivot": [-10.5, 17, 1],
 					"cubes": [
 						{"origin": [-12.5, 16, -2], "size": [2, 1, 3], "uv": [47, 14], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-12.25, 16, -1]
+					}
 				},
 				{
 					"name": "finger_back_right",

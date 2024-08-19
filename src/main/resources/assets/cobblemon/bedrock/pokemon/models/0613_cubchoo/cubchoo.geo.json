@@ -151,7 +151,10 @@
 					"cubes": [
 						{"origin": [-8, 7, -1.5], "size": [3, 2, 3], "inflate": 0.01, "uv": [40, 0]},
 						{"origin": [-7.5, 6.98, -1], "size": [2, 0, 2], "uv": [13, 28]}
-					]
+					],
+					"locators": {
+						"held_item": [-9, 7.75, 0]
+					}
 				},
 				{
 					"name": "left_fingies",

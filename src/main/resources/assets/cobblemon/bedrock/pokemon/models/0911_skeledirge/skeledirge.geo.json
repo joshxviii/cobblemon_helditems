@@ -611,7 +611,6 @@
 					"name": "leg_left",
 					"parent": "hip_left",
 					"pivot": [12.25, 14.75, 8.5],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [11.25, 10, 5], "size": [10, 7, 7], "uv": [222, 44]}
 					]
@@ -700,7 +699,6 @@
 					"name": "leg_right",
 					"parent": "hip_right",
 					"pivot": [-12.25, 14.75, 8.5],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-21.25, 10, 5], "size": [10, 7, 7], "uv": [222, 30]}
 					]
@@ -901,7 +899,13 @@
 					"pivot": [27.75, 14.75, -11.5],
 					"cubes": [
 						{"origin": [26.75, 13.25, -13.5], "size": [4, 3, 4], "inflate": 0.01, "uv": [171, 16]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [31.75, 13, -12.5],
+							"rotation": [0, 180, 0]
+						}
+					}
 				},
 				{
 					"name": "finger_left_index",

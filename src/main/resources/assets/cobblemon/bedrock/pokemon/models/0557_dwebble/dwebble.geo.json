@@ -91,7 +91,13 @@
 					"cubes": [
 						{"origin": [-9.5, 1.75, -2.5], "size": [4, 3, 3], "uv": [27, 0]},
 						{"origin": [-12, 1.75, -1], "size": [3, 2, 0], "pivot": [-10.5, 2.75, -1], "rotation": [0, 0, -15], "uv": [0, 0]}
-					]
+					],
+					"locators": {
+						"held_item": {
+							"offset": [-9.5, 1.75, -1],
+							"rotation": [0, 0, -15]
+						}
+					}
 				},
 				{
 					"name": "leftbackleg",

@@ -123,7 +123,10 @@
 					"pivot": [-19, 30, 9.5],
 					"cubes": [
 						{"origin": [-21, 28.5, 6.5], "size": [2, 3, 3], "uv": [108, 22], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-21.25, 29.75, 8]
+					}
 				},
 				{
 					"name": "arm_slime_right",
@@ -145,7 +148,6 @@
 					"name": "neck",
 					"parent": "chest2",
 					"pivot": [0, 33, 11],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-3.5, 33, 5], "size": [7, 5, 6], "inflate": 0.02, "uv": [0, 16]}
 					]
@@ -154,7 +156,6 @@
 					"name": "neck2",
 					"parent": "neck",
 					"pivot": [0, 38, 11],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-3, 38, 5], "size": [6, 4, 6], "inflate": 0.01, "uv": [34, 0]}
 					]

@@ -114,7 +114,13 @@
 					"pivot": [0, 17.25, -32.5],
 					"cubes": [
 						{"origin": [-5, 17.25, -39.5], "size": [10, 0, 7], "uv": [32, 29]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 17.75, -35.75],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "top_head",

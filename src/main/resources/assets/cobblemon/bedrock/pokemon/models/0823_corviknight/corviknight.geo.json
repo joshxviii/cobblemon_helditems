@@ -145,7 +145,13 @@
 					"pivot": [0, 44, -26.25],
 					"cubes": [
 						{"origin": [-2.5, 42, -33.75], "size": [5, 2, 9], "uv": [156, 101]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 39.3498, -35.81768],
+							"rotation": [-35, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "beard",

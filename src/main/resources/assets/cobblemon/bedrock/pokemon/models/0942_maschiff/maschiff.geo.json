@@ -153,7 +153,13 @@
 					"cubes": [
 						{"origin": [-4.5, 4.5, -13], "size": [9, 5, 4], "uv": [0, 35]},
 						{"origin": [-1.5, 9.5, -13], "size": [3, 1, 4], "uv": [113, 48]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 5.70838, -14.9454],
+							"rotation": [-55, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "corner_mouth_left",

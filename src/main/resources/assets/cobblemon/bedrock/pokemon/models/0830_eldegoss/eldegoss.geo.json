@@ -42,7 +42,13 @@
 					"rotation": [22.5, 0, 0],
 					"cubes": [
 						{"origin": [-11.5, 0, 1], "size": [23, 23, 23], "uv": [0, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-11, 20.9526, 14.09081],
+							"rotation": [0, -22.5, 0]
+						}
+					}
 				},
 				{
 					"name": "eye_left",

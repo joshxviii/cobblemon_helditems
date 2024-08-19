@@ -488,7 +488,10 @@
 					"cubes": [
 						{"origin": [-9.25, 9, -5.25], "size": [2, 10, 11], "uv": [102, 10]},
 						{"origin": [-9.25, 10, -3.75], "size": [0, 6, 8], "inflate": 0.01, "uv": [112, 49], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item": [-7.75, 7.75, -0.25]
+					}
 				},
 				{
 					"name": "wing_right_closed_tips_main",

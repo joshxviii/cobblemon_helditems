@@ -283,7 +283,13 @@
 					"cubes": [
 						{"origin": [-11.35, 9.35, -0.25], "size": [2, 2, 2], "inflate": 0.06, "pivot": [-9.35, 11.35, 0.75], "rotation": [0, 0, -27.5], "uv": [24, 40]},
 						{"origin": [-9.35, 9.35, -0.75], "size": [3, 2, 3], "inflate": 0.06, "uv": [37, 14]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [-9.25, 9.25, 1],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "neck",

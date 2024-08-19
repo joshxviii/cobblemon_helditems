@@ -297,7 +297,10 @@
 					"pivot": [-15, 18.5, 0],
 					"cubes": [
 						{"origin": [-17, 16.5, -1.5], "size": [2, 2, 3], "inflate": 0.01, "uv": [48, 4]}
-					]
+					],
+					"locators": {
+						"held_item": [-18, 15.25, 0]
+					}
 				},
 				{
 					"name": "right_index_finger",

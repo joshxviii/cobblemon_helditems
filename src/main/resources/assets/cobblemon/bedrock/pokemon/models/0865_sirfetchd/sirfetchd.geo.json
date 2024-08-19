@@ -111,7 +111,13 @@
 					"rotation": [-5, 0, 0],
 					"cubes": [
 						{"origin": [-1, 11.5, -7.25], "size": [2, 1, 5], "uv": [33, 54]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 7.93463, -8.24715],
+							"rotation": [-22.5, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "hair",

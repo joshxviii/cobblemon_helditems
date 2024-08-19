@@ -98,7 +98,13 @@
 					"pivot": [0, 5.72658, -22.64435],
 					"cubes": [
 						{"origin": [-3, 4.5, -26.75], "size": [6, 2, 7], "uv": [80, 0]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 5.75, -25.25],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "leg_front_left",
