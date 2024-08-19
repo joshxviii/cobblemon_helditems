@@ -20,7 +20,7 @@ These are the default settings of the file:
 }
 ```
 
-If there are Pokemon that do not render their held item or if you would like to have custom Fakemon show their held items, you can add a locator in the model named "held_item" or held_item_fixed.
+If there are Pokemon that do not render their held item or if you would like to have custom Fakemon show their held items, you can add a locator in the model named "held_item" or "held_item_fixed".
 
 ![Customizing how held items are rendered.](https://cdn.modrinth.com/data/cached_images/6ce70e33d590ed0fe7a20af629d77e49a94c22e6.png)
 
