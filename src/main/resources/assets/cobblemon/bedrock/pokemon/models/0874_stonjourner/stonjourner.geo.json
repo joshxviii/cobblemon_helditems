@@ -141,7 +141,7 @@
 					],
 					"locators": {
 						"held_item_fixed": {
-							"offset": [-32, 46.5, -1.25],
+							"offset": [-31.75, 46, -1.25],
 							"rotation": [-180, 0, 90]
 						}
 					}

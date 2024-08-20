@@ -27,9 +27,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.Inject;
 
-import java.util.Collection;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 @Mixin(value = PokemonRenderer.class)
 abstract class PokemonRendererMixin {
@@ -40,7 +38,7 @@ abstract class PokemonRendererMixin {
     @Inject(method = "render*", at = @At(value = "TAIL"))
     public void render(PokemonEntity entity, float entityYaw, float partialTicks, MatrixStack poseMatrix, VertexConsumerProvider buffer, int packedLight, CallbackInfo ci) {
 
-        ItemStack heldItem = getHeldItem(entity.getUuid(), entity.getPokemon().getOwnerUUID() == MinecraftClient.getInstance().player.getUuid());
+        ItemStack heldItem = getHeldItem(entity.getUuid());
 
         if (!heldItem.isEmpty()) {
             PokemonPoseableModel model = PokemonModelRepository.INSTANCE.getPoser(entity.getPokemon().getSpecies().resourceIdentifier, entity.getAspects());
@@ -65,9 +63,16 @@ abstract class PokemonRendererMixin {
     }
 
     @Unique
-    private static ItemStack getHeldItem(UUID pokemonID, boolean isClientOwned) {
+    private static ItemStack getHeldItem(UUID pokemonID) {
         //TODO Make the client storage search not so insanely bad..
-        if (isClientOwned) {
+
+        //check server item cache
+        HashMap<UUID, ItemStack> cache = CobblemonHeldItemsClient.cachedHeldItems;
+        if (cache.containsKey(pokemonID)) {
+            return cache.get(pokemonID);
+        }
+        //if not in cache check client storage
+        else {
             ClientStorageManager storage = CobblemonClient.INSTANCE.getStorage();
             ClientParty party = storage.getMyParty();
             Collection<ClientPC> pcs = storage.getPcStores().values();
@@ -91,9 +96,7 @@ abstract class PokemonRendererMixin {
                 }
             }
         }
-
-        //If not client owned, check server item cache
-        return CobblemonHeldItemsClient.cachedHeldItems.getOrDefault(pokemonID, ItemStack.EMPTY);
+        return ItemStack.EMPTY;
     }
 
 }

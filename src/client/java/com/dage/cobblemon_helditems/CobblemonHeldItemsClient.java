@@ -10,6 +10,7 @@ import java.util.*;
 
 public class CobblemonHeldItemsClient implements ClientModInitializer {
 
+    public static final Logger LOGGER = LoggerFactory.getLogger("cobblemon_helditems");
     /**
      * A list of pokemon entities this client player is currently tracking.
      */

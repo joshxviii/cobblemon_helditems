@@ -17,8 +17,9 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.util.HashMap;
-import java.util.UUID;
+
+import java.awt.List;
+import java.util.*;
 
 
 public class CobblemonHeldItems implements ModInitializer {
@@ -27,14 +28,12 @@ public class CobblemonHeldItems implements ModInitializer {
 	/**
 	 * A list of pokemon entities currently being tracked on the server.
 	 */
-	private static final HashMap<UUID, ServerPlayerEntity> cachedTrackedPokemon = new HashMap<>();
+	private static final HashMap<UUID, HashSet<ServerPlayerEntity>> cachedTrackedPokemon = new HashMap<>();
 
 	public static final TagKey<Item> HIDDEN_ITEMS = TagKey.of(RegistryKeys.ITEM, new Identifier("cobblemon_helditems", "hidden_items"));
 	public static final Identifier ENTITY_START_TRACKING = new Identifier(MOD_ID, "pokemon_item_start");
 	public static final Identifier ENTITY_STOP_TRACKING = new Identifier(MOD_ID, "pokemon_item_stop");
 	public static final Identifier HELD_ITEM_UPDATED = new Identifier(MOD_ID, "pokemon_item_updated");
-
-
 
 	@Override
 	public void onInitialize() {
@@ -42,14 +41,17 @@ public class CobblemonHeldItems implements ModInitializer {
 			PokemonEntity pokemonEntity = post.getPokemon().getEntity();
 
 			if (pokemonEntity != null) {
-				if (cachedTrackedPokemon.containsKey(pokemonEntity.getUuid())) {
-					for (ServerPlayerEntity player : cachedTrackedPokemon.values()){
+				UUID pokemonId = pokemonEntity.getUuid();
+				if (cachedTrackedPokemon.containsKey(pokemonId)) {
+					for (ServerPlayerEntity player : cachedTrackedPokemon.get(pokemonId)){
+						LOGGER.info(pokemonEntity.getDisplayName() + " is updating " + player.getPlayerListName());
+
 						MinecraftServer server = player.getServer();
 						ItemStack heldItem = post.getReceived();
-						if(heldItem.isIn(HIDDEN_ITEMS)) heldItem = ItemStack.EMPTY;;
+						if(heldItem.isIn(HIDDEN_ITEMS)) heldItem = ItemStack.EMPTY;
 
 						PacketByteBuf data = PacketByteBufs.create();
-						data.writeUuid(pokemonEntity.getUuid());
+						data.writeUuid(pokemonId);
 						data.writeItemStack(heldItem);
 
 						// Send a packet to the client
@@ -65,16 +67,18 @@ public class CobblemonHeldItems implements ModInitializer {
 
 		EntityTrackingEvents.START_TRACKING.register( (trackedEntity, player) -> {
 			if (trackedEntity.getClass() == PokemonEntity.class) {
+				LOGGER.info(player.getPlayerListName() + " tracked " + trackedEntity.getDisplayName());
 				if ( ((PokemonEntity) trackedEntity).getPokemon().getOwnerUUID() == player.getUuid() ) return;//exit early if entity can be rendered client side.
 
 				PokemonEntity pokemonEntity = (PokemonEntity)trackedEntity;
+				UUID pokemonId = pokemonEntity.getUuid();
 				ItemStack heldItem = pokemonEntity.getPokemon().heldItem();
 				if(heldItem.isIn(HIDDEN_ITEMS)) heldItem = ItemStack.EMPTY;
 
 				MinecraftServer server = player.getServer();
 
 				PacketByteBuf data = PacketByteBufs.create();
-				data.writeUuid(pokemonEntity.getUuid());
+				data.writeUuid(pokemonId);
 				data.writeItemStack(heldItem);
 
 				// Send a packet to the client
@@ -82,29 +86,34 @@ public class CobblemonHeldItems implements ModInitializer {
 				server.execute(() -> {
 					ServerPlayNetworking.send(playerEntity, ENTITY_START_TRACKING, data);
 
-					cachedTrackedPokemon.putIfAbsent(pokemonEntity.getUuid(), playerEntity);
+					if ( cachedTrackedPokemon.containsKey(pokemonId) ) cachedTrackedPokemon.get(pokemonId).add(playerEntity);
+					else {
+						cachedTrackedPokemon.putIfAbsent(pokemonId, new HashSet<>() );
+						cachedTrackedPokemon.get(pokemonId).add(playerEntity);
+					}
 				});
 			}
 		});
 
 		EntityTrackingEvents.STOP_TRACKING.register((trackedEntity, player) -> {
 			if (trackedEntity.getClass() == PokemonEntity.class) {
-				if ( ((PokemonEntity) trackedEntity).getPokemon().getOwnerUUID() == player.getUuid() ) return;//exit early if entity can be rendered client side.
-				PokemonEntity pokemonEntity = (PokemonEntity)trackedEntity;
+				LOGGER.info(player.getCustomName() + " stopped tracking " + trackedEntity.getCustomName());
 
+				if ( ((PokemonEntity) trackedEntity).getPokemon().getOwnerUUID() == player.getUuid() ) return;//exit early if entity can be rendered client side.
+
+				PokemonEntity pokemonEntity = (PokemonEntity)trackedEntity;
+				UUID pokemonId = pokemonEntity.getUuid();
 				MinecraftServer server = player.getServer();
 
 				PacketByteBuf data = PacketByteBufs.create();
-				data.writeUuid(pokemonEntity.getUuid());
+				data.writeUuid(pokemonId);
 
 				// Send a packet to the client
 				ServerPlayerEntity playerEntity = server.getPlayerManager().getPlayer(player.getUuid());
 				server.execute(() -> {
 					ServerPlayNetworking.send(playerEntity, ENTITY_STOP_TRACKING, data);
-
-					if (cachedTrackedPokemon.containsKey(pokemonEntity.getUuid())) {
-						cachedTrackedPokemon.remove(pokemonEntity.getUuid(), playerEntity);
-					}
+					cachedTrackedPokemon.get(pokemonId).remove(playerEntity);
+					if (cachedTrackedPokemon.get(pokemonId).isEmpty()) cachedTrackedPokemon.remove(pokemonId);
 				});
 			}
 		});
