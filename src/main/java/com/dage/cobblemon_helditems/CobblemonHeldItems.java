@@ -17,8 +17,6 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.awt.List;
 import java.util.*;
 
 
@@ -39,13 +37,11 @@ public class CobblemonHeldItems implements ModInitializer {
 	public void onInitialize() {
 		CobblemonEvents.HELD_ITEM_POST.subscribe(Priority.NORMAL, post -> {
 			PokemonEntity pokemonEntity = post.getPokemon().getEntity();
-
+			//TODO find a better way to send updates from pokemon to player trackers
 			if (pokemonEntity != null) {
 				UUID pokemonId = pokemonEntity.getUuid();
 				if (cachedTrackedPokemon.containsKey(pokemonId)) {
 					for (ServerPlayerEntity player : cachedTrackedPokemon.get(pokemonId)){
-						LOGGER.info(pokemonEntity.getDisplayName() + " is updating " + player.getPlayerListName());
-
 						MinecraftServer server = player.getServer();
 						ItemStack heldItem = post.getReceived();
 						if(heldItem.isIn(HIDDEN_ITEMS)) heldItem = ItemStack.EMPTY;
@@ -67,7 +63,6 @@ public class CobblemonHeldItems implements ModInitializer {
 
 		EntityTrackingEvents.START_TRACKING.register( (trackedEntity, player) -> {
 			if (trackedEntity.getClass() == PokemonEntity.class) {
-				LOGGER.info(player.getPlayerListName() + " tracked " + trackedEntity.getDisplayName());
 				if ( ((PokemonEntity) trackedEntity).getPokemon().getOwnerUUID() == player.getUuid() ) return;//exit early if entity can be rendered client side.
 
 				PokemonEntity pokemonEntity = (PokemonEntity)trackedEntity;
@@ -97,8 +92,6 @@ public class CobblemonHeldItems implements ModInitializer {
 
 		EntityTrackingEvents.STOP_TRACKING.register((trackedEntity, player) -> {
 			if (trackedEntity.getClass() == PokemonEntity.class) {
-				LOGGER.info(player.getCustomName() + " stopped tracking " + trackedEntity.getCustomName());
-
 				if ( ((PokemonEntity) trackedEntity).getPokemon().getOwnerUUID() == player.getUuid() ) return;//exit early if entity can be rendered client side.
 
 				PokemonEntity pokemonEntity = (PokemonEntity)trackedEntity;

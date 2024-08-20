@@ -209,7 +209,13 @@
 					"cubes": [
 						{"origin": [-5, 30, -18.5], "size": [10, 2, 4], "uv": [38, 11]},
 						{"origin": [-4, 30, -22.5], "size": [8, 2, 4], "uv": [34, 18]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 32, -20.5],
+							"rotation": [97.5, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "ears",
