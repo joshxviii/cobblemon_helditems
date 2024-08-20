@@ -6,6 +6,10 @@ import com.cobblemon.mod.common.client.render.MatrixWrapper;
 import com.cobblemon.mod.common.client.render.models.blockbench.*;
 import com.cobblemon.mod.common.client.render.models.blockbench.pokemon.PokemonPoseableModel;
 import com.cobblemon.mod.common.client.render.models.blockbench.repository.PokemonModelRepository;
+import com.cobblemon.mod.common.client.storage.ClientBox;
+import com.cobblemon.mod.common.client.storage.ClientPC;
+import com.cobblemon.mod.common.client.storage.ClientParty;
+import com.cobblemon.mod.common.client.storage.ClientStorageManager;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.client.render.pokemon.PokemonRenderer;
 import com.cobblemon.mod.common.pokemon.Pokemon;
@@ -23,6 +27,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.Inject;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.UUID;
 
@@ -35,15 +40,14 @@ abstract class PokemonRendererMixin {
     @Inject(method = "render*", at = @At(value = "TAIL"))
     public void render(PokemonEntity entity, float entityYaw, float partialTicks, MatrixStack poseMatrix, VertexConsumerProvider buffer, int packedLight, CallbackInfo ci) {
 
-        ItemStack heldItem = getHeldItem(entity.getUuid());
+        ItemStack heldItem = getHeldItem(entity.getUuid(), entity.getPokemon().getOwnerUUID() == MinecraftClient.getInstance().player.getUuid());
 
         if (!heldItem.isEmpty()) {
-
             PokemonPoseableModel model = PokemonModelRepository.INSTANCE.getPoser(entity.getPokemon().getSpecies().resourceIdentifier, entity.getAspects());
             Map<String, MatrixWrapper> locators = ((PoseableEntityModel<PokemonEntity>) model).getState(entity).getLocatorStates();
 
             poseMatrix.push();
-            if (locators.containsKey("held_item")) {
+            if (locators.containsKey("held_item")) {//render item the same way as the player
                 poseMatrix.multiplyPositionMatrix( locators.get("held_item").getMatrix() );
 
                 poseMatrix.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-90));
@@ -51,7 +55,7 @@ abstract class PokemonRendererMixin {
 
                 this.heldItemRenderer.renderItem(entity, heldItem, ModelTransformationMode.THIRD_PERSON_RIGHT_HAND, false, poseMatrix, buffer, packedLight);
             }
-            else if (locators.containsKey("held_item_fixed")) {
+            else if (locators.containsKey("held_item_fixed")) {//render flat ground item model
                 poseMatrix.multiplyPositionMatrix( locators.get("held_item_fixed").getMatrix() );
 
                 this.heldItemRenderer.renderItem(entity, heldItem, ModelTransformationMode.GROUND, false, poseMatrix, buffer, packedLight);
@@ -61,19 +65,34 @@ abstract class PokemonRendererMixin {
     }
 
     @Unique
-    private static ItemStack getHeldItem(UUID pokemonID) {
-        Pokemon fromMyParty = null;
-        //try to see if the pokemon that is being rendered is part of client users party
-        //TODO Make the client storage search not suck so bad
-        for (Pokemon p : CobblemonClient.INSTANCE.getStorage().getMyParty()) {
-            if (p==null) continue;
-            PokemonEntity partyEntity = p.getEntity();
-            if (partyEntity==null) continue;
-            if (partyEntity.getUuid() == pokemonID) fromMyParty = p;
+    private static ItemStack getHeldItem(UUID pokemonID, boolean isClientOwned) {
+        //TODO Make the client storage search not so insanely bad..
+        if (isClientOwned) {
+            ClientStorageManager storage = CobblemonClient.INSTANCE.getStorage();
+            ClientParty party = storage.getMyParty();
+            Collection<ClientPC> pcs = storage.getPcStores().values();
+            //See if the pokemon that is being rendered is part of client users party
+            for (Pokemon p : party) {
+                if (p == null) continue;
+                PokemonEntity partyEntity = p.getEntity();
+                if (partyEntity == null) continue;
+                if (partyEntity.getUuid() == pokemonID) return p.heldItem();
+            }
+            //If not then check PC **this is from pokemon roaming around from the pasture block**
+            //AKA triple for-loop nightmare
+            for (ClientPC pc : pcs) {
+                for (ClientBox box : pc.getBoxes()) {
+                    for (Pokemon p : box.getSlots()) {
+                        if (p == null) continue;
+                        PokemonEntity partyEntity = p.getEntity();
+                        if (partyEntity == null) continue;
+                        if (partyEntity.getUuid() == pokemonID) return p.heldItem();
+                    }
+                }
+            }
         }
-        if (fromMyParty != null) return fromMyParty.heldItem();//if yes, then get held item from client storage
 
-        //Otherwise check item cache for held items
+        //If not client owned, check server item cache
         return CobblemonHeldItemsClient.cachedHeldItems.getOrDefault(pokemonID, ItemStack.EMPTY);
     }
 

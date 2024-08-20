@@ -22,12 +22,11 @@ import java.util.UUID;
 
 
 public class CobblemonHeldItems implements ModInitializer {
-
-	//CobblemonHeldItemsConfig config = new CobblemonHeldItemsConfig(new File( FabricLoader.getInstance().getConfigDir().resolve(CobblemonHeldItems.MOD_ID + ".properties").toString() ));
-
 	public static final String MOD_ID = "cobblemon_helditems";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-
+	/**
+	 * A list of pokemon entities currently being tracked on the server.
+	 */
 	private static final HashMap<UUID, ServerPlayerEntity> cachedTrackedPokemon = new HashMap<>();
 
 	public static final TagKey<Item> HIDDEN_ITEMS = TagKey.of(RegistryKeys.ITEM, new Identifier("cobblemon_helditems", "hidden_items"));
@@ -39,8 +38,6 @@ public class CobblemonHeldItems implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		//if (1==1) return;//TODO ADD CONFIG CHECK TO EACH EVENT CALL
-
 		CobblemonEvents.HELD_ITEM_POST.subscribe(Priority.NORMAL, post -> {
 			PokemonEntity pokemonEntity = post.getPokemon().getEntity();
 
