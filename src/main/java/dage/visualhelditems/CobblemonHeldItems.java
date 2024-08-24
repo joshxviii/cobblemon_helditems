@@ -1,4 +1,4 @@
-package com.dage.cobblemon_helditems;
+package dage.visualhelditems;
 
 import com.cobblemon.mod.common.api.Priority;
 import com.cobblemon.mod.common.api.events.CobblemonEvents;
@@ -17,7 +17,10 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.UUID;
 
 
 public class CobblemonHeldItems implements ModInitializer {

@@ -1,7 +1,8 @@
-package com.dage.cobblemon_helditems.config;
+package dage.visualhelditems.config;
 
-import com.dage.cobblemon_helditems.CobblemonHeldItems;
-import com.google.gson.*;
+import dage.visualhelditems.CobblemonHeldItems;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

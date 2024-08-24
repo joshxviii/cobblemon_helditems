@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "com.dage.cobblemon_helditems.mixin",
+	"package": "dage.visualhelditems.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"PokemonEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

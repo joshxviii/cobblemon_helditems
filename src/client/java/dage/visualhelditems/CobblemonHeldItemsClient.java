@@ -1,4 +1,4 @@
-package com.dage.cobblemon_helditems;
+package dage.visualhelditems;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
@@ -6,7 +6,8 @@ import net.minecraft.item.ItemStack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.UUID;
 
 public class CobblemonHeldItemsClient implements ClientModInitializer {
 

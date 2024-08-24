@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "com.dage.cobblemon_helditems.mixin.client",
+	"package": "dage.visualhelditems.mixin.client",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
 		"PokemonRendererMixin"

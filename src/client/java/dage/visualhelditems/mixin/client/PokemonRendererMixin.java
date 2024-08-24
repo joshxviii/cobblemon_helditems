@@ -1,21 +1,21 @@
 
-package com.dage.cobblemon_helditems.mixin.client;
+package dage.visualhelditems.mixin.client;
 
 import com.cobblemon.mod.common.client.CobblemonClient;
 import com.cobblemon.mod.common.client.render.MatrixWrapper;
 import com.cobblemon.mod.common.client.render.models.blockbench.*;
 import com.cobblemon.mod.common.client.render.models.blockbench.pokemon.PokemonPoseableModel;
 import com.cobblemon.mod.common.client.render.models.blockbench.repository.PokemonModelRepository;
+import com.cobblemon.mod.common.client.render.pokemon.PokemonRenderer;
 import com.cobblemon.mod.common.client.storage.ClientBox;
 import com.cobblemon.mod.common.client.storage.ClientPC;
 import com.cobblemon.mod.common.client.storage.ClientParty;
 import com.cobblemon.mod.common.client.storage.ClientStorageManager;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
-import com.cobblemon.mod.common.client.render.pokemon.PokemonRenderer;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.dage.cobblemon_helditems.CobblemonHeldItemsClient;
+import dage.visualhelditems.CobblemonHeldItemsClient;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.render.*;
+import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.item.HeldItemRenderer;
 import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.util.math.MatrixStack;
@@ -24,10 +24,13 @@ import net.minecraft.util.math.RotationAxis;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 @Mixin(value = PokemonRenderer.class)
 abstract class PokemonRendererMixin {
@@ -98,6 +101,5 @@ abstract class PokemonRendererMixin {
         }
         return ItemStack.EMPTY;
     }
-
 }
 
