@@ -2,7 +2,11 @@ package dage.visualhelditems;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +15,7 @@ import java.util.UUID;
 
 public class CobblemonHeldItemsClient implements ClientModInitializer {
 
+    public static final String MOD_ID = "cobblemon_helditems";
     public static final Logger LOGGER = LoggerFactory.getLogger("cobblemon_helditems");
     /**
      * A list of pokemon entities this client player is currently tracking.

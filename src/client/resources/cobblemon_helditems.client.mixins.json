@@ -3,7 +3,10 @@
 	"package": "dage.visualhelditems.mixin.client",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
-		"PokemonRendererMixin"
+		"PokemonRendererMixin",
+		"ItemRendererAccessorMixin",
+		"ItemRendererMixin",
+		"ModelLoaderMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -31,6 +31,8 @@ public class CobblemonHeldItems implements ModInitializer {
 	 */
 	private static final HashMap<UUID, HashSet<ServerPlayerEntity>> cachedTrackedPokemon = new HashMap<>();
 
+	//public static final TagKey<Item> WEARABLE_EYE_ITEMS = TagKey.of(RegistryKeys.ITEM, new Identifier("cobblemon_helditems", "wearable_eye_items"));
+	//public static final TagKey<Item> WEARABLE_HAT_ITEMS = TagKey.of(RegistryKeys.ITEM, new Identifier("cobblemon_helditems", "wearable_hat_items"));
 	public static final TagKey<Item> HIDDEN_ITEMS = TagKey.of(RegistryKeys.ITEM, new Identifier("cobblemon_helditems", "hidden_items"));
 	public static final Identifier ENTITY_START_TRACKING = new Identifier(MOD_ID, "pokemon_item_start");
 	public static final Identifier ENTITY_STOP_TRACKING = new Identifier(MOD_ID, "pokemon_item_stop");
@@ -108,8 +110,10 @@ public class CobblemonHeldItems implements ModInitializer {
 				ServerPlayerEntity playerEntity = server.getPlayerManager().getPlayer(player.getUuid());
 				server.execute(() -> {
 					ServerPlayNetworking.send(playerEntity, ENTITY_STOP_TRACKING, data);
-					cachedTrackedPokemon.get(pokemonId).remove(playerEntity);
-					if (cachedTrackedPokemon.get(pokemonId).isEmpty()) cachedTrackedPokemon.remove(pokemonId);
+					if (cachedTrackedPokemon.containsKey(pokemonId)) {
+						cachedTrackedPokemon.get(pokemonId).remove(playerEntity);
+						if (cachedTrackedPokemon.get(pokemonId).isEmpty()) cachedTrackedPokemon.remove(pokemonId);
+					}
 				});
 			}
 		});
