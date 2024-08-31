@@ -69,7 +69,13 @@
 						{"origin": [-2.5, 19, -9], "size": [5, 4, 18], "inflate": -0.001, "uv": [0, 82]},
 						{"origin": [-10, 19, -8], "size": [5, 3, 16], "pivot": [-6.5, 22, 0], "rotation": [0, 0, -17.5], "uv": [72, 89]},
 						{"origin": [5, 19, -8], "size": [5, 3, 16], "pivot": [6.5, 22, 0], "rotation": [0, 0, 17.5], "uv": [30, 89], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 23.5, 1],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "cannon_front_right",

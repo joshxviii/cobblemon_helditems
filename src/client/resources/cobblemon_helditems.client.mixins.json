@@ -6,7 +6,8 @@
 		"PokemonRendererMixin",
 		"ItemRendererAccessorMixin",
 		"ItemRendererMixin",
-		"ModelLoaderMixin"
+		"ModelLoaderMixin",
+        "LambDynLightsMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

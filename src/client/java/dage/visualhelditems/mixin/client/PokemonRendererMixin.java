@@ -1,42 +1,28 @@
 
 package dage.visualhelditems.mixin.client;
 
-import com.cobblemon.mod.common.client.CobblemonClient;
-import com.cobblemon.mod.common.client.entity.PokemonClientDelegate;
 import com.cobblemon.mod.common.client.render.MatrixWrapper;
 import com.cobblemon.mod.common.client.render.models.blockbench.*;
 import com.cobblemon.mod.common.client.render.models.blockbench.pokemon.PokemonPoseableModel;
 import com.cobblemon.mod.common.client.render.models.blockbench.repository.PokemonModelRepository;
 import com.cobblemon.mod.common.client.render.pokemon.PokemonRenderer;
-import com.cobblemon.mod.common.client.storage.ClientBox;
-import com.cobblemon.mod.common.client.storage.ClientPC;
-import com.cobblemon.mod.common.client.storage.ClientParty;
-import com.cobblemon.mod.common.client.storage.ClientStorageManager;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
-import com.cobblemon.mod.common.pokemon.Pokemon;
 import dage.visualhelditems.CobblemonHeldItems;
 import dage.visualhelditems.CobblemonHeldItemsClient;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.entity.feature.FoxHeldItemFeatureRenderer;
-import net.minecraft.client.render.entity.model.FoxEntityModel;
 import net.minecraft.client.render.item.HeldItemRenderer;
 import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.RotationAxis;
-import org.joml.Matrix4f;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
+
 
 @Mixin(value = PokemonRenderer.class)
 abstract class PokemonRendererMixin {
@@ -47,17 +33,17 @@ abstract class PokemonRendererMixin {
     @Inject(method = "render*", at = @At(value = "TAIL"))
     public void render(PokemonEntity entity, float entityYaw, float partialTicks, MatrixStack poseMatrix, VertexConsumerProvider buffer, int packedLight, CallbackInfo ci) {
 
-        ItemStack heldItem = getHeldItem(entity.getUuid());
+        ItemStack heldItem = CobblemonHeldItemsClient.getHeldItem(entity.getUuid());
 
         if (!heldItem.isEmpty()) {
             PokemonPoseableModel model = PokemonModelRepository.INSTANCE.getPoser(entity.getPokemon().getSpecies().resourceIdentifier, entity.getAspects());
             PoseableEntityState<PokemonEntity> state = ((PoseableEntityModel<PokemonEntity>) model).getState(entity);
             Map<String, MatrixWrapper> locators = state.getLocatorStates();
 
-
             poseMatrix.push();
 
-//          For version 0.2.0
+          //For version 0.2.0
+
 //          if(heldItem.isIn(CobblemonHeldItems.WEARABLE_EYE_ITEMS) && locators.containsKey("eyes"))/*render wearable glasses items*/ {
 //              poseMatrix.multiplyPositionMatrix( locators.get("eyes").getMatrix() );
 //              poseMatrix.translate(0f,0f,.28f);
@@ -66,7 +52,7 @@ abstract class PokemonRendererMixin {
 //          }
 //          else if(heldItem.isIn(CobblemonHeldItems.WEARABLE_HAT_ITEMS) && locators.containsKey("head_top"))/*render wearable hat items*/ {
 //              poseMatrix.multiplyPositionMatrix( locators.get("head_top").getMatrix() );
-//              poseMatrix.translate(0f,-0.2f, 0f);
+//              poseMatrix.translate(0f,-0.26f, 0f);
 //              poseMatrix.scale(.68f,.68f,.68f);
 //              this.heldItemRenderer.renderItem(entity, heldItem, ModelTransformationMode.HEAD, false, poseMatrix, buffer, packedLight);
 //          }
@@ -87,44 +73,6 @@ abstract class PokemonRendererMixin {
             }
             poseMatrix.pop();
         }
-    }
-
-
-    @Unique
-    private static ItemStack getHeldItem(UUID pokemonID) {
-        //TODO Make the client storage search not so insanely bad..
-
-        //check server item cache
-        HashMap<UUID, ItemStack> cache = CobblemonHeldItemsClient.cachedHeldItems;
-        if (cache.containsKey(pokemonID)) {
-            return cache.get(pokemonID);
-        }
-        //if not in cache check client storage
-        else {
-            ClientStorageManager storage = CobblemonClient.INSTANCE.getStorage();
-            ClientParty party = storage.getMyParty();
-            Collection<ClientPC> pcs = storage.getPcStores().values();
-            //See if the pokemon that is being rendered is part of client users party
-            for (Pokemon p : party) {
-                if (p == null) continue;
-                PokemonEntity partyEntity = p.getEntity();
-                if (partyEntity == null) continue;
-                if (partyEntity.getUuid() == pokemonID) return p.heldItem();
-            }
-            //If not then check PC **this is from pokemon roaming around from the pasture block**
-            //AKA triple for-loop nightmare
-            for (ClientPC pc : pcs) {
-                for (ClientBox box : pc.getBoxes()) {
-                    for (Pokemon p : box.getSlots()) {
-                        if (p == null) continue;
-                        PokemonEntity partyEntity = p.getEntity();
-                        if (partyEntity == null) continue;
-                        if (partyEntity.getUuid() == pokemonID) return p.heldItem();
-                    }
-                }
-            }
-        }
-        return ItemStack.EMPTY;
     }
 }
 

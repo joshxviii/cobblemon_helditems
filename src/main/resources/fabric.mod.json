@@ -24,6 +24,9 @@
 			{
 				"value": "dage.visualhelditems.CobblemonHeldItemsClient"
 			}
+		],
+		"dynamiclights": [
+			"dage.visualhelditems.DynamicHeldItemLight"
 		]
 	},
 	"mixins": [

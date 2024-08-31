@@ -35,6 +35,17 @@
 					]
 				},
 				{
+					"name": "held_item_fixed",
+					"parent": "cap",
+					"pivot": [0.75, 7.5, 0],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0.75, 7.5, 0],
+							"rotation": [90, 0, 0]
+						}
+					}
+				},
+				{
 					"name": "salt_top",
 					"parent": "cap",
 					"pivot": [2.06623, 5.12013, 0],

@@ -64,7 +64,13 @@
 						{"origin": [-9, 12, -9], "size": [0, 2, 18], "inflate": 0.001, "uv": [54, 5]},
 						{"origin": [-9, 14, -9], "size": [18, 4, 18], "uv": [0, 23]},
 						{"origin": [-9, 18, -9], "size": [18, 2, 18], "uv": [0, 45]}
-					]
+					],
+					"locators": {
+						"held_item_fixed": {
+							"offset": [0, 20.5, 1],
+							"rotation": [90, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "cannon_front_right",

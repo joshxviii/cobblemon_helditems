@@ -67,11 +67,10 @@ public class CobblemonHeldItems implements ModInitializer {
 		});
 
 		EntityTrackingEvents.START_TRACKING.register( (trackedEntity, player) -> {
-			if (trackedEntity.getClass() == PokemonEntity.class) {
-				if ( ((PokemonEntity) trackedEntity).getPokemon().getOwnerUUID() == player.getUuid() ) return;//exit early if entity can be rendered client side.
+			if (trackedEntity instanceof PokemonEntity pokemonEntity) {
+				if ( pokemonEntity.getPokemon().getOwnerUUID() == player.getUuid() ) return;//exit early if entity can be rendered client side.
 
-				PokemonEntity pokemonEntity = (PokemonEntity)trackedEntity;
-				UUID pokemonId = pokemonEntity.getUuid();
+                UUID pokemonId = pokemonEntity.getUuid();
 				ItemStack heldItem = pokemonEntity.getPokemon().heldItem();
 				if(heldItem.isIn(HIDDEN_ITEMS)) heldItem = ItemStack.EMPTY;
 
@@ -96,11 +95,10 @@ public class CobblemonHeldItems implements ModInitializer {
 		});
 
 		EntityTrackingEvents.STOP_TRACKING.register((trackedEntity, player) -> {
-			if (trackedEntity.getClass() == PokemonEntity.class) {
-				if ( ((PokemonEntity) trackedEntity).getPokemon().getOwnerUUID() == player.getUuid() ) return;//exit early if entity can be rendered client side.
+			if (trackedEntity instanceof PokemonEntity pokemonEntity) {
+				if ( pokemonEntity.getPokemon().getOwnerUUID() == player.getUuid() ) return;//exit early if entity can be rendered client side.
 
-				PokemonEntity pokemonEntity = (PokemonEntity)trackedEntity;
-				UUID pokemonId = pokemonEntity.getUuid();
+                UUID pokemonId = pokemonEntity.getUuid();
 				MinecraftServer server = player.getServer();
 
 				PacketByteBuf data = PacketByteBufs.create();
