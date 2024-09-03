@@ -28,7 +28,7 @@ These are the default settings of the file:
   ]
 }
 ```
-Any modded or vanilla items can be added here. 
+Any modded or vanilla items can be added here.
 
 ### Compatibility With Other Models
 

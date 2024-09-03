@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "name": "${mod_name}",
+  "id": "${mod_id}",
+  "version":  "${mod_version}",
+  "description": "${mod_description}",
+  "authors": ["${author}"],
+  "contact": {"repo": "${repository}"},
+  "license": "${license}",
+  "environment": "*",
+  "mixins": [
+    "mod-common.mixins.json"
+  ],
+  "entrypoints": {
+    "main": [
+      "com.dage.visualhelditems.fabric.FabricCommon"
+    ],
+    "client": [
+      "com.dage.visualhelditems.fabric.FabricClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "1.20.1",
+    "cobblemon": ">=1.5.0"
+  }
+}

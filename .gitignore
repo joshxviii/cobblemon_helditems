@@ -1,44 +1,37 @@
-# gradle
+.gradle
+run
+build
+.idea
+common/run
+forge/run
+fabric/run
+/run/
 
-.gradle/
-build/
-out/
-classes/
+/forge/.architectury-transformer/debug.log
 
 # eclipse
-
+bin
 *.launch
-
-# idea
-
-.idea/
-*.iml
-*.ipr
-*.iws
-
-# vscode
-
-.settings/
-.vscode/
-bin/
+.settings
+.metadata
 .classpath
 .project
+/.architectury-transformer/
 
-# macos
+# idea
+out
+*.ipr
+*.iws
+*.iml
 
-*.DS_Store
+# Files from Forge MDK
+forge*changelog.txt
+/showdown/
+/logs/
+.vscode/launch.json
+.vscode
 
-# fabric
-
-run/
-
-# java
-
-hs_err_*.log
-replay_*.log
-*.hprof
-*.jfr
-
-# me
-
-*.xcf
+# Generated files
+*/generated/resources/*
+/fabric/src/generated/resources/cobblemon-common.accesswidener
+/libs/*

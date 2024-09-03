@@ -1,0 +1,18 @@
+{
+	"required": true,
+	"package": "com.dage.visualhelditems.mixin.client",
+	"compatibilityLevel": "JAVA_17",
+	"client": [
+		"ItemRendererAccessorMixin",
+		"ItemRendererMixin",
+		"LambDynLightsMixin",
+		"ModelLoaderMixin",
+		"PokemonRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"mixins": [
+		"PokemonEntityMixin"
+	]
+}
