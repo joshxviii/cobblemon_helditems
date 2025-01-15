@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "${mod_id}",
+	"version": "${mod_version}",
+	"name": "${mod_name}",
+	"description": "${mod_description}",
+	"authors": ["${author}"],
+	"contact": {"repo": "${repository}"},
+	"license": "${license}",
+	"icon": "assets/show-held-items/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "dev.dage.showhelditems.ShowHeldItems",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "dev.dage.showhelditems.ShowHeldItemsClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"show-held-items.mixins.json",
+		{
+			"config": "show-held-items.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*",
+		"cobblemon": ">=1.6.0"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
