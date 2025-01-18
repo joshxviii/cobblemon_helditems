@@ -23,27 +23,17 @@ repositories {
 	// for more information about repositories.
 }
 
-loom {
-	splitEnvironmentSourceSets()
-
-	mods {
-		"show-held-items" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
-	}
-
-}
-
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings loom.officialMojangMappings()
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
+
+	//Cobblemon
 	modImplementation "com.cobblemon:fabric:${project.cobblemon_version}"
 	modApi "com.cobblemon:fabric:${project.cobblemon_version}"
 }
@@ -53,14 +43,14 @@ processResources {
 
 	filesMatching("fabric.mod.json") {
 		expand(
-		"mod_id": project.mod_id,
-		"mod_version": project.mod_version,
-		"mod_name": project.mod_name,
-		"mod_description": project.mod_description,
-		"author": project.author,
-		"repository": project.repository,
-		"license": project.license,
-		"mod_icon": project.mod_icon
+				"mod_id": project.mod_id,
+				"mod_version": project.mod_version,
+				"mod_name": project.mod_name,
+				"mod_description": project.mod_description,
+				"author": project.author,
+				"repository": project.repository,
+				"license": project.license,
+				"mod_icon": project.mod_icon
 		)
 	}
 }

@@ -12,23 +12,13 @@
 	"entrypoints": {
 		"main": [
 			{
-				"value": "dev.dage.showhelditems.ShowHeldItems",
-				"adapter": "kotlin"
-			}
-		],
-		"client": [
-			{
-				"value": "dev.dage.showhelditems.ShowHeldItemsClient",
+				"value": "dage.showhelditems.ShowHeldItems",
 				"adapter": "kotlin"
 			}
 		]
 	},
 	"mixins": [
-		"show-held-items.mixins.json",
-		{
-			"config": "show-held-items.client.mixins.json",
-			"environment": "client"
-		}
+		"show-held-items.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.10",

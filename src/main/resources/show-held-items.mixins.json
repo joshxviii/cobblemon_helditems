@@ -1,9 +1,15 @@
 {
 	"required": true,
-	"package": "dev.dage.showhelditems.mixin",
+	"package": "dage.showhelditems.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"PokemonEntityMixin"
+	],
+	"client": [
+		"ItemRendererAccessorMixin",
+		"ItemRendererMixin",
+		"ModelLoaderMixin",
+		"PokemonRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
