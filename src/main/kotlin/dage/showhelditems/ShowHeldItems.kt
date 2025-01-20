@@ -1,18 +1,25 @@
 package dage.showhelditems
 
 import com.cobblemon.mod.common.api.Priority
+import com.cobblemon.mod.common.api.entity.PokemonSideDelegate
 import com.cobblemon.mod.common.api.events.CobblemonEvents.HELD_ITEM_POST
 import com.cobblemon.mod.common.api.events.pokemon.HeldItemEvent
 import com.cobblemon.mod.common.client.CobblemonClient.storage
+import com.cobblemon.mod.common.client.entity.PokemonClientDelegate
+import com.cobblemon.mod.common.client.render.MatrixWrapper
 import com.cobblemon.mod.common.client.storage.ClientPC
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
+import com.cobblemon.mod.common.entity.pokemon.PokemonServerDelegate
 import net.fabricmc.api.ModInitializer
+import net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents
+import net.minecraft.client.MinecraftClient
+import net.minecraft.entity.Entity
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.registry.RegistryKeys
 import net.minecraft.registry.tag.TagKey
+import net.minecraft.server.network.ServerPlayerEntity
 import net.minecraft.util.Identifier
-import net.minecraft.client.MinecraftClient
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import java.util.*
@@ -32,7 +39,7 @@ object ShowHeldItems : ModInitializer {
 		var shownItem = ItemStack.EMPTY;
 		if (!item.isIn(HIDDEN_ITEMS)) shownItem = item;
 
-		if (pokemonEntity is ShownItemTracker) {
+		if ( pokemonEntity is ShownItemTracker) {
 			(pokemonEntity as ShownItemTracker).shownItem = shownItem
 		}
 	}
@@ -81,5 +88,10 @@ object ShowHeldItems : ModInitializer {
 				updateShownItem(pokemonEntity, post.received)
 			}
 		}
+		EntityTrackingEvents.START_TRACKING.register(EntityTrackingEvents.StartTracking { target: Entity, player: ServerPlayerEntity ->
+			if (target is PokemonEntity) {
+				updateShownItem(target, target.pokemon.heldItem())
+			}
+		})
 	}
 }

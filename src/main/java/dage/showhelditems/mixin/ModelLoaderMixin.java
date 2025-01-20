@@ -34,15 +34,15 @@ public abstract class ModelLoaderMixin {
     @Inject(method = "<init>", at = @At(value = "TAIL"))
     public void addAccessoryModels(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SpriteGetter>> blockStates, CallbackInfo ci) {
 
-        profiler.push("items");
+        profiler.push("item");
 
-        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID), "blackglasses"));
-        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID), "choicespecs"));
-        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID), "safetygoggles"));
-        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID), "wiseglasses"));
-        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID), "rockyhelmet"));
-        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID), "kingsrock"));
-        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID), "expshare"));
+        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "blackglasses"), "inventory"));
+        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "choicespecs"), "inventory"));
+        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "safetygoggles"), "inventory"));
+        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "wiseglasses"), "inventory"));
+        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "rockyhelmet"), "inventory"));
+        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "kingsrock"), "inventory"));
+        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "expshare"), "inventory"));
 
         this.modelsToBake.values().forEach((model) -> {
             model.setParents(this::getOrLoadModel);

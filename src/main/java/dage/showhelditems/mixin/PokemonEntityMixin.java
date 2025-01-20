@@ -1,7 +1,10 @@
 package dage.showhelditems.mixin;
 
+import com.cobblemon.mod.common.client.entity.PokemonClientDelegate;
+import com.cobblemon.mod.common.client.render.MatrixWrapper;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import dage.showhelditems.HeldItemModifierParser.HeldItemModifier;
 import dage.showhelditems.ShownItemTracker;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
@@ -13,6 +16,8 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import java.util.Map;
 
 /**
  * @author Josh
@@ -30,7 +35,9 @@ public class PokemonEntityMixin implements ShownItemTracker {
     protected void initDataTrackerInject(DataTracker.Builder builder, CallbackInfo ci) {
         ItemStack item = ItemStack.EMPTY;
         Pokemon p = ((PokemonEntity) (Object) this).getPokemon();
-        if (p!=null ) item = p.heldItem();
+        if (p!=null ) {
+            item = p.heldItem();
+        }
         builder.add(HELD_ITEM, item);
     }
 

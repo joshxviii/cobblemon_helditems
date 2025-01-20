@@ -1,8 +1,7 @@
 package dage.showhelditems
 
 import dage.showhelditems.HeldItemModifierParser.HeldItemModifier
-import net.minecraft.item.ItemStack
 
-interface ShownItemTracker {
-    var shownItem: ItemStack
+interface LocatorModifier {
+    var itemModifiers: Array<HeldItemModifier>
 }
