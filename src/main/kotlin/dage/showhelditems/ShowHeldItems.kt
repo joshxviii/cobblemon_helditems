@@ -49,38 +49,32 @@ object ShowHeldItems : ModInitializer {
 	 *
 	 */
 	fun getHeldItem(pokemonEntity: PokemonEntity): ItemStack? {
-		val pokemonID : UUID = pokemonEntity.uuid;
-		//TODO Make the client storage search not so insanely bad..
+		//Server Search
 		if (pokemonEntity is ShownItemTracker) {
 			val i = pokemonEntity.shownItem
 			if (!i.isEmpty) return i
 		}
+		//TODO Make the client storage search not so bad..
+		//Client Search
 		if (pokemonEntity.ownerUuid == MinecraftClient.getInstance().player?.uuid) {
+			val pokemonID : UUID = pokemonEntity.uuid;
 			val storage = storage
 			val myParty = storage.myParty
 			val pcs: Collection<ClientPC> = storage.pcStores.values
-			val parties: Collection<ClientParty> = storage.partyStores.values
 			//See if the pokemon that is being rendered is part of client users party
 			for (p in myParty) {
 				if (p == null) continue
 				val partyEntity = p.entity ?: continue
-				if (partyEntity.uuid === pokemonID) return p.heldItem()
+				if (partyEntity.uuid.equals( pokemonID )) return p.heldItem()
 			}
-			//See if the pokemon that is being rendered is part of client users parties
-//			for (party in parties) {
-//				for (p in party) {
-//					if (p == null) continue
-//					val partyEntity = p.entity ?: continue
-//					if (partyEntity.uuid === pokemonID) return p.heldItem()
-//				}
-//			}
+			println("not in myParty")
 			//If not then check PC **this is from pokemon roaming around from the pasture block**
 			for (pc in pcs) {
 				for (box in pc.boxes) {
 					for (p in box.slots) {
 						if (p == null) continue
 						val partyEntity = p.entity ?: continue
-						if (partyEntity.uuid === pokemonID) return p.heldItem()
+						if (partyEntity.uuid.equals( pokemonID )) return p.heldItem()
 					}
 				}
 			}
