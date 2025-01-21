@@ -8,6 +8,7 @@ import com.cobblemon.mod.common.client.CobblemonClient.storage
 import com.cobblemon.mod.common.client.entity.PokemonClientDelegate
 import com.cobblemon.mod.common.client.render.MatrixWrapper
 import com.cobblemon.mod.common.client.storage.ClientPC
+import com.cobblemon.mod.common.client.storage.ClientParty
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity
 import com.cobblemon.mod.common.entity.pokemon.PokemonServerDelegate
 import net.fabricmc.api.ModInitializer
@@ -50,23 +51,30 @@ object ShowHeldItems : ModInitializer {
 	fun getHeldItem(pokemonEntity: PokemonEntity): ItemStack? {
 		val pokemonID : UUID = pokemonEntity.uuid;
 		//TODO Make the client storage search not so insanely bad..
-		if (pokemonEntity.ownerUuid != MinecraftClient.getInstance().player?.uuid){
-			if (pokemonEntity is ShownItemTracker) {
-				val i = pokemonEntity.shownItem
-				if (!i.isEmpty) return i
-			}
-		} else {
+		if (pokemonEntity is ShownItemTracker) {
+			val i = pokemonEntity.shownItem
+			if (!i.isEmpty) return i
+		}
+		if (pokemonEntity.ownerUuid == MinecraftClient.getInstance().player?.uuid) {
 			val storage = storage
-			val party = storage.myParty
+			val myParty = storage.myParty
 			val pcs: Collection<ClientPC> = storage.pcStores.values
+			val parties: Collection<ClientParty> = storage.partyStores.values
 			//See if the pokemon that is being rendered is part of client users party
-			for (p in party) {
+			for (p in myParty) {
 				if (p == null) continue
 				val partyEntity = p.entity ?: continue
 				if (partyEntity.uuid === pokemonID) return p.heldItem()
 			}
+			//See if the pokemon that is being rendered is part of client users parties
+//			for (party in parties) {
+//				for (p in party) {
+//					if (p == null) continue
+//					val partyEntity = p.entity ?: continue
+//					if (partyEntity.uuid === pokemonID) return p.heldItem()
+//				}
+//			}
 			//If not then check PC **this is from pokemon roaming around from the pasture block**
-			//AKA triple for-loop nightmare
 			for (pc in pcs) {
 				for (box in pc.boxes) {
 					for (p in box.slots) {

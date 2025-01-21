@@ -6,8 +6,6 @@ import com.cobblemon.mod.common.client.render.MatrixWrapper;
 import com.cobblemon.mod.common.client.render.pokemon.PokemonRenderer;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import dage.showhelditems.HeldItemModifierParser;
-import dage.showhelditems.HeldItemModifierParser.HeldItemModifier;
-import dage.showhelditems.LocatorModifier;
 import dage.showhelditems.ShowHeldItems;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -16,7 +14,6 @@ import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.RotationAxis;
-import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -27,7 +24,7 @@ import java.util.Map;
 
 
 @Mixin(value = PokemonRenderer.class)
-abstract class PokemonRendererMixin implements LocatorModifier {
+abstract class PokemonRendererMixin {
 
     @Unique
     private final HeldItemRenderer heldItemRenderer = new HeldItemRenderer(MinecraftClient.getInstance(), MinecraftClient.getInstance().getEntityRenderDispatcher(), MinecraftClient.getInstance().getItemRenderer());

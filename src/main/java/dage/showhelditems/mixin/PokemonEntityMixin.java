@@ -31,7 +31,7 @@ public class PokemonEntityMixin implements ShownItemTracker {
         HELD_ITEM = DataTracker.registerData(PokemonEntity.class, TrackedDataHandlerRegistry.ITEM_STACK);
     }
 
-    @Inject(method = "initDataTracker", at = @At("TAIL"))
+    @Inject(method = "initDataTracker", at = @At("HEAD"))
     protected void initDataTrackerInject(DataTracker.Builder builder, CallbackInfo ci) {
         ItemStack item = ItemStack.EMPTY;
         Pokemon p = ((PokemonEntity) (Object) this).getPokemon();
