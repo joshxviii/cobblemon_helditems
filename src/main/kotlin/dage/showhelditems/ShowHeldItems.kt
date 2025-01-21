@@ -34,9 +34,10 @@ object ShowHeldItems : ModInitializer {
 	val HIDDEN_ITEMS: TagKey<Item> = TagKey.of(RegistryKeys.ITEM, Identifier.tryParse(MOD_ID, "hidden_items"))
 
 	/**
-	 *
+	 * Updates The HELD_ITEM DataTracker for a PokemonEntity.
+	 * If the item is in the hidden list
 	 */
-	fun updateShownItem(pokemonEntity : PokemonEntity, item: ItemStack) {
+	private fun updateShownItem(pokemonEntity : PokemonEntity, item: ItemStack) {
 		var shownItem = ItemStack.EMPTY;
 		if (!item.isIn(HIDDEN_ITEMS)) shownItem = item;
 
@@ -46,7 +47,8 @@ object ShowHeldItems : ModInitializer {
 	}
 
 	/**
-	 *
+	 * @param pokemonEntity The pokemon to get the held item from.
+	 * @return Returns the held item for this pokemon.
 	 */
 	fun getHeldItem(pokemonEntity: PokemonEntity): ItemStack? {
 		//Server Search
@@ -54,27 +56,24 @@ object ShowHeldItems : ModInitializer {
 			val i = pokemonEntity.shownItem
 			if (!i.isEmpty) return i
 		}
-		//TODO Make the client storage search not so bad..
 		//Client Search
-		if (pokemonEntity.ownerUuid == MinecraftClient.getInstance().player?.uuid) {
-			val pokemonID : UUID = pokemonEntity.uuid;
+		if (pokemonEntity.ownerUuid?.equals(MinecraftClient.getInstance().player?.uuid) == true) {
 			val storage = storage
 			val myParty = storage.myParty
 			val pcs: Collection<ClientPC> = storage.pcStores.values
 			//See if the pokemon that is being rendered is part of client users party
 			for (p in myParty) {
 				if (p == null) continue
-				val partyEntity = p.entity ?: continue
-				if (partyEntity.uuid.equals( pokemonID )) return p.heldItem()
+				val partyEntity = p.entity ?: continue// Todo there is a bug with pasture pokemon not having the same uuid
+				if (partyEntity.uuid.equals(pokemonEntity.uuid)) return p.heldItem()
 			}
-			println("not in myParty")
 			//If not then check PC **this is from pokemon roaming around from the pasture block**
 			for (pc in pcs) {
 				for (box in pc.boxes) {
 					for (p in box.slots) {
 						if (p == null) continue
-						val partyEntity = p.entity ?: continue
-						if (partyEntity.uuid.equals( pokemonID )) return p.heldItem()
+						val partyEntity = p.entity ?: continue// Todo there is a bug with pasture pokemon not having the same uuid
+						if (partyEntity.uuid.equals(pokemonEntity.uuid)) return p.heldItem()
 					}
 				}
 			}

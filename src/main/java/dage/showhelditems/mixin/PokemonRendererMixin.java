@@ -5,7 +5,7 @@ import com.cobblemon.mod.common.client.entity.PokemonClientDelegate;
 import com.cobblemon.mod.common.client.render.MatrixWrapper;
 import com.cobblemon.mod.common.client.render.pokemon.PokemonRenderer;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
-import dage.showhelditems.HeldItemModifierParser;
+import dage.showhelditems.NullObjectParser;
 import dage.showhelditems.ShowHeldItems;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -89,7 +89,7 @@ abstract class PokemonRendererMixin {
         locators.forEach((locator,m)->{
             Map<String, Float> modifiers;
             if (locator.startsWith("_null_"+name+"[")) {
-                modifiers = HeldItemModifierParser.parseHeldItemModifier(locator).getModifiers();
+                modifiers = NullObjectParser.parseNullObject(locator).getModifiers();
                 ModelTransformationMode[] modes = ModelTransformationMode.values();
                 if ( modifiers.containsKey("scale") ) scale = modifiers.get("scale");
                 if ( modifiers.containsKey("mode") ) transformationMode = modes[( (int)(float)modifiers.get("mode") ) % modes.length];

@@ -1,8 +1,10 @@
 package dage.showhelditems
 
-import dage.showhelditems.HeldItemModifierParser.HeldItemModifier
 import net.minecraft.item.ItemStack
 
+/**
+ * Used to inject a HELD_ITEM DataTracker into a PokemonEntity.
+ */
 interface ShownItemTracker {
     var shownItem: ItemStack
 }

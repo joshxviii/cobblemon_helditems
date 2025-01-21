@@ -30,8 +30,11 @@ public abstract class ItemRendererMixin {
             if (stack.isOf(CobblemonItems.SAFETY_GOGGLES)) return modelManager.getModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "safetygoggles"), "inventory"));
             if (stack.isOf(CobblemonItems.WISE_GLASSES)) return modelManager.getModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "wiseglasses"), "inventory"));
             if (stack.isOf(CobblemonItems.ROCKY_HELMET)) return modelManager.getModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "rockyhelmet"), "inventory"));
-            if (stack.isOf(CobblemonItems.EXP_SHARE)) return modelManager.getModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "expshare"), "inventory"));
             if (stack.isOf(CobblemonItems.KINGS_ROCK)) return modelManager.getModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "kingsrock"), "inventory"));
+            if (stack.isOf(CobblemonItems.EXP_SHARE)) return modelManager.getModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "expshare"), "inventory"));
+            if (stack.isOf(CobblemonItems.CHOICE_BAND)) return modelManager.getModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "choiceband"), "inventory"));
+            if (stack.isOf(CobblemonItems.FOCUS_BAND)) return modelManager.getModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "focusband"), "inventory"));
+            if (stack.isOf(CobblemonItems.MUSCLE_BAND)) return modelManager.getModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "muscleband"), "inventory"));
         }
 
         return value;

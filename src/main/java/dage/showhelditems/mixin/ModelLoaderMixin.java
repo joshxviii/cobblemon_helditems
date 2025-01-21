@@ -43,6 +43,9 @@ public abstract class ModelLoaderMixin {
         this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "rockyhelmet"), "inventory"));
         this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "kingsrock"), "inventory"));
         this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "expshare"), "inventory"));
+        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "choiceband"), "inventory"));
+        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "focusband"), "inventory"));
+        this.loadItemModel(new ModelIdentifier(Identifier.of(ShowHeldItems.MOD_ID, "muscleband"), "inventory"));
 
         this.modelsToBake.values().forEach((model) -> {
             model.setParents(this::getOrLoadModel);

@@ -3,17 +3,21 @@ package dage.showhelditems;
 import java.util.HashMap;
 import java.util.Map;
 
+
 /**
+ * Uses the name of null objects in a model to get modifier values for a locator.
  * @author Josh
  */
+public class NullObjectParser {
 
-public class HeldItemModifierParser {
-
-    public static class HeldItemModifier {
+    /**
+     * Stores modifiers for a particular locator.
+     */
+    public static class NullObjectModifier {
         private String LocatorName;
         private Map<String, Float> modifiers;
 
-        public HeldItemModifier(String modifiedLocator, Map<String, Float> modifiers) {
+        public NullObjectModifier(String modifiedLocator, Map<String, Float> modifiers) {
             this.LocatorName = modifiedLocator;
             this.modifiers = modifiers;
         }
@@ -27,7 +31,7 @@ public class HeldItemModifierParser {
         }
     }
 
-    public static HeldItemModifier parseHeldItemModifier(String input) {
+    public static NullObjectModifier parseNullObject(String input) {
         // Extract modifiedLocator
         String modifiedLocator = input.replaceFirst("^_null_", "").replaceAll("\\[.*\\]$", "");
 
@@ -54,6 +58,6 @@ public class HeldItemModifierParser {
             }
         }
 
-        return new HeldItemModifier(modifiedLocator, modifiers);
+        return new NullObjectModifier(modifiedLocator, modifiers);
     }
 }
