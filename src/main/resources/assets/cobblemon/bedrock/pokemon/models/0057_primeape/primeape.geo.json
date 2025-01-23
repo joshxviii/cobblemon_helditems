@@ -15,7 +15,7 @@
 					"name": "primeape",
 					"pivot": [0, 0, 0],
 					"locators": {
-						"_null_held_item_head[scale=1.25]": [0, 0, 0]
+						"_null_held_item_head[scale=1.15]": [0, 0, 0]
 					}
 				},
 				{

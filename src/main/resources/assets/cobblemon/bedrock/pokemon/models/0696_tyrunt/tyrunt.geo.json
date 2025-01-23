@@ -122,10 +122,10 @@
 				{
 					"name": "held_item_head",
 					"parent": "head_rotation",
-					"pivot": [0, 20.42534, -16.59474],
+					"pivot": [0, 20.42534, -15.71974],
 					"rotation": [-12.5, 0, 0],
 					"locators": {
-						"held_item_head": [0, 20.42534, -16.59474]
+						"held_item_head": [0, 20.42534, -15.71974]
 					}
 				},
 				{
