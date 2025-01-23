@@ -1,0 +1,1101 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:geometry": [{
+        "bones": [
+            {
+                "name": "solrock",
+                "pivot": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            {
+                "parent": "solrock",
+                "name": "body",
+                "pivot": [
+                    0,
+                    12.5,
+                    0
+                ]
+            },
+            {
+                "parent": "body",
+                "cubes": [
+                    {
+                        "uv": [
+                            0,
+                            0
+                        ],
+                        "size": [
+                            11,
+                            11,
+                            11
+                        ],
+                        "origin": [
+                            -5.5,
+                            7,
+                            -5.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            0,
+                            48
+                        ],
+                        "size": [
+                            2,
+                            11,
+                            0
+                        ],
+                        "origin": [
+                            -1,
+                            7,
+                            -5.51
+                        ]
+                    },
+                    {
+                        "uv": [
+                            4,
+                            48
+                        ],
+                        "size": [
+                            2,
+                            11,
+                            0
+                        ],
+                        "origin": [
+                            -1,
+                            7,
+                            5.51
+                        ]
+                    },
+                    {
+                        "uv": [
+                            1,
+                            51
+                        ],
+                        "size": [
+                            2,
+                            0,
+                            7
+                        ],
+                        "origin": [
+                            -1,
+                            18.01,
+                            -3.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            13,
+                            43
+                        ],
+                        "size": [
+                            2,
+                            0,
+                            5
+                        ],
+                        "origin": [
+                            -1,
+                            6.99,
+                            -4
+                        ]
+                    }
+                ],
+                "name": "torso",
+                "pivot": [
+                    0,
+                    12.5,
+                    0
+                ]
+            },
+            {
+                "parent": "torso",
+                "name": "eyes",
+                "pivot": [
+                    0,
+                    12,
+                    0
+                ]
+            },
+            {
+                "parent": "eyes",
+                "cubes": [
+                    {
+                        "uv": [
+                            49,
+                            30
+                        ],
+                        "size": [
+                            3,
+                            5,
+                            0
+                        ],
+                        "origin": [
+                            2,
+                            10,
+                            -5.51
+                        ]
+                    },
+                    {
+                        "uv": [
+                            55,
+                            30
+                        ],
+                        "size": [
+                            1,
+                            1,
+                            0
+                        ],
+                        "origin": [
+                            1,
+                            13.5,
+                            -5.51
+                        ]
+                    },
+                    {
+                        "uv": [
+                            55,
+                            32
+                        ],
+                        "size": [
+                            1,
+                            1,
+                            0
+                        ],
+                        "origin": [
+                            5,
+                            13.5,
+                            -5.51
+                        ]
+                    },
+                    {
+                        "uv": [
+                            55,
+                            31
+                        ],
+                        "size": [
+                            1,
+                            1,
+                            0
+                        ],
+                        "origin": [
+                            1,
+                            10.5,
+                            -5.51
+                        ]
+                    },
+                    {
+                        "uv": [
+                            55,
+                            33
+                        ],
+                        "size": [
+                            1,
+                            1,
+                            0
+                        ],
+                        "origin": [
+                            5,
+                            10.5,
+                            -5.51
+                        ]
+                    }
+                ],
+                "name": "eye_left",
+                "pivot": [
+                    3.5,
+                    12.5,
+                    -5.51
+                ]
+            },
+            {
+                "parent": "eye_left",
+                "cubes": [{
+                    "uv": [
+                        47,
+                        34
+                    ],
+                    "size": [
+                        1,
+                        1,
+                        0
+                    ],
+                    "origin": [
+                        3,
+                        12,
+                        -5.52
+                    ]
+                }],
+                "name": "pupil_left",
+                "pivot": [
+                    3.5,
+                    12.5,
+                    -5.53
+                ]
+            },
+            {
+                "parent": "eye_left",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        0
+                    ],
+                    "size": [
+                        3,
+                        3,
+                        0
+                    ],
+                    "origin": [
+                        2,
+                        11,
+                        -5.53
+                    ]
+                }],
+                "name": "eyelash_left",
+                "pivot": [
+                    3.5,
+                    12.5,
+                    -5.53
+                ]
+            },
+            {
+                "parent": "eye_left",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        3
+                    ],
+                    "size": [
+                        3,
+                        3,
+                        1
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        2,
+                        11,
+                        -5.43
+                    ]
+                }],
+                "name": "eyelid_left",
+                "pivot": [
+                    3.5,
+                    12.5,
+                    -4.91
+                ]
+            },
+            {
+                "parent": "eyes",
+                "cubes": [
+                    {
+                        "uv": [
+                            49,
+                            35
+                        ],
+                        "mirror": true,
+                        "size": [
+                            3,
+                            5,
+                            0
+                        ],
+                        "origin": [
+                            -5,
+                            10,
+                            -5.51
+                        ]
+                    },
+                    {
+                        "uv": [
+                            55,
+                            34
+                        ],
+                        "mirror": true,
+                        "size": [
+                            1,
+                            1,
+                            0
+                        ],
+                        "origin": [
+                            -2,
+                            13.5,
+                            -5.51
+                        ]
+                    },
+                    {
+                        "uv": [
+                            55,
+                            36
+                        ],
+                        "mirror": true,
+                        "size": [
+                            1,
+                            1,
+                            0
+                        ],
+                        "origin": [
+                            -6,
+                            13.5,
+                            -5.51
+                        ]
+                    },
+                    {
+                        "uv": [
+                            55,
+                            35
+                        ],
+                        "mirror": true,
+                        "size": [
+                            1,
+                            1,
+                            0
+                        ],
+                        "origin": [
+                            -2,
+                            10.5,
+                            -5.51
+                        ]
+                    },
+                    {
+                        "uv": [
+                            55,
+                            37
+                        ],
+                        "mirror": true,
+                        "size": [
+                            1,
+                            1,
+                            0
+                        ],
+                        "origin": [
+                            -6,
+                            10.5,
+                            -5.51
+                        ]
+                    }
+                ],
+                "name": "eye_right",
+                "pivot": [
+                    -3.5,
+                    12.5,
+                    -5.51
+                ]
+            },
+            {
+                "parent": "eye_right",
+                "cubes": [{
+                    "uv": [
+                        47,
+                        35
+                    ],
+                    "mirror": true,
+                    "size": [
+                        1,
+                        1,
+                        0
+                    ],
+                    "origin": [
+                        -4,
+                        12,
+                        -5.52
+                    ]
+                }],
+                "name": "pupil_right",
+                "pivot": [
+                    -3.5,
+                    12.5,
+                    -5.53
+                ]
+            },
+            {
+                "parent": "eye_right",
+                "cubes": [{
+                    "uv": [
+                        33,
+                        0
+                    ],
+                    "mirror": true,
+                    "size": [
+                        3,
+                        3,
+                        0
+                    ],
+                    "origin": [
+                        -5,
+                        11,
+                        -5.53
+                    ]
+                }],
+                "name": "eyelash_right",
+                "pivot": [
+                    -3.5,
+                    12.5,
+                    -5.53
+                ]
+            },
+            {
+                "parent": "eye_right",
+                "cubes": [{
+                    "uv": [
+                        33,
+                        3
+                    ],
+                    "mirror": true,
+                    "size": [
+                        3,
+                        3,
+                        1
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        -5,
+                        11,
+                        -5.43
+                    ]
+                }],
+                "name": "eyelid_right",
+                "pivot": [
+                    -3.5,
+                    12.5,
+                    -4.91
+                ]
+            },
+            {
+                "parent": "torso",
+                "name": "rock_edges",
+                "pivot": [
+                    0,
+                    0,
+                    0.1
+                ]
+            },
+            {
+                "parent": "rock_edges",
+                "name": "rock_edge_main",
+                "pivot": [
+                    0,
+                    12.5,
+                    0
+                ]
+            },
+            {
+                "parent": "rock_edge_main",
+                "cubes": [
+                    {
+                        "uv": [
+                            0,
+                            28
+                        ],
+                        "size": [
+                            2,
+                            2,
+                            4
+                        ],
+                        "origin": [
+                            5.5,
+                            11.5,
+                            -1.4
+                        ]
+                    },
+                    {
+                        "uv": [
+                            12,
+                            28
+                        ],
+                        "size": [
+                            3,
+                            2,
+                            5
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            6.5,
+                            11.5,
+                            -1.7
+                        ],
+                        "rotation": [
+                            0,
+                            -13.5,
+                            0
+                        ],
+                        "pivot": [
+                            8,
+                            12.5,
+                            1.1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            23,
+                            28
+                        ],
+                        "size": [
+                            4,
+                            2,
+                            3
+                        ],
+                        "origin": [
+                            9.5,
+                            11.5,
+                            -1.2
+                        ],
+                        "rotation": [
+                            0,
+                            -13.5,
+                            0
+                        ],
+                        "pivot": [
+                            8,
+                            12.5,
+                            1.1
+                        ]
+                    }
+                ],
+                "name": "rock_edge_left",
+                "pivot": [
+                    5.5,
+                    12.5,
+                    0.9
+                ]
+            },
+            {
+                "parent": "rock_edge_main",
+                "locators": {"held_item_fixed": {
+                    "offset": [
+                        -9.5,
+                        14,
+                        2
+                    ],
+                    "rotation": [
+                        90,
+                        0,
+                        0
+                    ]
+                }},
+                "cubes": [
+                    {
+                        "uv": [
+                            0,
+                            22
+                        ],
+                        "mirror": true,
+                        "size": [
+                            2,
+                            2,
+                            4
+                        ],
+                        "origin": [
+                            -7.5,
+                            11.5,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            12,
+                            22
+                        ],
+                        "mirror": true,
+                        "size": [
+                            3,
+                            2,
+                            4
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            -10,
+                            11.5,
+                            -1.2
+                        ],
+                        "rotation": [
+                            0,
+                            -11.5,
+                            0
+                        ],
+                        "pivot": [
+                            -8,
+                            12.5,
+                            1.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            26,
+                            22
+                        ],
+                        "mirror": true,
+                        "size": [
+                            4,
+                            2,
+                            3
+                        ],
+                        "origin": [
+                            -14,
+                            11.5,
+                            -0.8
+                        ],
+                        "rotation": [
+                            0,
+                            -11.5,
+                            0
+                        ],
+                        "pivot": [
+                            -8,
+                            12.5,
+                            1.5
+                        ]
+                    }
+                ],
+                "name": "rock_edge_right",
+                "pivot": [
+                    -5.5,
+                    12.5,
+                    0.9
+                ]
+            },
+            {
+                "parent": "rock_edge_main",
+                "cubes": [
+                    {
+                        "uv": [
+                            0,
+                            34
+                        ],
+                        "size": [
+                            2,
+                            2,
+                            5
+                        ],
+                        "origin": [
+                            -1,
+                            18,
+                            -2.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            14,
+                            35
+                        ],
+                        "size": [
+                            2,
+                            3,
+                            5
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            -1,
+                            19.1,
+                            -2.1
+                        ],
+                        "rotation": [
+                            -22.5,
+                            0,
+                            0
+                        ],
+                        "pivot": [
+                            0,
+                            20.5,
+                            0
+                        ]
+                    },
+                    {
+                        "uv": [
+                            28,
+                            33
+                        ],
+                        "size": [
+                            2,
+                            4,
+                            4
+                        ],
+                        "origin": [
+                            -1,
+                            22.1,
+                            -2
+                        ],
+                        "rotation": [
+                            -22.5,
+                            0,
+                            0
+                        ],
+                        "pivot": [
+                            0,
+                            20.5,
+                            0
+                        ]
+                    }
+                ],
+                "name": "rock_edge_top",
+                "pivot": [
+                    0,
+                    18,
+                    0.16
+                ]
+            },
+            {
+                "parent": "rock_edge_main",
+                "cubes": [
+                    {
+                        "uv": [
+                            0,
+                            41
+                        ],
+                        "size": [
+                            2,
+                            2,
+                            5
+                        ],
+                        "origin": [
+                            -1,
+                            5,
+                            -2.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            9,
+                            43
+                        ],
+                        "size": [
+                            2,
+                            3,
+                            5
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            -1,
+                            2.9,
+                            -2.9
+                        ],
+                        "rotation": [
+                            -22.5,
+                            0,
+                            0
+                        ],
+                        "pivot": [
+                            0,
+                            4.5,
+                            0
+                        ]
+                    },
+                    {
+                        "uv": [
+                            23,
+                            43
+                        ],
+                        "size": [
+                            2,
+                            4,
+                            4
+                        ],
+                        "origin": [
+                            -1,
+                            -1.1,
+                            -2.2
+                        ],
+                        "rotation": [
+                            -22.5,
+                            0,
+                            0
+                        ],
+                        "pivot": [
+                            0,
+                            4.5,
+                            0
+                        ]
+                    }
+                ],
+                "name": "rock_edge_bottom",
+                "pivot": [
+                    0,
+                    7,
+                    0
+                ]
+            },
+            {
+                "parent": "rock_edges",
+                "name": "rock_edge_small",
+                "pivot": [
+                    0,
+                    12.5,
+                    0.1
+                ]
+            },
+            {
+                "parent": "rock_edge_small",
+                "rotation": [
+                    0,
+                    0,
+                    45
+                ],
+                "cubes": [
+                    {
+                        "uv": [
+                            44,
+                            7
+                        ],
+                        "size": [
+                            2,
+                            3,
+                            4
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            3.6,
+                            17.15,
+                            -2.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            53,
+                            11
+                        ],
+                        "size": [
+                            2,
+                            4,
+                            3
+                        ],
+                        "origin": [
+                            3.6,
+                            19.5,
+                            -1.8
+                        ],
+                        "rotation": [
+                            -22.5,
+                            0,
+                            0
+                        ],
+                        "pivot": [
+                            4.6,
+                            19.4,
+                            -0.5
+                        ]
+                    }
+                ],
+                "name": "rock_edge_up_left",
+                "pivot": [
+                    4.6,
+                    17.12683,
+                    -0.33035
+                ]
+            },
+            {
+                "parent": "rock_edge_small",
+                "rotation": [
+                    0,
+                    0,
+                    -45
+                ],
+                "cubes": [
+                    {
+                        "uv": [
+                            41,
+                            0
+                        ],
+                        "mirror": true,
+                        "size": [
+                            2,
+                            3,
+                            4
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            -5.7,
+                            17.3,
+                            -2
+                        ]
+                    },
+                    {
+                        "uv": [
+                            53,
+                            0
+                        ],
+                        "mirror": true,
+                        "size": [
+                            2,
+                            2,
+                            3
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            -5.7,
+                            20.25,
+                            -1.8
+                        ],
+                        "rotation": [
+                            0,
+                            0,
+                            2.5
+                        ],
+                        "pivot": [
+                            -4.5,
+                            21.35,
+                            -0.3
+                        ]
+                    }
+                ],
+                "name": "rock_edge_up_right",
+                "pivot": [
+                    -4.7,
+                    17.32683,
+                    0.16965
+                ]
+            },
+            {
+                "parent": "rock_edge_small",
+                "rotation": [
+                    0,
+                    0,
+                    -55
+                ],
+                "cubes": [
+                    {
+                        "uv": [
+                            45,
+                            14
+                        ],
+                        "size": [
+                            2,
+                            4,
+                            4
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            3.5,
+                            4,
+                            -2
+                        ],
+                        "rotation": [
+                            -2.5,
+                            0,
+                            0
+                        ],
+                        "pivot": [
+                            4.5,
+                            4.6,
+                            0.3
+                        ]
+                    },
+                    {
+                        "uv": [
+                            54,
+                            19
+                        ],
+                        "size": [
+                            2,
+                            4,
+                            3
+                        ],
+                        "origin": [
+                            3.5,
+                            0.7,
+                            -1
+                        ],
+                        "rotation": [
+                            10,
+                            0,
+                            0
+                        ],
+                        "pivot": [
+                            4.55,
+                            4.6,
+                            0.3
+                        ]
+                    }
+                ],
+                "name": "rock_edge_down_left",
+                "pivot": [
+                    4.6,
+                    7.97317,
+                    0.16965
+                ]
+            },
+            {
+                "parent": "rock_edge_small",
+                "rotation": [
+                    0,
+                    0,
+                    45
+                ],
+                "cubes": [
+                    {
+                        "uv": [
+                            46,
+                            22
+                        ],
+                        "mirror": true,
+                        "size": [
+                            2,
+                            4,
+                            4
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            -5.25,
+                            4.4,
+                            -1.5
+                        ],
+                        "rotation": [
+                            -2.5,
+                            0,
+                            0
+                        ],
+                        "pivot": [
+                            -4.25,
+                            5.05009,
+                            0.85736
+                        ]
+                    },
+                    {
+                        "uv": [
+                            39,
+                            27
+                        ],
+                        "mirror": true,
+                        "size": [
+                            2,
+                            4,
+                            3
+                        ],
+                        "origin": [
+                            -5.25,
+                            1.15483,
+                            -1.38593
+                        ],
+                        "rotation": [
+                            10,
+                            0,
+                            0
+                        ],
+                        "pivot": [
+                            -4.25,
+                            5.05009,
+                            0.85736
+                        ]
+                    }
+                ],
+                "name": "rock_edge_down_right",
+                "pivot": [
+                    -4.25,
+                    8.47317,
+                    0.66965
+                ]
+            }
+        ],
+        "description": {
+            "identifier": "geometry.solrock",
+            "texture_height": 64,
+            "visible_bounds_height": 3.5,
+            "texture_width": 64,
+            "visible_bounds_width": 3,
+            "visible_bounds_offset": [
+                0,
+                1.25,
+                0
+            ]
+        }
+    }]
+}

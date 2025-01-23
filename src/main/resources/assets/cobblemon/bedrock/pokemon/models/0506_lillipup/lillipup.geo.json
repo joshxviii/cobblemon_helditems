@@ -1,0 +1,937 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:geometry": [{
+        "bones": [
+            {
+                "name": "lillipup",
+                "pivot": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            {
+                "parent": "lillipup",
+                "name": "body",
+                "pivot": [
+                    0,
+                    6.5,
+                    0.5
+                ]
+            },
+            {
+                "parent": "body",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        16
+                    ],
+                    "size": [
+                        5,
+                        5,
+                        10
+                    ],
+                    "origin": [
+                        -2.5,
+                        3,
+                        -4.5
+                    ]
+                }],
+                "name": "torso",
+                "pivot": [
+                    0,
+                    -1.25,
+                    0
+                ]
+            },
+            {
+                "parent": "torso",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        0
+                    ],
+                    "size": [
+                        9,
+                        9,
+                        7
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        -4.5,
+                        7.5,
+                        -7.25
+                    ]
+                }],
+                "name": "head",
+                "pivot": [
+                    0,
+                    8,
+                    -4.25
+                ]
+            },
+            {
+                "parent": "head",
+                "locators": {"held_item_fixed": {
+                    "offset": [
+                        0,
+                        8,
+                        -7
+                    ],
+                    "rotation": [
+                        90,
+                        0,
+                        0
+                    ]
+                }},
+                "rotation": [
+                    17.5,
+                    0,
+                    0
+                ],
+                "cubes": [
+                    {
+                        "uv": [
+                            38,
+                            26
+                        ],
+                        "size": [
+                            5,
+                            3,
+                            2
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            -2.5,
+                            7.5,
+                            -7.25
+                        ]
+                    },
+                    {
+                        "uv": [
+                            0,
+                            16
+                        ],
+                        "size": [
+                            2,
+                            1,
+                            2
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            -1,
+                            9.51,
+                            -7.251
+                        ]
+                    }
+                ],
+                "name": "snout",
+                "pivot": [
+                    0,
+                    7.5,
+                    -7.25
+                ]
+            },
+            {
+                "parent": "snout",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        5
+                    ],
+                    "size": [
+                        1,
+                        1,
+                        0
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        -0.5,
+                        8,
+                        -7.151
+                    ]
+                }],
+                "name": "mouth_open",
+                "pivot": [
+                    0,
+                    8.5,
+                    -7.151
+                ]
+            },
+            {
+                "parent": "snout",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        4
+                    ],
+                    "size": [
+                        2,
+                        1,
+                        0
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        -1,
+                        8,
+                        -7.251
+                    ]
+                }],
+                "name": "mouth_closed",
+                "pivot": [
+                    -0.5,
+                    8.5,
+                    -7.251
+                ]
+            },
+            {
+                "parent": "head",
+                "rotation": [
+                    -17.5,
+                    0,
+                    47.5
+                ],
+                "cubes": [{
+                    "uv": [
+                        6,
+                        50
+                    ],
+                    "size": [
+                        6,
+                        9,
+                        0
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        1.5,
+                        15,
+                        -3.25
+                    ]
+                }],
+                "name": "ear_left",
+                "pivot": [
+                    4,
+                    16,
+                    -3.25
+                ]
+            },
+            {
+                "parent": "head",
+                "rotation": [
+                    -17.5,
+                    0,
+                    -47.5
+                ],
+                "cubes": [{
+                    "uv": [
+                        18,
+                        50
+                    ],
+                    "size": [
+                        6,
+                        9,
+                        0
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        -7.5,
+                        15,
+                        -3.25
+                    ]
+                }],
+                "name": "ear_right",
+                "pivot": [
+                    -4,
+                    16,
+                    -3.25
+                ]
+            },
+            {
+                "parent": "head",
+                "rotation": [
+                    -17.5,
+                    0,
+                    0
+                ],
+                "cubes": [{
+                    "uv": [
+                        20,
+                        16
+                    ],
+                    "size": [
+                        11,
+                        5,
+                        0
+                    ],
+                    "origin": [
+                        -5.5,
+                        16.5,
+                        -7.25
+                    ]
+                }],
+                "name": "scruff_top",
+                "pivot": [
+                    0,
+                    16.5,
+                    -7.25
+                ]
+            },
+            {
+                "parent": "head",
+                "rotation": [
+                    0,
+                    -17.5,
+                    0
+                ],
+                "cubes": [{
+                    "uv": [
+                        37,
+                        43
+                    ],
+                    "size": [
+                        3,
+                        11,
+                        0
+                    ],
+                    "origin": [
+                        4.5,
+                        7,
+                        -7.25
+                    ]
+                }],
+                "name": "scruff_left",
+                "pivot": [
+                    4.5,
+                    12,
+                    -7.25
+                ]
+            },
+            {
+                "parent": "head",
+                "rotation": [
+                    0,
+                    17.5,
+                    0
+                ],
+                "cubes": [{
+                    "uv": [
+                        0,
+                        43
+                    ],
+                    "size": [
+                        3,
+                        11,
+                        0
+                    ],
+                    "origin": [
+                        -7.5,
+                        7,
+                        -7.25
+                    ]
+                }],
+                "name": "scruff_right",
+                "pivot": [
+                    -4.5,
+                    12,
+                    -7.25
+                ]
+            },
+            {
+                "parent": "head",
+                "rotation": [
+                    17.5,
+                    0,
+                    0
+                ],
+                "cubes": [{
+                    "uv": [
+                        25,
+                        0
+                    ],
+                    "size": [
+                        11,
+                        2,
+                        0
+                    ],
+                    "origin": [
+                        -5.5,
+                        5.5,
+                        -7.25
+                    ]
+                }],
+                "name": "scruff_bottom",
+                "pivot": [
+                    0,
+                    7.5,
+                    -7.25
+                ]
+            },
+            {
+                "parent": "head",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        19
+                    ],
+                    "size": [
+                        3,
+                        4,
+                        0
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        -4.51,
+                        10,
+                        -7.26
+                    ]
+                }],
+                "name": "eye_right",
+                "pivot": [
+                    -3.01,
+                    12,
+                    -7.26
+                ]
+            },
+            {
+                "parent": "eye_right",
+                "cubes": [{
+                    "uv": [
+                        52,
+                        0
+                    ],
+                    "size": [
+                        3,
+                        4,
+                        0
+                    ],
+                    "inflate": 0.02,
+                    "origin": [
+                        -4.41,
+                        10,
+                        -7.16
+                    ]
+                }],
+                "name": "eyelid_right",
+                "pivot": [
+                    -2.31,
+                    12,
+                    -6.06
+                ]
+            },
+            {
+                "parent": "head",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        0
+                    ],
+                    "size": [
+                        3,
+                        4,
+                        0
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        1.51,
+                        10,
+                        -7.26
+                    ]
+                }],
+                "name": "eye_left",
+                "pivot": [
+                    3.01,
+                    12,
+                    -7.26
+                ]
+            },
+            {
+                "parent": "eye_left",
+                "cubes": [{
+                    "uv": [
+                        58,
+                        0
+                    ],
+                    "size": [
+                        3,
+                        4,
+                        0
+                    ],
+                    "inflate": 0.02,
+                    "origin": [
+                        1.41,
+                        10,
+                        -7.16
+                    ]
+                }],
+                "name": "eyelid_left",
+                "pivot": [
+                    2.31,
+                    12,
+                    -6.06
+                ]
+            },
+            {
+                "parent": "torso",
+                "rotation": [
+                    45,
+                    0,
+                    0
+                ],
+                "cubes": [{
+                    "uv": [
+                        20,
+                        14
+                    ],
+                    "size": [
+                        0,
+                        4,
+                        7
+                    ],
+                    "origin": [
+                        0,
+                        4.5,
+                        4.75
+                    ]
+                }],
+                "name": "tail1",
+                "pivot": [
+                    0,
+                    7.25,
+                    4.75
+                ]
+            },
+            {
+                "parent": "body",
+                "cubes": [{
+                    "uv": [
+                        25,
+                        39
+                    ],
+                    "size": [
+                        3,
+                        4,
+                        3
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        0.75,
+                        2.75,
+                        2
+                    ]
+                }],
+                "name": "leg_back_left1",
+                "pivot": [
+                    2.25,
+                    5.5,
+                    3.5
+                ]
+            },
+            {
+                "parent": "leg_back_left1",
+                "rotation": [
+                    -7.5,
+                    0,
+                    0
+                ],
+                "cubes": [
+                    {
+                        "uv": [
+                            26,
+                            27
+                        ],
+                        "size": [
+                            4,
+                            1,
+                            4
+                        ],
+                        "origin": [
+                            0.25,
+                            0.75,
+                            1.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            6,
+                            45
+                        ],
+                        "size": [
+                            3,
+                            2,
+                            3
+                        ],
+                        "origin": [
+                            0.75,
+                            0.75,
+                            2
+                        ]
+                    }
+                ],
+                "name": "leg_back_left2",
+                "pivot": [
+                    2.25,
+                    2.75,
+                    5
+                ]
+            },
+            {
+                "parent": "leg_back_left2",
+                "rotation": [
+                    7.5,
+                    0,
+                    0
+                ],
+                "cubes": [{
+                    "uv": [
+                        44,
+                        7
+                    ],
+                    "size": [
+                        3,
+                        2,
+                        3
+                    ],
+                    "inflate": 0.02,
+                    "origin": [
+                        0.75,
+                        -0.25,
+                        1.75
+                    ]
+                }],
+                "name": "leg_back_left3",
+                "pivot": [
+                    2.25,
+                    1.25,
+                    3.5
+                ]
+            },
+            {
+                "parent": "body",
+                "cubes": [{
+                    "uv": [
+                        28,
+                        32
+                    ],
+                    "size": [
+                        3,
+                        4,
+                        3
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        -3.75,
+                        2.75,
+                        2
+                    ]
+                }],
+                "name": "leg_back_right1",
+                "pivot": [
+                    -2.25,
+                    5.5,
+                    3.5
+                ]
+            },
+            {
+                "parent": "leg_back_right1",
+                "rotation": [
+                    -7.5,
+                    0,
+                    0
+                ],
+                "cubes": [
+                    {
+                        "uv": [
+                            25,
+                            2
+                        ],
+                        "size": [
+                            4,
+                            1,
+                            4
+                        ],
+                        "origin": [
+                            -4.25,
+                            0.75,
+                            1.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            40,
+                            31
+                        ],
+                        "size": [
+                            3,
+                            2,
+                            3
+                        ],
+                        "origin": [
+                            -3.75,
+                            0.75,
+                            2
+                        ]
+                    }
+                ],
+                "name": "leg_back_right2",
+                "pivot": [
+                    -2.25,
+                    2.75,
+                    5
+                ]
+            },
+            {
+                "parent": "leg_back_right2",
+                "rotation": [
+                    7.5,
+                    0,
+                    0
+                ],
+                "cubes": [{
+                    "uv": [
+                        9,
+                        40
+                    ],
+                    "size": [
+                        3,
+                        2,
+                        3
+                    ],
+                    "inflate": 0.02,
+                    "origin": [
+                        -3.75,
+                        -0.25,
+                        1.75
+                    ]
+                }],
+                "name": "leg_back_right3",
+                "pivot": [
+                    -2.25,
+                    1.25,
+                    3.5
+                ]
+            },
+            {
+                "parent": "body",
+                "cubes": [{
+                    "uv": [
+                        37,
+                        36
+                    ],
+                    "size": [
+                        3,
+                        4,
+                        3
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        0.75,
+                        2.75,
+                        -4
+                    ]
+                }],
+                "name": "leg_front_left",
+                "pivot": [
+                    2.25,
+                    5.5,
+                    -2.5
+                ]
+            },
+            {
+                "parent": "leg_front_left",
+                "rotation": [
+                    -7.5,
+                    0,
+                    0
+                ],
+                "cubes": [
+                    {
+                        "uv": [
+                            43,
+                            43
+                        ],
+                        "size": [
+                            3,
+                            2,
+                            3
+                        ],
+                        "origin": [
+                            0.75,
+                            0.75,
+                            -4
+                        ]
+                    },
+                    {
+                        "uv": [
+                            0,
+                            31
+                        ],
+                        "size": [
+                            4,
+                            1,
+                            4
+                        ],
+                        "origin": [
+                            0.25,
+                            0.75,
+                            -4.5
+                        ]
+                    }
+                ],
+                "name": "leg_front_left2",
+                "pivot": [
+                    2.25,
+                    2.75,
+                    -1
+                ]
+            },
+            {
+                "parent": "leg_front_left2",
+                "rotation": [
+                    7.5,
+                    0,
+                    0
+                ],
+                "cubes": [{
+                    "uv": [
+                        42,
+                        17
+                    ],
+                    "size": [
+                        3,
+                        2,
+                        3
+                    ],
+                    "inflate": 0.02,
+                    "origin": [
+                        0.75,
+                        -0.25,
+                        -4.25
+                    ]
+                }],
+                "name": "leg_front_left3",
+                "pivot": [
+                    2.25,
+                    1.25,
+                    -2.5
+                ]
+            },
+            {
+                "parent": "body",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        36
+                    ],
+                    "size": [
+                        3,
+                        4,
+                        3
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        -3.75,
+                        2.75,
+                        -4
+                    ]
+                }],
+                "name": "leg_front_right",
+                "pivot": [
+                    -2.25,
+                    5.5,
+                    -2.5
+                ]
+            },
+            {
+                "parent": "leg_front_right",
+                "rotation": [
+                    -7.5,
+                    0,
+                    0
+                ],
+                "cubes": [
+                    {
+                        "uv": [
+                            42,
+                            12
+                        ],
+                        "size": [
+                            3,
+                            2,
+                            3
+                        ],
+                        "origin": [
+                            -3.75,
+                            0.75,
+                            -4
+                        ]
+                    },
+                    {
+                        "uv": [
+                            30,
+                            21
+                        ],
+                        "size": [
+                            4,
+                            1,
+                            4
+                        ],
+                        "origin": [
+                            -4.25,
+                            0.75,
+                            -4.5
+                        ]
+                    }
+                ],
+                "name": "leg_front_right2",
+                "pivot": [
+                    -2.25,
+                    2.75,
+                    -1
+                ]
+            },
+            {
+                "parent": "leg_front_right2",
+                "rotation": [
+                    7.5,
+                    0,
+                    0
+                ],
+                "cubes": [{
+                    "uv": [
+                        41,
+                        2
+                    ],
+                    "size": [
+                        3,
+                        2,
+                        3
+                    ],
+                    "inflate": 0.02,
+                    "origin": [
+                        -3.75,
+                        -0.25,
+                        -4.25
+                    ]
+                }],
+                "name": "leg_front_right3",
+                "pivot": [
+                    -2.25,
+                    1.25,
+                    -2.5
+                ]
+            }
+        ],
+        "description": {
+            "identifier": "geometry.lillipup",
+            "texture_height": 64,
+            "visible_bounds_height": 2.5,
+            "texture_width": 64,
+            "visible_bounds_width": 3,
+            "visible_bounds_offset": [
+                0,
+                0.75,
+                0
+            ]
+        }
+    }]
+}

@@ -77,6 +77,7 @@ abstract class PokemonRendererMixin {
                 applyModifiers("held_item_fixed", locators);
                 poseMatrix.scale(scale, scale, scale);
             }
+            else {poseMatrix.pop();return;}
 
             this.heldItemRenderer.renderItem(entity, heldItem, transformationMode, false, poseMatrix, buffer, packedLight);
             poseMatrix.pop();

@@ -1,0 +1,1234 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:geometry": [{
+        "bones": [
+            {
+                "name": "magneton",
+                "pivot": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            {
+                "parent": "magneton",
+                "name": "allbodies",
+                "pivot": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            {
+                "parent": "allbodies",
+                "locators": {
+                    "lowerleft": [
+                        3,
+                        13,
+                        0
+                    ],
+                    "lowerright": [
+                        -3,
+                        13,
+                        0
+                    ]
+                },
+                "cubes": [{
+                    "uv": [
+                        0,
+                        0
+                    ],
+                    "size": [
+                        8,
+                        8,
+                        8
+                    ],
+                    "origin": [
+                        -4,
+                        13,
+                        -4
+                    ]
+                }],
+                "name": "body",
+                "pivot": [
+                    0,
+                    16.5,
+                    0
+                ]
+            },
+            {
+                "parent": "body",
+                "cubes": [{
+                    "uv": [
+                        32,
+                        8
+                    ],
+                    "size": [
+                        4,
+                        4,
+                        0
+                    ],
+                    "origin": [
+                        -2,
+                        15,
+                        -4.01
+                    ]
+                }],
+                "name": "eye",
+                "pivot": [
+                    0,
+                    17,
+                    -4.01
+                ]
+            },
+            {
+                "parent": "eye",
+                "cubes": [{
+                    "uv": [
+                        40,
+                        8
+                    ],
+                    "size": [
+                        1,
+                        1,
+                        0
+                    ],
+                    "origin": [
+                        -0.5,
+                        16.5,
+                        -4.02
+                    ]
+                }],
+                "name": "pupil",
+                "pivot": [
+                    0,
+                    17,
+                    -4.1
+                ]
+            },
+            {
+                "parent": "eye",
+                "cubes": [{
+                    "uv": [
+                        32,
+                        15
+                    ],
+                    "size": [
+                        3,
+                        1,
+                        0
+                    ],
+                    "origin": [
+                        -1.5,
+                        16.5,
+                        -3.92
+                    ]
+                }],
+                "name": "pupil_closed",
+                "pivot": [
+                    0,
+                    17,
+                    -3.92
+                ]
+            },
+            {
+                "parent": "body",
+                "cubes": [
+                    {
+                        "uv": [
+                            38,
+                            11
+                        ],
+                        "size": [
+                            2,
+                            3,
+                            2
+                        ],
+                        "origin": [
+                            -1,
+                            20.5,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            48,
+                            8
+                        ],
+                        "size": [
+                            4,
+                            1,
+                            4
+                        ],
+                        "origin": [
+                            -2,
+                            23.5,
+                            -2
+                        ]
+                    },
+                    {
+                        "uv": [
+                            49,
+                            13
+                        ],
+                        "size": [
+                            3,
+                            0,
+                            3
+                        ],
+                        "origin": [
+                            -1.5,
+                            24.51,
+                            -1.5
+                        ]
+                    }
+                ],
+                "name": "nail_head",
+                "pivot": [
+                    0,
+                    21,
+                    0
+                ]
+            },
+            {
+                "parent": "body",
+                "rotation": [
+                    0,
+                    -25,
+                    0
+                ],
+                "name": "nail_left",
+                "pivot": [
+                    2.75,
+                    14,
+                    -4
+                ]
+            },
+            {
+                "parent": "nail_left",
+                "cubes": [
+                    {
+                        "uv": [
+                            32,
+                            12
+                        ],
+                        "size": [
+                            2,
+                            2,
+                            1
+                        ],
+                        "origin": [
+                            1.75,
+                            13,
+                            -6.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            40,
+                            8
+                        ],
+                        "size": [
+                            1,
+                            1,
+                            2
+                        ],
+                        "origin": [
+                            2.25,
+                            13.5,
+                            -5.5
+                        ]
+                    }
+                ],
+                "name": "nail_left_rotation",
+                "pivot": [
+                    2.75,
+                    14,
+                    -4
+                ]
+            },
+            {
+                "parent": "body",
+                "rotation": [
+                    0,
+                    25,
+                    0
+                ],
+                "name": "nail_right",
+                "pivot": [
+                    -2.75,
+                    14,
+                    -4
+                ]
+            },
+            {
+                "parent": "nail_right",
+                "cubes": [
+                    {
+                        "uv": [
+                            46,
+                            8
+                        ],
+                        "mirror": true,
+                        "size": [
+                            2,
+                            2,
+                            1
+                        ],
+                        "origin": [
+                            -3.75,
+                            13,
+                            -6.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            46,
+                            13
+                        ],
+                        "mirror": true,
+                        "size": [
+                            1,
+                            1,
+                            2
+                        ],
+                        "origin": [
+                            -3.25,
+                            13.5,
+                            -5.5
+                        ]
+                    }
+                ],
+                "name": "nail_right_rotation",
+                "pivot": [
+                    -2.75,
+                    14,
+                    -4
+                ]
+            },
+            {
+                "parent": "body",
+                "name": "magnets",
+                "pivot": [
+                    0.5,
+                    12.5,
+                    0
+                ]
+            },
+            {
+                "parent": "magnets",
+                "name": "magnet_left",
+                "pivot": [
+                    4,
+                    17,
+                    0
+                ]
+            },
+            {
+                "parent": "magnet_left",
+                "cubes": [
+                    {
+                        "uv": [
+                            48,
+                            0
+                        ],
+                        "size": [
+                            6,
+                            2,
+                            2
+                        ],
+                        "origin": [
+                            5,
+                            14,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            0,
+                            0
+                        ],
+                        "size": [
+                            2,
+                            6,
+                            2
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            3.5,
+                            14,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            32,
+                            0
+                        ],
+                        "size": [
+                            6,
+                            2,
+                            2
+                        ],
+                        "origin": [
+                            5,
+                            18,
+                            -1
+                        ]
+                    }
+                ],
+                "name": "magnet_left_rotation",
+                "pivot": [
+                    4,
+                    17,
+                    0
+                ]
+            },
+            {
+                "parent": "magnets",
+                "name": "magnet_right",
+                "pivot": [
+                    -4,
+                    17,
+                    0
+                ]
+            },
+            {
+                "parent": "magnet_right",
+                "locators": {"held_item_fixed": {
+                    "offset": [
+                        -11.5,
+                        15.25,
+                        0
+                    ],
+                    "rotation": [
+                        0,
+                        -90,
+                        0
+                    ]
+                }},
+                "cubes": [
+                    {
+                        "uv": [
+                            48,
+                            4
+                        ],
+                        "mirror": true,
+                        "size": [
+                            6,
+                            2,
+                            2
+                        ],
+                        "origin": [
+                            -11,
+                            14,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            24,
+                            0
+                        ],
+                        "mirror": true,
+                        "size": [
+                            2,
+                            6,
+                            2
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            -5.5,
+                            14,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            32,
+                            4
+                        ],
+                        "mirror": true,
+                        "size": [
+                            6,
+                            2,
+                            2
+                        ],
+                        "origin": [
+                            -11,
+                            18,
+                            -1
+                        ]
+                    }
+                ],
+                "name": "magnet_right_rotation",
+                "pivot": [
+                    -4,
+                    17,
+                    0
+                ]
+            },
+            {
+                "parent": "allbodies",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        16
+                    ],
+                    "size": [
+                        8,
+                        8,
+                        8
+                    ],
+                    "origin": [
+                        6,
+                        1,
+                        -4
+                    ]
+                }],
+                "name": "body2",
+                "pivot": [
+                    10,
+                    4.5,
+                    0
+                ]
+            },
+            {
+                "parent": "body2",
+                "cubes": [{
+                    "uv": [
+                        32,
+                        24
+                    ],
+                    "size": [
+                        4,
+                        4,
+                        0
+                    ],
+                    "origin": [
+                        8,
+                        3,
+                        -4.01
+                    ]
+                }],
+                "name": "eye2",
+                "pivot": [
+                    10,
+                    5,
+                    -4.01
+                ]
+            },
+            {
+                "parent": "eye2",
+                "cubes": [{
+                    "uv": [
+                        40,
+                        24
+                    ],
+                    "size": [
+                        1,
+                        1,
+                        0
+                    ],
+                    "origin": [
+                        9.5,
+                        4.5,
+                        -4.02
+                    ]
+                }],
+                "name": "pupil2",
+                "pivot": [
+                    10,
+                    5,
+                    -4.1
+                ]
+            },
+            {
+                "parent": "eye2",
+                "cubes": [{
+                    "uv": [
+                        32,
+                        31
+                    ],
+                    "size": [
+                        3,
+                        1,
+                        0
+                    ],
+                    "origin": [
+                        8.5,
+                        4.5,
+                        -3.92
+                    ]
+                }],
+                "name": "pupil_closed2",
+                "pivot": [
+                    10,
+                    5,
+                    -3.92
+                ]
+            },
+            {
+                "parent": "body2",
+                "cubes": [
+                    {
+                        "uv": [
+                            38,
+                            27
+                        ],
+                        "size": [
+                            2,
+                            3,
+                            2
+                        ],
+                        "origin": [
+                            9,
+                            8.5,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            48,
+                            24
+                        ],
+                        "size": [
+                            4,
+                            1,
+                            4
+                        ],
+                        "origin": [
+                            8,
+                            11.5,
+                            -2
+                        ]
+                    },
+                    {
+                        "uv": [
+                            49,
+                            29
+                        ],
+                        "size": [
+                            3,
+                            0,
+                            3
+                        ],
+                        "origin": [
+                            8.5,
+                            12.51,
+                            -1.5
+                        ]
+                    }
+                ],
+                "name": "nail_head2",
+                "pivot": [
+                    10,
+                    9,
+                    0
+                ]
+            },
+            {
+                "parent": "body2",
+                "rotation": [
+                    0,
+                    -25,
+                    0
+                ],
+                "name": "nail_left2",
+                "pivot": [
+                    12.75,
+                    2,
+                    -4
+                ]
+            },
+            {
+                "parent": "nail_left2",
+                "cubes": [
+                    {
+                        "uv": [
+                            32,
+                            28
+                        ],
+                        "size": [
+                            2,
+                            2,
+                            1
+                        ],
+                        "origin": [
+                            11.75,
+                            1,
+                            -6.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            40,
+                            24
+                        ],
+                        "size": [
+                            1,
+                            1,
+                            2
+                        ],
+                        "origin": [
+                            12.25,
+                            1.5,
+                            -5.5
+                        ]
+                    }
+                ],
+                "name": "nail_left_rotation2",
+                "pivot": [
+                    12.75,
+                    2,
+                    -4
+                ]
+            },
+            {
+                "parent": "body2",
+                "name": "magnets2",
+                "pivot": [
+                    10.5,
+                    0.5,
+                    0
+                ]
+            },
+            {
+                "parent": "magnets2",
+                "name": "magnet_left2",
+                "pivot": [
+                    14,
+                    5,
+                    0
+                ]
+            },
+            {
+                "parent": "magnet_left2",
+                "cubes": [
+                    {
+                        "uv": [
+                            48,
+                            16
+                        ],
+                        "size": [
+                            6,
+                            2,
+                            2
+                        ],
+                        "origin": [
+                            15,
+                            2,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            0,
+                            16
+                        ],
+                        "size": [
+                            2,
+                            6,
+                            2
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            13.5,
+                            2,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            32,
+                            16
+                        ],
+                        "size": [
+                            6,
+                            2,
+                            2
+                        ],
+                        "origin": [
+                            15,
+                            6,
+                            -1
+                        ]
+                    }
+                ],
+                "name": "magnet_left2_rotation",
+                "pivot": [
+                    14,
+                    5,
+                    0
+                ]
+            },
+            {
+                "parent": "magnets2",
+                "name": "magnet_right2",
+                "pivot": [
+                    6,
+                    5,
+                    0
+                ]
+            },
+            {
+                "parent": "magnet_right2",
+                "cubes": [
+                    {
+                        "uv": [
+                            48,
+                            20
+                        ],
+                        "mirror": true,
+                        "size": [
+                            6,
+                            2,
+                            2
+                        ],
+                        "origin": [
+                            -1,
+                            2,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            24,
+                            16
+                        ],
+                        "mirror": true,
+                        "size": [
+                            2,
+                            6,
+                            2
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            4.5,
+                            2,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            32,
+                            20
+                        ],
+                        "mirror": true,
+                        "size": [
+                            6,
+                            2,
+                            2
+                        ],
+                        "origin": [
+                            -1,
+                            6,
+                            -1
+                        ]
+                    }
+                ],
+                "name": "magnet_right2_rotation",
+                "pivot": [
+                    6,
+                    5,
+                    0
+                ]
+            },
+            {
+                "parent": "allbodies",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        32
+                    ],
+                    "size": [
+                        8,
+                        8,
+                        8
+                    ],
+                    "origin": [
+                        -14,
+                        1,
+                        -4
+                    ]
+                }],
+                "name": "body3",
+                "pivot": [
+                    -10,
+                    4.5,
+                    0
+                ]
+            },
+            {
+                "parent": "body3",
+                "cubes": [{
+                    "uv": [
+                        32,
+                        40
+                    ],
+                    "size": [
+                        4,
+                        4,
+                        0
+                    ],
+                    "origin": [
+                        -12,
+                        3,
+                        -4.01
+                    ]
+                }],
+                "name": "eye3",
+                "pivot": [
+                    -10,
+                    5,
+                    -4.01
+                ]
+            },
+            {
+                "parent": "eye3",
+                "cubes": [{
+                    "uv": [
+                        40,
+                        40
+                    ],
+                    "size": [
+                        1,
+                        1,
+                        0
+                    ],
+                    "origin": [
+                        -10.5,
+                        4.5,
+                        -4.02
+                    ]
+                }],
+                "name": "pupil3",
+                "pivot": [
+                    -10,
+                    5,
+                    -4.1
+                ]
+            },
+            {
+                "parent": "eye3",
+                "cubes": [{
+                    "uv": [
+                        32,
+                        47
+                    ],
+                    "size": [
+                        3,
+                        1,
+                        0
+                    ],
+                    "origin": [
+                        -11.5,
+                        4.5,
+                        -3.92
+                    ]
+                }],
+                "name": "pupil_closed3",
+                "pivot": [
+                    -10,
+                    5,
+                    -3.92
+                ]
+            },
+            {
+                "parent": "body3",
+                "cubes": [
+                    {
+                        "uv": [
+                            38,
+                            43
+                        ],
+                        "size": [
+                            2,
+                            3,
+                            2
+                        ],
+                        "origin": [
+                            -11,
+                            8.5,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            48,
+                            40
+                        ],
+                        "size": [
+                            4,
+                            1,
+                            4
+                        ],
+                        "origin": [
+                            -12,
+                            11.5,
+                            -2
+                        ]
+                    },
+                    {
+                        "uv": [
+                            49,
+                            45
+                        ],
+                        "mirror": true,
+                        "size": [
+                            3,
+                            0,
+                            3
+                        ],
+                        "origin": [
+                            -11.5,
+                            12.51,
+                            -1.5
+                        ]
+                    }
+                ],
+                "name": "nail_head3",
+                "pivot": [
+                    -10,
+                    9,
+                    0
+                ]
+            },
+            {
+                "parent": "body3",
+                "rotation": [
+                    0,
+                    25,
+                    0
+                ],
+                "name": "nail_right3",
+                "pivot": [
+                    -12.75,
+                    2,
+                    -4
+                ]
+            },
+            {
+                "parent": "nail_right3",
+                "cubes": [
+                    {
+                        "uv": [
+                            32,
+                            44
+                        ],
+                        "mirror": true,
+                        "size": [
+                            2,
+                            2,
+                            1
+                        ],
+                        "origin": [
+                            -13.75,
+                            1,
+                            -6.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            40,
+                            40
+                        ],
+                        "mirror": true,
+                        "size": [
+                            1,
+                            1,
+                            2
+                        ],
+                        "origin": [
+                            -13.25,
+                            1.5,
+                            -5.5
+                        ]
+                    }
+                ],
+                "name": "nail_right_rotation3",
+                "pivot": [
+                    -12.75,
+                    2,
+                    -4
+                ]
+            },
+            {
+                "parent": "body3",
+                "name": "magnets3",
+                "pivot": [
+                    -9.5,
+                    0.5,
+                    0
+                ]
+            },
+            {
+                "parent": "magnets3",
+                "name": "magnet_left3",
+                "pivot": [
+                    -6,
+                    5,
+                    0
+                ]
+            },
+            {
+                "parent": "magnet_left3",
+                "cubes": [
+                    {
+                        "uv": [
+                            0,
+                            32
+                        ],
+                        "size": [
+                            2,
+                            6,
+                            2
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            -6.5,
+                            2,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            32,
+                            32
+                        ],
+                        "size": [
+                            6,
+                            2,
+                            2
+                        ],
+                        "origin": [
+                            -5,
+                            6,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            48,
+                            32
+                        ],
+                        "size": [
+                            6,
+                            2,
+                            2
+                        ],
+                        "origin": [
+                            -5,
+                            2,
+                            -1
+                        ]
+                    }
+                ],
+                "name": "magnet_left3_rotation",
+                "pivot": [
+                    -6,
+                    5,
+                    0
+                ]
+            },
+            {
+                "parent": "magnets3",
+                "name": "magnet_right3",
+                "pivot": [
+                    -14,
+                    5,
+                    0
+                ]
+            },
+            {
+                "parent": "magnet_right3",
+                "cubes": [
+                    {
+                        "uv": [
+                            48,
+                            36
+                        ],
+                        "mirror": true,
+                        "size": [
+                            6,
+                            2,
+                            2
+                        ],
+                        "origin": [
+                            -21,
+                            2,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            24,
+                            32
+                        ],
+                        "mirror": true,
+                        "size": [
+                            2,
+                            6,
+                            2
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            -15.5,
+                            2,
+                            -1
+                        ]
+                    },
+                    {
+                        "uv": [
+                            32,
+                            36
+                        ],
+                        "mirror": true,
+                        "size": [
+                            6,
+                            2,
+                            2
+                        ],
+                        "origin": [
+                            -21,
+                            6,
+                            -1
+                        ]
+                    }
+                ],
+                "name": "magnet_right3_rotation",
+                "pivot": [
+                    -14,
+                    5,
+                    0
+                ]
+            },
+            {
+                "parent": "body",
+                "locators": {"held_item_head": [
+                    0,
+                    21,
+                    0
+                ]},
+                "name": "head_top",
+                "pivot": [
+                    0,
+                    21,
+                    0
+                ]
+            }
+        ],
+        "description": {
+            "identifier": "geometry.magneton",
+            "texture_height": 64,
+            "visible_bounds_height": 3.5,
+            "texture_width": 64,
+            "visible_bounds_width": 4,
+            "visible_bounds_offset": [
+                0,
+                1.25,
+                0
+            ]
+        }
+    }]
+}

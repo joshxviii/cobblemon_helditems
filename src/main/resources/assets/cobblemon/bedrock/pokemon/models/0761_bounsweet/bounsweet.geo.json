@@ -1,0 +1,439 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:geometry": [{
+        "bones": [
+            {
+                "name": "bounsweet",
+                "pivot": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            {
+                "parent": "bounsweet",
+                "name": "body",
+                "pivot": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            {
+                "parent": "body",
+                "cubes": [
+                    {
+                        "uv": [
+                            0,
+                            0
+                        ],
+                        "size": [
+                            7,
+                            6,
+                            7
+                        ],
+                        "origin": [
+                            -3.5,
+                            2,
+                            -3.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            0,
+                            29
+                        ],
+                        "size": [
+                            1,
+                            1,
+                            0
+                        ],
+                        "inflate": 0.01,
+                        "origin": [
+                            -0.5,
+                            4.5,
+                            -3.5
+                        ]
+                    },
+                    {
+                        "uv": [
+                            0,
+                            13
+                        ],
+                        "size": [
+                            6,
+                            1,
+                            6
+                        ],
+                        "origin": [
+                            -3,
+                            1,
+                            -3
+                        ]
+                    }
+                ],
+                "name": "torso",
+                "pivot": [
+                    0,
+                    1,
+                    0
+                ]
+            },
+            {
+                "parent": "torso",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        26
+                    ],
+                    "mirror": true,
+                    "size": [
+                        1,
+                        1,
+                        0
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        -2.25,
+                        5.25,
+                        -3.5
+                    ]
+                }],
+                "name": "eye_right",
+                "pivot": [
+                    -1.75,
+                    5.75,
+                    -3.5
+                ]
+            },
+            {
+                "parent": "eye_right",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        27
+                    ],
+                    "mirror": true,
+                    "size": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "inflate": 0.02,
+                    "origin": [
+                        -2.75,
+                        5.25,
+                        -3.4
+                    ]
+                }],
+                "name": "eyelid_right",
+                "pivot": [
+                    -1.75,
+                    5.75,
+                    -2.9
+                ]
+            },
+            {
+                "parent": "torso",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        26
+                    ],
+                    "size": [
+                        1,
+                        1,
+                        0
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        1.25,
+                        5.25,
+                        -3.5
+                    ]
+                }],
+                "name": "eye_left",
+                "pivot": [
+                    1.75,
+                    5.75,
+                    -3.5
+                ]
+            },
+            {
+                "parent": "eye_left",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        27
+                    ],
+                    "size": [
+                        2,
+                        1,
+                        1
+                    ],
+                    "inflate": 0.02,
+                    "origin": [
+                        0.75,
+                        5.25,
+                        -3.4
+                    ]
+                }],
+                "name": "eyelid_left",
+                "pivot": [
+                    1.75,
+                    5.75,
+                    -2.9
+                ]
+            },
+            {
+                "parent": "torso",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        0
+                    ],
+                    "size": [
+                        1,
+                        5,
+                        1
+                    ],
+                    "origin": [
+                        -0.5,
+                        6.5,
+                        -0.5
+                    ]
+                }],
+                "name": "stem",
+                "pivot": [
+                    0,
+                    7,
+                    0
+                ]
+            },
+            {
+                "parent": "stem",
+                "rotation": [
+                    0,
+                    0,
+                    -50
+                ],
+                "cubes": [{
+                    "uv": [
+                        0,
+                        13
+                    ],
+                    "size": [
+                        1,
+                        2,
+                        1
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        -0.5,
+                        11.5,
+                        -0.5
+                    ]
+                }],
+                "name": "stem2",
+                "pivot": [
+                    0.5,
+                    11.5,
+                    0
+                ]
+            },
+            {
+                "parent": "torso",
+                "name": "leaves",
+                "pivot": [
+                    0,
+                    8,
+                    0
+                ]
+            },
+            {
+                "parent": "leaves",
+                "rotation": [
+                    7.5,
+                    0,
+                    0
+                ],
+                "cubes": [{
+                    "uv": [
+                        21,
+                        0
+                    ],
+                    "size": [
+                        4,
+                        2,
+                        4
+                    ],
+                    "origin": [
+                        -2,
+                        7.85,
+                        -4.5
+                    ]
+                }],
+                "name": "leaf_front",
+                "pivot": [
+                    0,
+                    9.85,
+                    -0.5
+                ]
+            },
+            {
+                "parent": "leaves",
+                "rotation": [
+                    -7.5,
+                    0,
+                    0
+                ],
+                "cubes": [{
+                    "uv": [
+                        20,
+                        19
+                    ],
+                    "size": [
+                        4,
+                        2,
+                        4
+                    ],
+                    "origin": [
+                        -2,
+                        7.85,
+                        0.5
+                    ]
+                }],
+                "name": "leaf_back",
+                "pivot": [
+                    0,
+                    9.85,
+                    0.5
+                ]
+            },
+            {
+                "parent": "leaves",
+                "rotation": [
+                    0,
+                    0,
+                    5
+                ],
+                "cubes": [{
+                    "uv": [
+                        0,
+                        20
+                    ],
+                    "size": [
+                        6,
+                        2,
+                        4
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        0.5,
+                        8,
+                        -2
+                    ]
+                }],
+                "name": "leaf_right",
+                "pivot": [
+                    0.5,
+                    10,
+                    0
+                ]
+            },
+            {
+                "parent": "leaves",
+                "rotation": [
+                    0,
+                    0,
+                    -5
+                ],
+                "cubes": [{
+                    "uv": [
+                        18,
+                        13
+                    ],
+                    "size": [
+                        6,
+                        2,
+                        4
+                    ],
+                    "inflate": 0.01,
+                    "origin": [
+                        -6.5,
+                        8,
+                        -2
+                    ]
+                }],
+                "name": "leaf_left",
+                "pivot": [
+                    -0.5,
+                    10,
+                    0
+                ]
+            },
+            {
+                "parent": "body",
+                "cubes": [{
+                    "uv": [
+                        0,
+                        16
+                    ],
+                    "size": [
+                        1,
+                        2,
+                        1
+                    ],
+                    "origin": [
+                        -1.5,
+                        0,
+                        -0.5
+                    ]
+                }],
+                "name": "right_foot",
+                "pivot": [
+                    -1,
+                    1,
+                    0
+                ]
+            },
+            {
+                "parent": "body",
+                "cubes": [{
+                    "uv": [
+                        18,
+                        13
+                    ],
+                    "size": [
+                        1,
+                        2,
+                        1
+                    ],
+                    "origin": [
+                        0.5,
+                        0,
+                        -0.5
+                    ]
+                }],
+                "name": "left_foot",
+                "pivot": [
+                    1,
+                    1,
+                    0
+                ]
+            }
+        ],
+        "description": {
+            "identifier": "geometry.bounsweet",
+            "texture_height": 64,
+            "visible_bounds_height": 2.5,
+            "texture_width": 64,
+            "visible_bounds_width": 2,
+            "visible_bounds_offset": [
+                0,
+                0.75,
+                0
+            ]
+        }
+    }]
+}
