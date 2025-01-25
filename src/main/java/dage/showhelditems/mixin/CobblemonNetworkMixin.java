@@ -2,22 +2,17 @@ package dage.showhelditems.mixin;
 
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.CobblemonNetwork;
-import com.cobblemon.mod.common.api.net.ClientNetworkPacketHandler;
-import com.cobblemon.mod.common.api.net.NetworkPacket;
 import com.cobblemon.mod.common.api.net.ServerNetworkPacketHandler;
 import com.cobblemon.mod.common.api.storage.PokemonStore;
 import com.cobblemon.mod.common.client.net.pokemon.update.PokemonUpdatePacketHandler;
 import com.cobblemon.mod.common.net.PacketRegisterInfo;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import dage.showhelditems.ItemVisibilityChangedEvent;
 import dage.showhelditems.ItemHiddenTracker;
+import dage.showhelditems.ShowHeldItems;
 import dage.showhelditems.net.ItemHiddenUpdatePacket;
 import dage.showhelditems.net.SetItemHiddenPacket;
-import kotlin.jvm.functions.Function0;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.Text;
-import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -29,10 +24,6 @@ import java.util.List;
  */
 @Mixin(value = CobblemonNetwork.class)
 public abstract class CobblemonNetworkMixin {
-
-    @Shadow public abstract void sendPacketToPlayer(@NotNull ServerPlayerEntity player, @NotNull NetworkPacket<?> packet);
-
-    @Shadow public abstract void sendToServer(@NotNull NetworkPacket<?> packet);
 
     @Inject(method = "generateS2CPacketInfoList", at = @At("RETURN"), cancellable = true, remap = false)
     private void generateS2CPacketInfoList(CallbackInfoReturnable<List<PacketRegisterInfo<?>>> cir){
@@ -50,15 +41,29 @@ public abstract class CobblemonNetworkMixin {
     private void generateC2SPacketInfoList(CallbackInfoReturnable<List<PacketRegisterInfo<?>>> cir){
         List<PacketRegisterInfo<?>> list = cir.getReturnValue();
 
+        //Todo i don't think I need this anymore
         ServerNetworkPacketHandler<SetItemHiddenPacket> SetHandler = (packet, minecraftServer, player) -> {
             PokemonStore<?> pokemonStore = Cobblemon.INSTANCE.getStorage().getParty(player);
 
             Pokemon pokemon =  pokemonStore.get(packet.getPokemonUUID());
             if (pokemon==null) return;
             ((ItemHiddenTracker)pokemon).setItemHidden(packet.isItemHidden());
-            //Todo i don't think I did this right lol
-            //
-            //this.sendPacketToPlayer(player, new ItemHiddenUpdatePacket(() -> pokemon,((ItemHiddenTracker)pokemon).isItemHidden()));
+
+            ShowHeldItems.ITEM_VISIBILITY_CHANGED.postThen(
+                new ItemVisibilityChangedEvent(
+                    pokemon,
+                    packet.isItemHidden()
+                ),
+                s -> {
+                    ((ItemHiddenTracker) pokemon).setItemHidden( packet.isItemHidden() );
+                    return null;
+                },
+                c -> {
+                    //this.sendPacketToPlayer(player, new ItemHiddenUpdatePacket(() -> pokemon,((ItemHiddenTracker)pokemon).isItemHidden()));
+                    return null;
+                }
+            );
+
         };
 
         list.add(new PacketRegisterInfo<>(SetItemHiddenPacket.Companion.getID(), SetItemHiddenPacket.Companion::decode, SetHandler, null));
