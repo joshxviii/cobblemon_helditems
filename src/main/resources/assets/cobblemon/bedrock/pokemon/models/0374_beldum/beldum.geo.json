@@ -13,7 +13,10 @@
 			"bones": [
 				{
 					"name": "beldum",
-					"pivot": [0, 0, 0]
+					"pivot": [0, 0, 0],
+					"locators": {
+						"_null_held_item_head[scale=0.6]": [0, 0, 0]
+					}
 				},
 				{
 					"name": "body",
@@ -44,7 +47,10 @@
 					"cubes": [
 						{"origin": [-2.5, 5.28413, -6.7845], "size": [5, 5, 5], "uv": [0, 0]},
 						{"origin": [0.15, 5.63413, -6.7945], "size": [2, 2, 0], "uv": [20, 5]}
-					]
+					],
+					"locators": {
+						"held_item_head": [0, 10.85, -4.25]
+					}
 				},
 				{
 					"name": "eye",
@@ -53,7 +59,13 @@
 					"cubes": [
 						{"origin": [-1, 6.78413, -6.7945], "size": [2, 2, 0], "uv": [0, 0]},
 						{"origin": [-1, 7.78413, -6.8145], "size": [1, 1, 0], "uv": [2, 2]}
-					]
+					],
+					"locators": {
+						"held_item_eyes": {
+							"offset": [1.75, 5.75, -7.25],
+							"rotation": [0, 0, 67.5]
+						}
+					}
 				},
 				{
 					"name": "pupil",
@@ -85,8 +97,8 @@
 					"pivot": [0, 12.25, 0],
 					"locators": {
 						"held_item_fixed": {
-							"offset": [0, 12.25, 0],
-							"rotation": [0, 0, -90]
+							"offset": [0, 11.75, 0],
+							"rotation": [0, -90, -90]
 						}
 					}
 				},

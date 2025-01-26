@@ -73,6 +73,14 @@
 					]
 				},
 				{
+					"name": "held_item_head",
+					"parent": "head_angle",
+					"pivot": [0, 22.25, -1],
+					"locators": {
+						"held_item_head": [0, 22.25, -1]
+					}
+				},
+				{
 					"name": "jaw",
 					"parent": "head_angle",
 					"pivot": [0, 16.25, -2],
@@ -295,6 +303,14 @@
 					"cubes": [
 						{"origin": [-3.92, 19, -2], "size": [0, 2, 2], "pivot": [-3.92, 20, -1], "rotation": [45, 0, 0], "uv": [73, 0], "mirror": true}
 					]
+				},
+				{
+					"name": "held_item_eyes",
+					"parent": "eyes",
+					"pivot": [0, 20.4, -5.475],
+					"locators": {
+						"held_item_eyes": [0, 20.4, -5.475]
+					}
 				},
 				{
 					"name": "left_upper_arm",

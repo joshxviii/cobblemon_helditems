@@ -13,7 +13,10 @@
 			"bones": [
 				{
 					"name": "salamence",
-					"pivot": [0, 0, 0]
+					"pivot": [0, 0, 0],
+					"locators": {
+						"_null_held_item_eyes[scale=1.2]": [0, 0, 0]
+					}
 				},
 				{
 					"name": "body",
@@ -171,7 +174,13 @@
 				{
 					"name": "head",
 					"parent": "neck3",
-					"pivot": [0, 18.75, -39]
+					"pivot": [0, 18.75, -39],
+					"locators": {
+						"held_item_head": {
+							"offset": [0, 20.85, -46.25],
+							"rotation": [45, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "head_ai",
@@ -299,7 +308,13 @@
 				{
 					"name": "eyes",
 					"parent": "muzzle",
-					"pivot": [0, 18.25, -50]
+					"pivot": [0, 18.25, -50],
+					"locators": {
+						"held_item_eyes": {
+							"offset": [-0.25, 22.25, -52.25],
+							"rotation": [-45, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "eye_left",

@@ -46,6 +46,14 @@
 					]
 				},
 				{
+					"name": "held_item_head",
+					"parent": "head",
+					"pivot": [0, 21, 0],
+					"locators": {
+						"held_item_head": [0, 21, 0]
+					}
+				},
+				{
 					"name": "eyes",
 					"parent": "head",
 					"pivot": [0, 17, -4]
@@ -98,6 +106,14 @@
 						{"origin": [-3.4, 15.5, -3.9], "size": [2, 1, 0], "inflate": 0.01, "uv": [32, 40], "mirror": true},
 						{"origin": [-2.9, 15.5, -3.9], "size": [1, 1, 0], "inflate": 0.02, "uv": [28, 40], "mirror": true}
 					]
+				},
+				{
+					"name": "held_item_eyes",
+					"parent": "eyes",
+					"pivot": [0, 17, -4.5],
+					"locators": {
+						"held_item_eyes": [0, 17, -4.5]
+					}
 				},
 				{
 					"name": "mouth",

@@ -75,6 +75,14 @@
 					]
 				},
 				{
+					"name": "held_item_head",
+					"parent": "head",
+					"pivot": [0, 14.5, 0],
+					"locators": {
+						"held_item_head": [0, 14.5, 0]
+					}
+				},
+				{
 					"name": "mouths",
 					"parent": "head",
 					"pivot": [0, 8.5, -4.01]
@@ -123,6 +131,14 @@
 					"cubes": [
 						{"origin": [1, 10.5, -4.01], "size": [3, 2, 0], "uv": [0, 2]}
 					]
+				},
+				{
+					"name": "held_item_eyes",
+					"parent": "eyes",
+					"pivot": [0, 11.5, -4.5],
+					"locators": {
+						"held_item_eyes": [0, 11.5, -4.5]
+					}
 				},
 				{
 					"name": "head_flap",

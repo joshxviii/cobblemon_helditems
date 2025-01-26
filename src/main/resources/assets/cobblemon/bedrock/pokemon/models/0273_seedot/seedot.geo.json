@@ -15,7 +15,8 @@
 					"name": "seedot",
 					"pivot": [0, 0, 0],
 					"locators": {
-						"_null_held_item_eyes[scale=0.725]": [0, 0, 0]
+						"_null_held_item_eyes[scale=0.725]": [0, 0, 0],
+						"_null_held_item_head[scale=0.78]": [0, 0, 0]
 					}
 				},
 				{
@@ -91,11 +92,11 @@
 					]
 				},
 				{
-					"name": "head_top",
+					"name": "held_item_head",
 					"parent": "torso",
-					"pivot": [0, 10.25, -0.5],
+					"pivot": [0, 9.9, 0],
 					"locators": {
-						"held_item_head": [0, 10.25, -0.5]
+						"held_item_head": [0, 9.9, 0]
 					}
 				},
 				{

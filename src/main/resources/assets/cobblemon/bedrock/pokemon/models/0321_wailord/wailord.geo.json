@@ -39,6 +39,14 @@
 					]
 				},
 				{
+					"name": "held_item_head",
+					"parent": "head",
+					"pivot": [0, 40.45, -24.175],
+					"locators": {
+						"held_item_head": [0, 40.45, -24.175]
+					}
+				},
+				{
 					"name": "eyes",
 					"parent": "head",
 					"pivot": [0, 20.25, -25.5]

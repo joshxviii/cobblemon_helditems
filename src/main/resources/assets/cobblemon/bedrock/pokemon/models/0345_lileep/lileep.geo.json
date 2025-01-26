@@ -13,7 +13,10 @@
 			"bones": [
 				{
 					"name": "lileep",
-					"pivot": [0, 0, 0]
+					"pivot": [0, 0, 0],
+					"locators": {
+						"_null_held_item_fixed[scale=0.6]": [0, 0, 0]
+					}
 				},
 				{
 					"name": "body",

@@ -13,7 +13,10 @@
 			"bones": [
 				{
 					"name": "hariyama",
-					"pivot": [0, 0, 0]
+					"pivot": [0, 0, 0],
+					"locators": {
+						"_null_held_item_head[scale=1.45]": [0, 0, 0]
+					}
 				},
 				{
 					"name": "body",
@@ -48,6 +51,23 @@
 						{"origin": [6.5, 30, -6], "size": [2, 0, 11], "pivot": [6.5, 30, -0.5], "rotation": [0, 0, 22.5], "uv": [0, 0]},
 						{"origin": [-4, 25, -6], "size": [8, 5, 10], "pivot": [0, 30, -6], "rotation": [24.94727, -0.38818, -0.34037], "uv": [218, 1]}
 					]
+				},
+				{
+					"name": "held_item_head",
+					"parent": "head",
+					"pivot": [0, 30, -0.225],
+					"rotation": [-15, 0, 0],
+					"locators": {
+						"held_item_head": [0, 30, -0.225]
+					}
+				},
+				{
+					"name": "held_item_eyes",
+					"parent": "head",
+					"pivot": [0, 27, -6.5],
+					"locators": {
+						"held_item_eyes": [0, 27, -6.5]
+					}
 				},
 				{
 					"name": "eye_right",

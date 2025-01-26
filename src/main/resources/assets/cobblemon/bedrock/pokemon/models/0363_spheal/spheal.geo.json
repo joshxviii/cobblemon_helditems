@@ -29,6 +29,14 @@
 					]
 				},
 				{
+					"name": "held_item_head",
+					"parent": "torso",
+					"pivot": [0, 16.05, 0],
+					"locators": {
+						"held_item_head": [0, 16.05, 0]
+					}
+				},
+				{
 					"name": "ear_left",
 					"parent": "torso",
 					"pivot": [5, 14, -5],
@@ -160,6 +168,14 @@
 					"cubes": [
 						{"origin": [-4.5, 10.5, -6.91], "size": [2, 2, 0], "inflate": 0.01, "uv": [8, 0]}
 					]
+				},
+				{
+					"name": "held_item_eyes",
+					"parent": "face",
+					"pivot": [0, 11.925, -7.25],
+					"locators": {
+						"held_item_eyes": [0, 11.925, -7.25]
+					}
 				}
 			]
 		}

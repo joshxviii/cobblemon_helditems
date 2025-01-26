@@ -98,6 +98,14 @@
 					]
 				},
 				{
+					"name": "held_item",
+					"parent": "right_hand",
+					"pivot": [-29.5, 20.75, -0.25],
+					"locators": {
+						"held_item": [-29.5, 20.75, -0.25]
+					}
+				},
+				{
 					"name": "right_arm_claws",
 					"parent": "right_hand",
 					"pivot": [-29.5, 21.9, 0],
@@ -120,6 +128,14 @@
 						{"origin": [-3, 23.4, -5.39], "size": [1, 1, 0], "inflate": 0.005, "pivot": [-2.5, 23.9, -5.39], "rotation": [0, 0, -45], "uv": [4, 3]},
 						{"origin": [-4.5, 21.4, -3.4], "size": [9, 3, 6], "uv": [33, 0]}
 					]
+				},
+				{
+					"name": "held_item_head",
+					"parent": "head",
+					"pivot": [0, 30.5, -1.5],
+					"locators": {
+						"held_item_head": [0, 30.5, -1.5]
+					}
 				},
 				{
 					"name": "eyes",
@@ -152,6 +168,14 @@
 						{"origin": [1.5, 25.6, -5.3], "size": [2, 2, 0], "inflate": 0.03, "pivot": [2.5, 26.6, -5.3], "rotation": [0, 0, -5], "uv": [0, 51]},
 						{"origin": [-3.5, 25.6, -5.3], "size": [2, 2, 0], "inflate": 0.03, "pivot": [-2.5, 26.6, -5.3], "rotation": [0, 0, 5], "uv": [30, 43]}
 					]
+				},
+				{
+					"name": "held_item_eyes",
+					"parent": "eyes",
+					"pivot": [0, 26.75, -6],
+					"locators": {
+						"held_item_eyes": [0, 26.75, -6]
+					}
 				},
 				{
 					"name": "nose",

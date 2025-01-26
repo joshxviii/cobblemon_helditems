@@ -13,7 +13,10 @@
 			"bones": [
 				{
 					"name": "luvdisc",
-					"pivot": [0, 0, 0]
+					"pivot": [0, 0, 0],
+					"locators": {
+						"_null_held_item_eyes[scale=0.6]": [0, 0, 0]
+					}
 				},
 				{
 					"name": "body",
@@ -68,7 +71,13 @@
 				{
 					"name": "eyes",
 					"parent": "body",
-					"pivot": [0, 4.25, -1.75]
+					"pivot": [0, 4.25, -1.75],
+					"locators": {
+						"held_item_eyes": {
+							"offset": [0, 3, -3.25],
+							"rotation": [45, 0, 0]
+						}
+					}
 				},
 				{
 					"name": "eye_right",

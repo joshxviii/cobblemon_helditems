@@ -13,7 +13,11 @@
 			"bones": [
 				{
 					"name": "shelgon",
-					"pivot": [0, 0, 0]
+					"pivot": [0, 0, 0],
+					"locators": {
+						"_null_held_item_head[scale=2.5]": [0, 0, 0],
+						"_null_held_item_eyes[scale=1.2]": [0, 0, 0]
+					}
 				},
 				{
 					"name": "body",
@@ -29,7 +33,10 @@
 						{"origin": [-2.5, 24, -9.5], "size": [5, 1, 19], "uv": [63, 1]},
 						{"origin": [10, 16.5, -9.5], "size": [1, 5, 19], "pivot": [10, 16.5, 0.5], "rotation": [0, 0, -2.5], "uv": [88, 21]},
 						{"origin": [-11, 16.5, -9.5], "size": [1, 5, 19], "pivot": [-10, 16.5, 0.5], "rotation": [0, 0, 2.5], "uv": [67, 26], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_head": [0, 24.85, 0]
+					}
 				},
 				{
 					"name": "held_item_fixed",
@@ -60,7 +67,10 @@
 				{
 					"name": "eyes",
 					"parent": "inside",
-					"pivot": [0, 13.75, -11.02]
+					"pivot": [0, 13.75, -11.02],
+					"locators": {
+						"held_item_eyes": [-0.25, 15.25, -11.75]
+					}
 				},
 				{
 					"name": "eye_left",

@@ -13,7 +13,10 @@
 			"bones": [
 				{
 					"name": "walrein",
-					"pivot": [0, 0, 0]
+					"pivot": [0, 0, 0],
+					"locators": {
+						"_null_held_item_head[scale=1.32]": [0, 0, 0]
+					}
 				},
 				{
 					"name": "body",
@@ -167,7 +170,11 @@
 					"cubes": [
 						{"origin": [-5.5, 23.45976, -16.43054], "size": [11, 6, 12], "uv": [0, 56]},
 						{"origin": [-2.5, 22.95976, -16.43054], "size": [5, 1, 0], "inflate": 0.005, "uv": [0, 43]}
-					]
+					],
+					"locators": {
+						"held_item_head": [0, 30.6, -10.45],
+						"held_item_eyes": [0, 27, -16.65]
+					}
 				},
 				{
 					"name": "nose",

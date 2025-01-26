@@ -13,7 +13,11 @@
 			"bones": [
 				{
 					"name": "absol",
-					"pivot": [0, 0, 0]
+					"pivot": [0, 0, 0],
+					"locators": {
+						"_null_held_item_head[scale=1.15]": [0, 0, 0],
+						"_null_held_item_eyes[scale=1.0]": [0, 0, 0]
+					}
 				},
 				{
 					"name": "body",
@@ -90,6 +94,14 @@
 							"offset": [0, 25.75, -13],
 							"rotation": [180, 0, 0]
 						}
+					}
+				},
+				{
+					"name": "held_item_head",
+					"parent": "head_angle",
+					"pivot": [0, 34.3, -8],
+					"locators": {
+						"held_item_head": [0, 34.3, -8]
 					}
 				},
 				{
@@ -198,6 +210,14 @@
 					"cubes": [
 						{"origin": [0.9, 27.75, -11.6], "size": [3, 2, 1], "uv": [24, 0]}
 					]
+				},
+				{
+					"name": "held_item_eyes",
+					"parent": "eyes",
+					"pivot": [0, 28.5, -13.25],
+					"locators": {
+						"held_item_eyes": [0, 28.5, -13.25]
+					}
 				},
 				{
 					"name": "mouth",

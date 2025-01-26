@@ -7,13 +7,16 @@
 				"texture_width": 64,
 				"texture_height": 64,
 				"visible_bounds_width": 3,
-				"visible_bounds_height": 2.5,
-				"visible_bounds_offset": [0, 0.75, 0]
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
 			},
 			"bones": [
 				{
 					"name": "corphish",
-					"pivot": [0, 0, 0]
+					"pivot": [0, 0, 0],
+					"locators": {
+						"_null_held_item_head[scale=0.8]": [0, 0, 0]
+					}
 				},
 				{
 					"name": "body",
@@ -147,6 +150,15 @@
 					]
 				},
 				{
+					"name": "held_item_eyes",
+					"parent": "eyes",
+					"pivot": [0, 1.92602, -10.59672],
+					"rotation": [90, 0, 0],
+					"locators": {
+						"held_item_eyes": [0, 1.92602, -10.59672]
+					}
+				},
+				{
 					"name": "head_spikes",
 					"parent": "head",
 					"pivot": [2.52571, 4.849, -12.42611]
@@ -177,6 +189,15 @@
 					"cubes": [
 						{"origin": [2.52571, 3.349, -17.92611], "size": [0, 2, 7], "uv": [36, -6], "mirror": true}
 					]
+				},
+				{
+					"name": "held_item_head",
+					"parent": "head",
+					"pivot": [0, 5.27678, -13.90633],
+					"rotation": [90, 0, 0],
+					"locators": {
+						"held_item_head": [0, 5.27678, -13.90633]
+					}
 				},
 				{
 					"name": "arms",

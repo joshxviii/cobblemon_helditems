@@ -140,9 +140,9 @@
 				{
 					"name": "head_top",
 					"parent": "head",
-					"pivot": [0, 20.25, -0.5],
+					"pivot": [0, 20.25, 0],
 					"locators": {
-						"held_item_head": [0, 20.25, -0.5]
+						"held_item_head": [0, 20.25, 0]
 					}
 				},
 				{

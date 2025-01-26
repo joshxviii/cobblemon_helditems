@@ -45,7 +45,10 @@
 				{
 					"name": "eyes",
 					"parent": "torso",
-					"pivot": [0, 33, -11]
+					"pivot": [0, 33, -11],
+					"locators": {
+						"held_item_eyes": [0, 34.25, -10.75]
+					}
 				},
 				{
 					"name": "eyes_left",
@@ -234,7 +237,10 @@
 						{"origin": [-3.5, 42.5, -2], "size": [4, 3, 2], "pivot": [-3.5, 40, -2], "rotation": [0, 29, 0], "uv": [12, 85], "mirror": true},
 						{"origin": [-0.5, 42.5, 0], "size": [4, 3, 2], "pivot": [3.5, 40, 2], "rotation": [0, 29, 0], "uv": [0, 90]},
 						{"origin": [-3.5, 42.5, 0], "size": [4, 3, 2], "inflate": 0.005, "pivot": [-3.5, 40, 2], "rotation": [0, -29, 0], "uv": [12, 90], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_head": [0, 45.25, 0]
+					}
 				},
 				{
 					"name": "arms",

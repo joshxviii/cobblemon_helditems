@@ -84,6 +84,15 @@
 					]
 				},
 				{
+					"name": "held_item_head",
+					"parent": "head",
+					"pivot": [0, 12.88516, -1.88017],
+					"rotation": [-90, 0, 0],
+					"locators": {
+						"held_item_head": [0, 12.88516, -1.88017]
+					}
+				},
+				{
 					"name": "face",
 					"parent": "head",
 					"pivot": [0, 16.78869, -6.04685]
@@ -286,6 +295,15 @@
 					"cubes": [
 						{"origin": [-3, 16.68869, -10.04685], "size": [6, 0, 3], "uv": [47, 23]}
 					]
+				},
+				{
+					"name": "held_item_eyes",
+					"parent": "face",
+					"pivot": [0, 17.12836, -5.01191],
+					"rotation": [-90, 0, 0],
+					"locators": {
+						"held_item_eyes": [0, 17.12836, -5.01191]
+					}
 				},
 				{
 					"name": "lower_body",

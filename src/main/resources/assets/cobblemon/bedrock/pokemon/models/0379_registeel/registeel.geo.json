@@ -61,12 +61,18 @@
 						{"origin": [-2.5, 35, 9], "size": [0, 8, 2], "uv": [38, 118], "mirror": true},
 						{"origin": [-2.5, 25, 10], "size": [0, 10, 1], "pivot": [-2.5, 35, 10.5], "rotation": [0, 0, -10], "uv": [2, 108], "mirror": true},
 						{"origin": [-1.5, 26, 10], "size": [3, 0, 1], "uv": [-1, 119], "mirror": true}
-					]
+					],
+					"locators": {
+						"held_item_head": [0, 45.25, -1]
+					}
 				},
 				{
 					"name": "eyes",
 					"parent": "chest",
-					"pivot": [0, 31.75, -11]
+					"pivot": [0, 31.75, -11],
+					"locators": {
+						"held_item_eyes": [0, 32.25, -12]
+					}
 				},
 				{
 					"name": "eye_center",

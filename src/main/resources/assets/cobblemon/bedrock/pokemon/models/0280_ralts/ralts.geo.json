@@ -211,11 +211,11 @@
 					]
 				},
 				{
-					"name": "head_top",
+					"name": "held_item_head",
 					"parent": "head",
-					"pivot": [0, 14.25, 0.5],
+					"pivot": [0, 14.25, 0],
 					"locators": {
-						"held_item_head": [0, 14.25, 0.5]
+						"held_item_head": [0, 14.25, 0]
 					}
 				},
 				{

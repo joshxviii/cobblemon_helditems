@@ -13,7 +13,11 @@
 			"bones": [
 				{
 					"name": "milotic",
-					"pivot": [0, 0, 0]
+					"pivot": [0, 0, 0],
+					"locators": {
+						"_null_held_item_head[scale=0.8]": [0, 0, 0],
+						"_null_held_item_eyes[scale=0.8]": [0, 0, 0]
+					}
 				},
 				{
 					"name": "body",
@@ -83,6 +87,15 @@
 						{"origin": [-3, 34.5, -4.75], "size": [6, 6, 7], "uv": [0, 0]},
 						{"origin": [-2, 34.5, -6.75], "size": [4, 4, 2], "uv": [26, 6]}
 					]
+				},
+				{
+					"name": "held_item_head",
+					"parent": "head_angle",
+					"pivot": [0, 40.725, 0.2],
+					"rotation": [-15, 0, 0],
+					"locators": {
+						"held_item_head": [0, 40.725, 0.2]
+					}
 				},
 				{
 					"name": "head_spike",
@@ -214,6 +227,14 @@
 					"cubes": [
 						{"origin": [-2.92, 36.25, -4.25], "size": [1, 3, 3], "inflate": 0.01, "uv": [118, 4], "mirror": true}
 					]
+				},
+				{
+					"name": "held_item_eyes",
+					"parent": "eyes",
+					"pivot": [0, 38.59622, -5.15574],
+					"locators": {
+						"held_item_eyes": [0, 38.59622, -5.15574]
+					}
 				},
 				{
 					"name": "mouth",

@@ -13,7 +13,10 @@
 			"bones": [
 				{
 					"name": "carvanha",
-					"pivot": [0, 0, 0]
+					"pivot": [0, 0, 0],
+					"locators": {
+						"_null_held_item_head[scale=1.24]": [0, 0, 0]
+					}
 				},
 				{
 					"name": "body",
@@ -42,6 +45,24 @@
 						{"origin": [-4.5, 4, 1], "size": [9, 1, 0], "uv": [37, 52]},
 						{"origin": [-4.5, 5.4, -6], "size": [9, 6, 4], "inflate": 0.2, "uv": [16, 34]}
 					]
+				},
+				{
+					"name": "held_item_head",
+					"parent": "head",
+					"pivot": [0, 11.6762, -0.20646],
+					"rotation": [-10, 0, 0],
+					"locators": {
+						"held_item_head": [0, 11.6762, -0.20646]
+					}
+				},
+				{
+					"name": "held_item_eyes",
+					"parent": "head",
+					"pivot": [0, 8.75, -6.7],
+					"rotation": [-12.5, 0, 0],
+					"locators": {
+						"held_item_eyes": [0, 8.75, -6.7]
+					}
 				},
 				{
 					"name": "eyelids_left",

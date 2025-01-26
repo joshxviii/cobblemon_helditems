@@ -36,8 +36,7 @@ public abstract class SummaryMixin extends Screen{
     @Unique
     private static final Identifier hiddenResource = Identifier.of(ShowHeldItems.MOD_ID,"textures/gui/item_hidden.png");
 
-    @Shadow
-    public Pokemon selectedPokemon;
+    @Shadow public Pokemon selectedPokemon;
 
     @Shadow public abstract void playSound(@NotNull SoundEvent soundEvent);
 

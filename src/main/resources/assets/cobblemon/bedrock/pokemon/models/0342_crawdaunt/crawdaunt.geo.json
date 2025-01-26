@@ -6,7 +6,7 @@
 				"identifier": "geometry.unknown",
 				"texture_width": 128,
 				"texture_height": 128,
-				"visible_bounds_width": 4,
+				"visible_bounds_width": 5,
 				"visible_bounds_height": 3.5,
 				"visible_bounds_offset": [0, 1.25, 0]
 			},
@@ -173,7 +173,6 @@
 					"name": "hand_left_bottom2",
 					"parent": "hand_left",
 					"pivot": [15.2, 16.85088, 7.59727],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [14.7, 14.85088, 5.59727], "size": [7, 3, 4], "inflate": -0.01, "uv": [46, 45]},
 						{"origin": [21.2, 15.35088, 6.59727], "size": [2, 3, 2], "inflate": -0.01, "uv": [54, 23]},
@@ -250,7 +249,6 @@
 					"name": "hand_right_bottom2",
 					"parent": "hand_right",
 					"pivot": [-15.2, 16.85088, 7.59727],
-					"rotation": [0, 0, 0],
 					"cubes": [
 						{"origin": [-21.7, 14.85088, 5.59727], "size": [7, 3, 4], "inflate": -0.01, "uv": [38, 29]},
 						{"origin": [-23.2, 15.35088, 6.59727], "size": [2, 3, 2], "inflate": -0.01, "uv": [25, 40]},
@@ -264,6 +262,23 @@
 					"cubes": [
 						{"origin": [-3, 23.43431, 2.76569], "size": [7, 4, 7], "pivot": [0, 21.43431, 5.76569], "rotation": [0, -45, 0], "uv": [17, 29]}
 					]
+				},
+				{
+					"name": "held_item_head",
+					"parent": "head",
+					"pivot": [0, 27.5, 7.425],
+					"rotation": [-12.5, 0, 0],
+					"locators": {
+						"held_item_head": [0, 27.5, 7.425]
+					}
+				},
+				{
+					"name": "held_item_eyes",
+					"parent": "head",
+					"pivot": [0, 25.225, 1.5],
+					"locators": {
+						"held_item_eyes": [0, 25.225, 1.5]
+					}
 				},
 				{
 					"name": "star",
