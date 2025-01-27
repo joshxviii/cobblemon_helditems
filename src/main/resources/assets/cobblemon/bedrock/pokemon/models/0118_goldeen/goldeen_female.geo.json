@@ -1108,6 +1108,20 @@
                 ]
             },
             {
+                "parent": "eyes",
+                "locators": {"held_item_eyes2": [
+                    0,
+                    6.6,
+                    -11.4
+                ]},
+                "name": "held_item_eyes",
+                "pivot": [
+                    0,
+                    6.6,
+                    -11.4
+                ]
+            },
+            {
                 "parent": "head",
                 "locators": {"held_item_head": [
                     0,

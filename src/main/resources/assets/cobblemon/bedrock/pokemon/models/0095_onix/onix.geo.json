@@ -3,6 +3,23 @@
     "minecraft:geometry": [{
         "bones": [
             {
+                "locators": {
+                    "_null_held_item_fixed[scale=3.0]": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "_null_held_item_head[scale=3.0]": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "_null_held_item_eyes[scale=3.0]": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
                 "name": "onix",
                 "pivot": [
                     0,

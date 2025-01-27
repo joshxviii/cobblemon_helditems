@@ -3,6 +3,18 @@
     "minecraft:geometry": [{
         "bones": [
             {
+                "locators": {
+                    "_null_held_item_head[scale=0.5]": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "_null_held_item[scale=0.8]": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
                 "name": "zubat",
                 "pivot": [
                     0,

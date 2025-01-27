@@ -3,6 +3,18 @@
     "minecraft:geometry": [{
         "bones": [
             {
+                "locators": {
+                    "_null_held_item_eyes[scale=1.15]": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "_null_held_item_head[scale=1.34]": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
                 "name": "miltank",
                 "pivot": [
                     0,

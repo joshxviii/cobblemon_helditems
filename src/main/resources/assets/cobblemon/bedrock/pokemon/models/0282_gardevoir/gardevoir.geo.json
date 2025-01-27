@@ -3,6 +3,11 @@
     "minecraft:geometry": [{
         "bones": [
             {
+                "locators": {"_null_held_item_eyes[scale=0.75]": [
+                    0,
+                    0,
+                    0
+                ]},
                 "name": "gardevoir",
                 "pivot": [
                     0,

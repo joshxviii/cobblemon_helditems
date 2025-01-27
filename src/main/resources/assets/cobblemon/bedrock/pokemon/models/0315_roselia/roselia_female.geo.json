@@ -1734,6 +1734,25 @@
                     17,
                     -4.5
                 ]
+            },
+            {
+                "parent": "right_flower",
+                "locators": {"held_item2": [
+                    -20,
+                    13,
+                    0
+                ]},
+                "rotation": [
+                    -90,
+                    0,
+                    0
+                ],
+                "name": "held_item",
+                "pivot": [
+                    -20,
+                    13,
+                    0
+                ]
             }
         ],
         "description": {

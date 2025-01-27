@@ -11,7 +11,7 @@
 	"client": [
 		"ItemRendererAccessorMixin",
 		"ItemRendererMixin",
-		"ModelLoaderMixin",
+		"ModelBakeryMixin",
 		"PokemonRendererMixin",
 		"SummaryMixin"
 	],

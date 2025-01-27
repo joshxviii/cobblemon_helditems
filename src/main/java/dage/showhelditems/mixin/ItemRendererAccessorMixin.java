@@ -1,7 +1,8 @@
 package dage.showhelditems.mixin;
 
-import net.minecraft.client.render.item.ItemModels;
-import net.minecraft.client.render.item.ItemRenderer;
+
+import net.minecraft.client.renderer.ItemModelShaper;
+import net.minecraft.client.renderer.entity.ItemRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
@@ -11,6 +12,6 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 
 @Mixin(ItemRenderer.class)
 public interface ItemRendererAccessorMixin {
-    @Accessor("models")
-    ItemModels item$getModels();
+    @Accessor("itemModelShaper")
+    ItemModelShaper item$getModels();
 }

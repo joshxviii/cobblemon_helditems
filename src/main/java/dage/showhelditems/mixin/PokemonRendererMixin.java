@@ -5,15 +5,15 @@ import com.cobblemon.mod.common.client.entity.PokemonClientDelegate;
 import com.cobblemon.mod.common.client.render.MatrixWrapper;
 import com.cobblemon.mod.common.client.render.pokemon.PokemonRenderer;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import dage.showhelditems.NullObjectParser;
 import dage.showhelditems.ShowHeldItems;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.item.HeldItemRenderer;
-import net.minecraft.client.render.model.json.ModelTransformationMode;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.RotationAxis;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemInHandRenderer;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -27,17 +27,17 @@ import java.util.Map;
 abstract class PokemonRendererMixin {
 
     @Unique
-    private final HeldItemRenderer heldItemRenderer = new HeldItemRenderer(MinecraftClient.getInstance(), MinecraftClient.getInstance().getEntityRenderDispatcher(), MinecraftClient.getInstance().getItemRenderer());
+    private final ItemInHandRenderer heldItemRenderer = new ItemInHandRenderer(Minecraft.getInstance(), Minecraft.getInstance().getEntityRenderDispatcher(), Minecraft.getInstance().getItemRenderer());
 
     @Unique
     float scale;
     @Unique
-    ModelTransformationMode transformationMode;
+    ItemDisplayContext transformationMode;
 
     @Inject(method = "render*", at = @At(value = "TAIL"))
-    public void render(PokemonEntity entity, float entityYaw, float partialTicks, MatrixStack poseMatrix, VertexConsumerProvider buffer, int packedLight, CallbackInfo ci) {
+    public void render(PokemonEntity entity, float entityYaw, float partialTicks, PoseStack poseMatrix, MultiBufferSource buffer, int packedLight, CallbackInfo ci) {
         scale = 1.0f;
-        transformationMode = ModelTransformationMode.GROUND;
+        transformationMode = ItemDisplayContext.GROUND;
 
         ItemStack heldItem = ShowHeldItems.INSTANCE.getHeldItem(entity);
 
@@ -46,41 +46,41 @@ abstract class PokemonRendererMixin {
             PokemonClientDelegate clientDelegate = (PokemonClientDelegate) entity.getDelegate();
             Map<String, MatrixWrapper> locators = clientDelegate.getLocatorStates();
 
-            poseMatrix.push();
+            poseMatrix.pushPose();
 
             //For version 0.2.0
 
-            if(heldItem.isIn(ShowHeldItems.INSTANCE.getWEARABLE_EYE_ITEMS()) && locators.containsKey("held_item_eyes"))/*render wearable glasses items*/ {
-                poseMatrix.multiplyPositionMatrix( locators.get("held_item_eyes").getMatrix() );
-                transformationMode = ModelTransformationMode.HEAD;
+            if(heldItem.is(ShowHeldItems.WEARABLE_EYE_ITEMS) && locators.containsKey("held_item_eyes"))/*render wearable glasses items*/ {
+                poseMatrix.mulPose( locators.get("held_item_eyes").getMatrix() );
+                transformationMode = ItemDisplayContext.HEAD;
                 applyModifiers("held_item_eyes", locators);
                 poseMatrix.translate(0f,0f,.28f*scale);
                 poseMatrix.scale(0.7f*scale,0.7f*scale,0.7f*scale);
             }
-            else if(heldItem.isIn(ShowHeldItems.INSTANCE.getWEARABLE_HAT_ITEMS()) && locators.containsKey("held_item_head"))/*render wearable hat items*/ {
-                poseMatrix.multiplyPositionMatrix( locators.get("held_item_head").getMatrix() );
-                transformationMode = ModelTransformationMode.HEAD;
+            else if(heldItem.is(ShowHeldItems.WEARABLE_HAT_ITEMS) && locators.containsKey("held_item_head"))/*render wearable hat items*/ {
+                poseMatrix.mulPose( locators.get("held_item_head").getMatrix() );
+                transformationMode = ItemDisplayContext.HEAD;
                 applyModifiers("held_item_head", locators);
                 poseMatrix.translate(0f,-0.26f*scale, 0f);
                 poseMatrix.scale(.68f*scale,.68f*scale,.68f*scale);
             }
             else if (locators.containsKey("held_item"))/*render item the same way as the player*/ {
-                poseMatrix.multiplyPositionMatrix(locators.get("held_item").getMatrix());
-                transformationMode = ModelTransformationMode.THIRD_PERSON_RIGHT_HAND;
+                poseMatrix.mulPose(locators.get("held_item").getMatrix());
+                transformationMode = ItemDisplayContext.THIRD_PERSON_RIGHT_HAND;
                 applyModifiers("held_item", locators);
                 poseMatrix.scale(scale, scale, scale);
-                poseMatrix.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-90));
-                poseMatrix.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-90));
+                poseMatrix.mulPose((Axis.XP.rotationDegrees(-90)));
+                poseMatrix.mulPose(Axis.YP.rotationDegrees(-90));
             }
             else if (locators.containsKey("held_item_fixed"))/*render flat ground item model*/ {
-                poseMatrix.multiplyPositionMatrix(locators.get("held_item_fixed").getMatrix());
+                poseMatrix.mulPose(locators.get("held_item_fixed").getMatrix());
                 applyModifiers("held_item_fixed", locators);
                 poseMatrix.scale(scale, scale, scale);
             }
-            else {poseMatrix.pop();return;}
+            else {poseMatrix.popPose();return;}
 
             this.heldItemRenderer.renderItem(entity, heldItem, transformationMode, false, poseMatrix, buffer, packedLight);
-            poseMatrix.pop();
+            poseMatrix.popPose();
         }
     }
 
@@ -91,7 +91,7 @@ abstract class PokemonRendererMixin {
             Map<String, Float> modifiers;
             if (locator.startsWith("_null_"+name+"[")) {
                 modifiers = NullObjectParser.parseNullObject(locator).getModifiers();
-                ModelTransformationMode[] modes = ModelTransformationMode.values();
+                ItemDisplayContext[] modes = ItemDisplayContext.values();
                 if ( modifiers.containsKey("scale") ) scale = modifiers.get("scale");
                 if ( modifiers.containsKey("mode") ) transformationMode = modes[( (int)(float)modifiers.get("mode") ) % modes.length];
                 return;

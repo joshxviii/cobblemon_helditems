@@ -3,6 +3,18 @@
     "minecraft:geometry": [{
         "bones": [
             {
+                "locators": {
+                    "_null_held_item_head[scale=0.56]": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "_null_held_item_eyes[scale=0.6]": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
                 "name": "vivillon",
                 "pivot": [
                     0,
@@ -718,6 +730,20 @@
                 "pivot": [
                     0,
                     9.675,
+                    -3.3
+                ]
+            },
+            {
+                "parent": "eyes",
+                "locators": {"held_item_eyes2": [
+                    0,
+                    9.725,
+                    -3.3
+                ]},
+                "name": "held_item_eyes2",
+                "pivot": [
+                    0,
+                    9.725,
                     -3.3
                 ]
             },

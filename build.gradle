@@ -19,17 +19,12 @@ repositories {
 	maven {
 		url = "https://api.modrinth.com/maven"
 	}
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
 }
 
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	mappings loom.officialMojangMappings()
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
@@ -41,7 +36,6 @@ dependencies {
 
 	//Cobblemon
 	modImplementation "com.cobblemon:fabric:${project.cobblemon_version}"
-	modApi "com.cobblemon:fabric:${project.cobblemon_version}"
 }
 
 processResources {
@@ -49,14 +43,14 @@ processResources {
 
 	filesMatching("fabric.mod.json") {
 		expand(
-				"mod_id": project.mod_id,
-				"mod_version": project.mod_version,
-				"mod_name": project.mod_name,
-				"mod_description": project.mod_description,
-				"author": project.author,
-				"repository": project.repository,
-				"license": project.license,
-				"mod_icon": project.mod_icon
+			"mod_id": project.mod_id,
+			"mod_version": project.mod_version,
+			"mod_name": project.mod_name,
+			"mod_description": project.mod_description,
+			"author": project.author,
+			"repository": project.repository,
+			"license": project.license,
+			"mod_icon": project.mod_icon
 		)
 	}
 }

@@ -3,6 +3,11 @@
     "minecraft:geometry": [{
         "bones": [
             {
+                "locators": {"_null_held_item_eyes[scale=1.5]": [
+                    0,
+                    0,
+                    0
+                ]},
                 "name": "seaking_female",
                 "pivot": [
                     0,

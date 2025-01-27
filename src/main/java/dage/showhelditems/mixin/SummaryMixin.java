@@ -8,11 +8,10 @@ import com.cobblemon.mod.common.pokemon.Pokemon;
 import dage.showhelditems.ItemHiddenTracker;
 import dage.showhelditems.ItemVisibilityChangedEvent;
 import dage.showhelditems.ShowHeldItems;
-import dage.showhelditems.net.SetItemHiddenPacket;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -25,22 +24,22 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * @author Josh
  */
 @Mixin(value = Summary.class)
-public abstract class SummaryMixin extends Screen{
+public abstract class SummaryMixin extends Screen {
 
     @Unique
     private static final int BASE_WIDTH = 331;
     @Unique
     private static final int BASE_HEIGHT = 161;
     @Unique
-    private static final Identifier visibleResource = Identifier.of(ShowHeldItems.MOD_ID,"textures/gui/item_visible.png");
+    private static final ResourceLocation visibleResource = ResourceLocation.fromNamespaceAndPath(ShowHeldItems.MOD_ID,"textures/gui/item_visible.png");
     @Unique
-    private static final Identifier hiddenResource = Identifier.of(ShowHeldItems.MOD_ID,"textures/gui/item_hidden.png");
+    private static final ResourceLocation hiddenResource = ResourceLocation.fromNamespaceAndPath(ShowHeldItems.MOD_ID,"textures/gui/item_hidden.png");
 
     @Shadow public Pokemon selectedPokemon;
 
     @Shadow public abstract void playSound(@NotNull SoundEvent soundEvent);
 
-    protected SummaryMixin(Text title) {
+    protected SummaryMixin(Component title) {
         super(title);
     }
 
@@ -56,7 +55,7 @@ public abstract class SummaryMixin extends Screen{
         SummaryButton hideHeldItemBtn = new SummaryButton(
                 btnX, btnY, btnWidth, btnHeight,
                 button -> onHideItemPress(),
-                Text.literal(""),
+                Component.literal(""),
                 visibleResource,
                 visibleResource,
                 button -> (!selectedPokemon.heldItem().isEmpty()) && !((ItemHiddenTracker) selectedPokemon).isItemHidden(),
@@ -70,7 +69,7 @@ public abstract class SummaryMixin extends Screen{
         SummaryButton showHeldItemBtn = new SummaryButton(
                 btnX, btnY, btnWidth, btnHeight,
                 button -> {},
-                Text.literal(""),
+                Component.literal(""),
                 hiddenResource,
                 hiddenResource,
                 button -> (!selectedPokemon.heldItem().isEmpty()) && ((ItemHiddenTracker) selectedPokemon).isItemHidden(),
@@ -81,8 +80,8 @@ public abstract class SummaryMixin extends Screen{
                 true,
                 1F
         );
-        addDrawableChild(showHeldItemBtn);
-        addDrawableChild(hideHeldItemBtn);
+        addRenderableWidget(showHeldItemBtn);
+        addRenderableWidget(hideHeldItemBtn);
     }
 
     @Unique
@@ -108,12 +107,12 @@ public abstract class SummaryMixin extends Screen{
 
         // Send update to server
         // Todo This might not be necessary
-        CobblemonNetwork.INSTANCE.sendToServer(
-            new SetItemHiddenPacket(
-                selectedPokemon.getUuid(),
-                value
-            )
-        );
+//        CobblemonNetwork.INSTANCE.sendToServer(
+//            new SetItemHiddenPacket(
+//                selectedPokemon.getUuid(),
+//                value
+//            )
+//        );
 
     }
 }

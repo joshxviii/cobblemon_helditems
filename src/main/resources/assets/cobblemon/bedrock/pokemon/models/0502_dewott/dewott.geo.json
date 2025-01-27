@@ -3,6 +3,11 @@
     "minecraft:geometry": [{
         "bones": [
             {
+                "locators": {"_null_held_item_head[scale=1.2]": [
+                    0,
+                    0,
+                    0
+                ]},
                 "name": "dewott",
                 "pivot": [
                     0,

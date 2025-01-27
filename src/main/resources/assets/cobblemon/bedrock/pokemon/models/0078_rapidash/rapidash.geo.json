@@ -3,6 +3,18 @@
     "minecraft:geometry": [{
         "bones": [
             {
+                "locators": {
+                    "_null_held_item_head[scale=0.75]": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "_null_held_item_eyes[scale=0.73]": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
                 "name": "rapidash",
                 "pivot": [
                     0,

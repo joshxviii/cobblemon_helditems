@@ -3,6 +3,18 @@
     "minecraft:geometry": [{
         "bones": [
             {
+                "locators": {
+                    "_null_held_item_eyes[scale=1.5]": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "_null_held_item_head[scale=1.25]": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
                 "name": "venusaur",
                 "pivot": [
                     0,
