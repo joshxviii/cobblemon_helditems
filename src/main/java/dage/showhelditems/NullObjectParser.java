@@ -14,8 +14,8 @@ public class NullObjectParser {
      * Stores modifiers for a particular locator.
      */
     public static class NullObjectModifier {
-        private String LocatorName;
-        private Map<String, Float> modifiers;
+        private final String LocatorName;
+        private final Map<String, Float> modifiers;
 
         public NullObjectModifier(String modifiedLocator, Map<String, Float> modifiers) {
             this.LocatorName = modifiedLocator;

@@ -2,15 +2,19 @@ package dage.showhelditems.net
 
 import com.cobblemon.mod.common.net.messages.client.pokemon.update.SingleUpdatePacket
 import com.cobblemon.mod.common.pokemon.Pokemon
+import com.cobblemon.mod.common.util.writeNullable
 import dage.showhelditems.ItemHiddenTracker
 import dage.showhelditems.ShowHeldItems
 import net.minecraft.network.RegistryFriendlyByteBuf
 import net.minecraft.resources.ResourceLocation
 
+/**
+ * Updates a value for this pokemon that is sent to all players
+ */
 class ItemHiddenUpdatePacket(pokemon: () -> Pokemon, value: Boolean) : SingleUpdatePacket<Boolean, ItemHiddenUpdatePacket>(pokemon, value) {
     override val id: ResourceLocation = ID
     override fun encodeValue(buffer: RegistryFriendlyByteBuf) {
-        buffer.writeBoolean(this.value)
+        buffer.writeBoolean(value)
     }
 
     override fun set(pokemon: Pokemon, value: Boolean) {

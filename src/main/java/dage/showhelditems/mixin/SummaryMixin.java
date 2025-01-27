@@ -8,6 +8,7 @@ import com.cobblemon.mod.common.pokemon.Pokemon;
 import dage.showhelditems.ItemHiddenTracker;
 import dage.showhelditems.ItemVisibilityChangedEvent;
 import dage.showhelditems.ShowHeldItems;
+import dage.showhelditems.net.SetItemHiddenPacket;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -58,7 +59,7 @@ public abstract class SummaryMixin extends Screen {
                 Component.literal(""),
                 visibleResource,
                 visibleResource,
-                button -> (!selectedPokemon.heldItem().isEmpty()) && !((ItemHiddenTracker) selectedPokemon).isItemHidden(),
+                button -> (!selectedPokemon.heldItem().isEmpty()) && Boolean.FALSE.equals(((ItemHiddenTracker) selectedPokemon).isItemHidden()),
                 button -> (!selectedPokemon.heldItem().isEmpty()),
                 true,
                 true,
@@ -72,7 +73,7 @@ public abstract class SummaryMixin extends Screen {
                 Component.literal(""),
                 hiddenResource,
                 hiddenResource,
-                button -> (!selectedPokemon.heldItem().isEmpty()) && ((ItemHiddenTracker) selectedPokemon).isItemHidden(),
+                button -> (!selectedPokemon.heldItem().isEmpty()) && Boolean.TRUE.equals(((ItemHiddenTracker) selectedPokemon).isItemHidden()),
                 button -> false,
                 true,
                 true,
@@ -87,32 +88,17 @@ public abstract class SummaryMixin extends Screen {
     @Unique
     private void onHideItemPress(){
 
-        boolean value = !((ItemHiddenTracker) selectedPokemon).isItemHidden();
+        boolean value = Boolean.FALSE.equals(((ItemHiddenTracker) selectedPokemon).isItemHidden());
         ((ItemHiddenTracker) selectedPokemon).setItemHidden( value );
         this.playSound(CobblemonSounds.GUI_CLICK);
 
-        // Send an update that visibility has changed
-        // Used to fix the issue with client side not updating
-        ShowHeldItems.ITEM_VISIBILITY_CHANGED.postThen(
-            new ItemVisibilityChangedEvent(
-                    selectedPokemon,
-                    value
-            ),
-            s -> {
-                ((ItemHiddenTracker) selectedPokemon).setItemHidden(value);
-                return null;
-            },
-            c -> null
-        );
-
         // Send update to server
         // Todo This might not be necessary
-//        CobblemonNetwork.INSTANCE.sendToServer(
-//            new SetItemHiddenPacket(
-//                selectedPokemon.getUuid(),
-//                value
-//            )
-//        );
-
+        CobblemonNetwork.INSTANCE.sendToServer(
+            new SetItemHiddenPacket(
+                selectedPokemon.getUuid(),
+                value
+            )
+        );
     }
 }

@@ -11,6 +11,8 @@ import dage.showhelditems.ItemHiddenTracker;
 import dage.showhelditems.ItemVisibilityChangedEvent;
 import dage.showhelditems.ShowHeldItems;
 import dage.showhelditems.net.ItemHiddenUpdatePacket;
+import dage.showhelditems.net.SetItemHiddenHandler;
+import dage.showhelditems.net.SetItemHiddenPacket;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -38,35 +40,10 @@ public abstract class CobblemonNetworkMixin {
      */
     @Inject(method = "generateC2SPacketInfoList", at = @At("RETURN"), cancellable = true, remap = false)
     private void generateC2SPacketInfoList(CallbackInfoReturnable<List<PacketRegisterInfo<?>>> cir){
-//        List<PacketRegisterInfo<?>> list = cir.getReturnValue();
-//
-//        //Todo i don't think I need this anymore
-//        ServerNetworkPacketHandler<SetItemHiddenPacket> SetHandler = (packet, minecraftServer, player) -> {
-//            PokemonStore<?> pokemonStore = Cobblemon.INSTANCE.getStorage().getParty(player);
-//
-//            Pokemon pokemon =  pokemonStore.get(packet.getPokemonUUID());
-//            if (pokemon==null) return;
-//            ((ItemHiddenTracker)pokemon).setItemHidden(packet.isItemHidden());
-//
-//            ShowHeldItems.ITEM_VISIBILITY_CHANGED.postThen(
-//                new ItemVisibilityChangedEvent(
-//                    pokemon,
-//                    packet.isItemHidden()
-//                ),
-//                s -> {
-//                    ((ItemHiddenTracker) pokemon).setItemHidden( packet.isItemHidden() );
-//                    return null;
-//                },
-//                c -> {
-//                    //this.sendPacketToPlayer(player, new ItemHiddenUpdatePacket(() -> pokemon,((ItemHiddenTracker)pokemon).isItemHidden()));
-//                    return null;
-//                }
-//            );
-//
-//        };
-//
-//        list.add(new PacketRegisterInfo<>(SetItemHiddenPacket.Companion.getID(), SetItemHiddenPacket.Companion::decode, SetHandler, null));
-//        cir.setReturnValue(list);
-    }
+        List<PacketRegisterInfo<?>> list = cir.getReturnValue();
 
+        list.add(new PacketRegisterInfo<>(SetItemHiddenPacket.Companion.getID(), SetItemHiddenPacket.Companion::decode, SetItemHiddenHandler.INSTANCE, null));
+
+        cir.setReturnValue(list);
+    }
 }

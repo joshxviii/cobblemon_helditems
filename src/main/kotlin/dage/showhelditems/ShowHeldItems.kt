@@ -62,19 +62,19 @@ object ShowHeldItems : ModInitializer {
 		//Server Search
 		if(!(pokemonEntity as ShownItemTracker).shownItem.isEmpty) return (pokemonEntity as ShownItemTracker).shownItem
 		//Client Search
-//		if (pokemonEntity.ownerUUID?.equals(Minecraft.getInstance().player?.uuid) == true) {
-//			val storage = storage
-//			val myParty = storage.myParty
-//			val pcs: Collection<ClientPC> = storage.pcStores.values
-//			//See if the pokemon that is being rendered is part of client users party
-//			for (p in myParty) {
-//				return comparePokemonEntity(p, pokemonEntity) ?: continue
-//			}
-//			//If not then check PC **this is from pokemon roaming around from the pasture block**
-//			for (pc in pcs) for (box in pc.boxes) for (p in box.slots) {
-//				return comparePokemonEntity(p, pokemonEntity) ?: continue
-//			}
-//		}
+		if (pokemonEntity.ownerUUID?.equals(Minecraft.getInstance().player?.uuid) == true) {
+			val storage = storage
+			val myParty = storage.myParty
+			val pcs: Collection<ClientPC> = storage.pcStores.values
+			//See if the pokemon that is being rendered is part of client users party
+			for (p in myParty) {
+				return comparePokemonEntity(p, pokemonEntity) ?: continue
+			}
+			//If not then check PC **this is from pokemon roaming around from the pasture block**
+			for (pc in pcs) for (box in pc.boxes) for (p in box.slots) {
+				return comparePokemonEntity(p, pokemonEntity) ?: continue
+			}
+		}
 		//Default
 		return ItemStack.EMPTY
 	}
@@ -82,7 +82,7 @@ object ShowHeldItems : ModInitializer {
 	private fun comparePokemonEntity(p: Pokemon?, pokemonEntity: PokemonEntity ) : ItemStack? {
 		if (p == null) return null
 		if (p.entity?.uuid?.equals(pokemonEntity.uuid) == true ) {
-			if ((p as ItemHiddenTracker).isItemHidden) return ItemStack.EMPTY
+			if ((p as ItemHiddenTracker).isItemHidden == true) return ItemStack.EMPTY
 			return p.heldItem()
 		}
 		return null
