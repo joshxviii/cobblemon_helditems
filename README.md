@@ -16,7 +16,7 @@ When joining a server that does not have this mod installed, only your own Poké
 The items that are hidden or shown as hats/glasses can be controlled by the server by adding a data pack to the server that replaces the "hidden_items.json", "wearable_eye_items.json" or "wearable_hat_items.json" item tag file. Hidden items will still be visible to the Pokémon's owner.
 
 The path for hidden items is:</br>
-```datapacks\[YOUR_SERVER'S_DATAPACK]\data\show-held-items\tags\items\hidden_items.json```
+```datapacks\[YOUR_SERVER'S_DATAPACK]\data\show-held-items\tags\item\hidden_items.json```
 
 These are the default settings of the file:
 ```json
@@ -31,9 +31,9 @@ These are the default settings of the file:
 Any modded or vanilla items can be added here. 
 </br></br>
 The paths for eye items and hats are:</br>
-```datapacks\[YOUR_SERVER'S_DATAPACK]\data\show-held-items\tags\items\wearable_eye_items.json```
+```datapacks\[YOUR_SERVER'S_DATAPACK]\data\show-held-items\tags\item\wearable_eye_items.json```
 </br>
-```datapacks\[YOUR_SERVER'S_DATAPACK]\data\show-held-items\tags\items\wearable_hat_items.json```
+```datapacks\[YOUR_SERVER'S_DATAPACK]\data\show-held-items\tags\item\wearable_hat_items.json```
 
 Here is an example using [Villager Hats](https://modrinth.com/mod/villager-hats) and [Simple Hats](https://modrinth.com/mod/simple-hats):
 
