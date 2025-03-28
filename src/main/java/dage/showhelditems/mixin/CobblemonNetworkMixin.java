@@ -23,10 +23,10 @@ import java.util.List;
 /**
  * @author Josh
  */
-@Mixin(value = CobblemonNetwork.class)
+@Mixin(value = CobblemonNetwork.class, remap = false)
 public abstract class CobblemonNetworkMixin {
 
-    @Inject(method = "generateS2CPacketInfoList", at = @At("RETURN"), cancellable = true, remap = false)
+    @Inject(method = "generateS2CPacketInfoList", at = @At("RETURN"), cancellable = true)
     private void generateS2CPacketInfoList(CallbackInfoReturnable<List<PacketRegisterInfo<?>>> cir){
         List<PacketRegisterInfo<?>> list = cir.getReturnValue();
 
@@ -38,11 +38,11 @@ public abstract class CobblemonNetworkMixin {
     /**
      * Register my packet in the c2s map.
      */
-    @Inject(method = "generateC2SPacketInfoList", at = @At("RETURN"), cancellable = true, remap = false)
+    @Inject(method = "generateC2SPacketInfoList", at = @At("RETURN"), cancellable = true)
     private void generateC2SPacketInfoList(CallbackInfoReturnable<List<PacketRegisterInfo<?>>> cir){
         List<PacketRegisterInfo<?>> list = cir.getReturnValue();
 
-        list.add(new PacketRegisterInfo<>(SetItemHiddenPacket.Companion.getID(), SetItemHiddenPacket.Companion::decode, SetItemHiddenHandler.INSTANCE, null));
+        list.add(new PacketRegisterInfo<>(SetItemHiddenPacket.Companion.getID(), SetItemHiddenPacket.Companion::decode, new SetItemHiddenHandler(), null));
 
         cir.setReturnValue(list);
     }

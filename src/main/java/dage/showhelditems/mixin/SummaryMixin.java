@@ -62,7 +62,7 @@ public abstract class SummaryMixin extends Screen {
                 button -> (!selectedPokemon.heldItem().isEmpty()) && Boolean.FALSE.equals(((ItemHiddenTracker) selectedPokemon).isItemHidden()),
                 button -> (!selectedPokemon.heldItem().isEmpty()),
                 true,
-                true,
+                false,
                 true,
                 true,
                 1F
@@ -90,7 +90,6 @@ public abstract class SummaryMixin extends Screen {
 
         boolean value = Boolean.FALSE.equals(((ItemHiddenTracker) selectedPokemon).isItemHidden());
         ((ItemHiddenTracker) selectedPokemon).setItemHidden( value );
-        this.playSound(CobblemonSounds.GUI_CLICK);
 
         // Send update to server
         // Todo This might not be necessary

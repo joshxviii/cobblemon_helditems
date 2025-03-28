@@ -6,7 +6,8 @@
 		"CobblemonNetworkMixin",
 		"LambDynLightsMixin",
 		"PokemonEntityMixin",
-		"PokemonMixin"
+		"PokemonMixin",
+		"PosableModelMixin"
 	],
 	"client": [
 		"ItemRendererAccessorMixin",

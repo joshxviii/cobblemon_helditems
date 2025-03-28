@@ -10,7 +10,7 @@ import dage.showhelditems.ShowHeldItems
 import net.minecraft.server.MinecraftServer
 import net.minecraft.server.level.ServerPlayer
 
-object SetItemHiddenHandler : ServerNetworkPacketHandler<SetItemHiddenPacket> {
+class SetItemHiddenHandler : ServerNetworkPacketHandler<SetItemHiddenPacket> {
 
     override fun handle(packet: SetItemHiddenPacket, server: MinecraftServer, player: ServerPlayer) {
 

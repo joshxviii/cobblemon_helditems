@@ -1,7 +1,6 @@
 {
   "replace": true,
   "values": [
-    "#cobblemon:held/is_held_item",
-    "#cobblemon:berries"
+    "minecraft:barrier"
   ]
 }
