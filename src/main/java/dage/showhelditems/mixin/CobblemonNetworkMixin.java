@@ -1,15 +1,8 @@
 package dage.showhelditems.mixin;
 
-import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.CobblemonNetwork;
-import com.cobblemon.mod.common.api.net.ServerNetworkPacketHandler;
-import com.cobblemon.mod.common.api.storage.PokemonStore;
 import com.cobblemon.mod.common.client.net.pokemon.update.PokemonUpdatePacketHandler;
 import com.cobblemon.mod.common.net.PacketRegisterInfo;
-import com.cobblemon.mod.common.pokemon.Pokemon;
-import dage.showhelditems.ItemHiddenTracker;
-import dage.showhelditems.ItemVisibilityChangedEvent;
-import dage.showhelditems.ShowHeldItems;
 import dage.showhelditems.net.ItemHiddenUpdatePacket;
 import dage.showhelditems.net.SetItemHiddenHandler;
 import dage.showhelditems.net.SetItemHiddenPacket;

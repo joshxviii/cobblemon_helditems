@@ -28,8 +28,8 @@ public class PosableModelMixin {
     @Shadow private transient boolean isForLivingEntityRenderer;
 
     /**
-     * @author
-     * @reason
+     * @author Josh
+     * @reason Fix item stuttering when entity rotates.
      */
     @Overwrite
     public final void updateLocators(Entity entity, PosableState state) {

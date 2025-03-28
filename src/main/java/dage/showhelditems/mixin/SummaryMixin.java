@@ -1,12 +1,10 @@
 package dage.showhelditems.mixin;
 
 import com.cobblemon.mod.common.CobblemonNetwork;
-import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.client.gui.summary.Summary;
 import com.cobblemon.mod.common.client.gui.summary.SummaryButton;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import dage.showhelditems.ItemHiddenTracker;
-import dage.showhelditems.ItemVisibilityChangedEvent;
 import dage.showhelditems.ShowHeldItems;
 import dage.showhelditems.net.SetItemHiddenPacket;
 import net.minecraft.client.gui.screens.Screen;
@@ -37,8 +35,6 @@ public abstract class SummaryMixin extends Screen {
     private static final ResourceLocation hiddenResource = ResourceLocation.fromNamespaceAndPath(ShowHeldItems.MOD_ID,"textures/gui/item_hidden.png");
 
     @Shadow public Pokemon selectedPokemon;
-
-    @Shadow public abstract void playSound(@NotNull SoundEvent soundEvent);
 
     protected SummaryMixin(Component title) {
         super(title);
