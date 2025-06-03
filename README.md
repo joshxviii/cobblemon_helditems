@@ -1,5 +1,7 @@
 # Cobblemon - Show Held Items
 
+This mod is available on [Modrinth](https://modrinth.com/mod/show-held-items) and [Curseforge](https://www.curseforge.com/minecraft/mc-mods/cobblemon-show-held-items)!
+
 This is a side mod for [Cobblemon](https://modrinth.com/mod/cobblemon) so it will not do anything without Cobblemon installed.
 
 This mod allows Pokémon's Held Items render in the world.
